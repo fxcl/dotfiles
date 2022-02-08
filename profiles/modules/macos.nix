@@ -82,9 +82,9 @@ in
         ];
 
         masApps = {
-          "1Password 7" = 1333542190;
+          #"1Password 7" = 1333542190;
           "Xcode" = 497799835;
-          "The Unarchiver" = 425424353;
+          #"The Unarchiver" = 425424353;
         };
       };
 
