@@ -1,7 +1,7 @@
 { pkgs, lib, config, options, ... }:
 
 let
-  cfg = config.my.modules.blizzard;
+  cfg = config.my.modules.raycast;
 
 in
 
@@ -9,9 +9,9 @@ in
   options = with lib; {
     my = {
       modules = {
-        blizzard = {
+        raycast = {
           enable = mkEnableOption ''
-            Whether to enable blizzard module
+            Whether to enable raycast module
           '';
         };
       };
@@ -22,7 +22,7 @@ in
     mkIf cfg.enable {
       homebrew = {
         casks = [
-          "battle-net"
+          "raycast"
         ];
       };
     };

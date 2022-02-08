@@ -35,9 +35,6 @@ in
             path = "${pkgs.vscode}/Applications/Visual Studio Code.app";
           }
           # {
-          #   path = "/Applications/ClickUp.app";
-          # }
-          # {
           #   path = "/Applications/Authy Desktop.app";
           # }
           # {

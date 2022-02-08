@@ -1,7 +1,7 @@
 { pkgs, lib, config, options, ... }:
 
 let
-  cfg = config.my.modules.clickup;
+  cfg = config.my.modules.battle;
 
 in
 
@@ -9,9 +9,9 @@ in
   options = with lib; {
     my = {
       modules = {
-        clickup = {
+        battle = {
           enable = mkEnableOption ''
-            Whether to enable clickup module
+            Whether to enable battle module
           '';
         };
       };
@@ -22,7 +22,7 @@ in
     mkIf cfg.enable {
       homebrew = {
         casks = [
-          "clickup"
+          "battle-net"
         ];
       };
     };

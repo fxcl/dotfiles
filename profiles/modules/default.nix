@@ -6,13 +6,12 @@
     ./macos.nix
 
     #./acrobat.nix
-    #./alfred.nix
+    ./raycast.nix
     ./appcleaner.nix
     #./authy.nix
     #./bartender.nix
     #./blizzard.nix
     ./chrome.nix
-    #./clickup.nix
     #./deezer.nix
     #./discord.nix
     ./dock.nix
@@ -76,10 +75,6 @@
       chrome = {
         enable = lib.mkDefault true;
       };
-
-      # clickup = {
-      #   enable = lib.mkDefault true;
-      # };
 
       # deezer = {
       #   enable = lib.mkDefault true;
