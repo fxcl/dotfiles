@@ -41,7 +41,7 @@
         "type": "github"
       }
     },
-    "homemanager": {
+    "home-manager": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
@@ -96,7 +96,7 @@
       "inputs": {
         "agenix": "agenix",
         "darwin": "darwin",
-        "homemanager": "homemanager",
+        "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nur": "nur"
       }

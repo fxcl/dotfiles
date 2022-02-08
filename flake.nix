@@ -71,7 +71,7 @@
           inherit inputs;
 
           modules = [
-            inputs.homemanager.darwinModules.home-manager
+            inputs.home-manager.darwinModules.home-manager
             inputs.agenix.nixosModules.age
             sharedDarwinConfiguration
             ./machines/tony
@@ -83,7 +83,7 @@
           inherit inputs;
 
           modules = [
-            inputs.homemanager.darwinModules.home-manager
+            inputs.home-manager.darwinModules.home-manager
             inputs.agenix.nixosModules.age
             sharedDarwinConfiguration
             ./machines/vvh
