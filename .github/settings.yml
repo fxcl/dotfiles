@@ -52,7 +52,7 @@ labels:
     description: Contribution at Hacktoberfest appreciated
 
 branches:
-  - name: master
+  - name: main
     protection:
       required_status_checks:
         strict: true

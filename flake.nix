@@ -15,8 +15,8 @@
     agenix.inputs.nixpkgs.follows = "nixpkgs";
 
     # Home inputs
-    home-manager.url = "github:nix-community/home-manager/release-21.11";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs"; # Ensure versions are consistent.
+    homemanager.url = "github:nix-community/home-manager/release-21.11";
+    homemanager.inputs.nixpkgs.follows = "nixpkgs"; # Ensure versions are consistent.
 
   };
 
@@ -71,7 +71,7 @@
           inherit inputs;
 
           modules = [
-            inputs.home-manager.darwinModules.home-manager
+            inputs.homemanager.darwinModules.home-manager
             inputs.agenix.nixosModules.age
             sharedDarwinConfiguration
             ./machines/tony
@@ -83,7 +83,7 @@
           inherit inputs;
 
           modules = [
-            inputs.home-manager.darwinModules.home-manager
+            inputs.homemanager.darwinModules.home-manager
             inputs.agenix.nixosModules.age
             sharedDarwinConfiguration
             ./machines/vvh

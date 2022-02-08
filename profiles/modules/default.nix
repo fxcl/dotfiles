@@ -13,11 +13,11 @@
     #./blizzard.nix
     ./chrome.nix
     #./clickup.nix
-    ./deezer.nix
+    #./deezer.nix
     #./discord.nix
     ./dock.nix
     #./docker.nix
-    ./element.nix
+    #./element.nix
     #./etcher.nix
     ./finder.nix
     #./franz.nix
@@ -26,12 +26,12 @@
     #./hammerspoon.nix
     #./istatmenus.nix
     ./iterm.nix
-    ./jabra.nix
-    ./kya.nix
+    #./jabra.nix
+    #./kya.nix
     #./lastpass.nix
     #./lens.nix
     #./macdown.nix
-    ./mattermost.nix
+    #./mattermost.nix
     #./minecraft.nix
     #./multipass.nix
     #./ngrok.nix
@@ -49,69 +49,69 @@
         enable = lib.mkDefault true;
       };
 
-      acrobat = {
-        enable = lib.mkDefault true;
-      };
+      # acrobat = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      alfred = {
-        enable = lib.mkDefault true;
-      };
+      # alfred = {
+      #   enable = lib.mkDefault true;
+      # };
 
       appcleaner = {
         enable = lib.mkDefault true;
       };
 
-      authy = {
-        enable = lib.mkDefault true;
-      };
+      # authy = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      bartender = {
-        enable = lib.mkDefault true;
-      };
+      # bartender = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      blizzard = {
-        enable = lib.mkDefault true;
-      };
+      # blizzard = {
+      #   enable = lib.mkDefault true;
+      # };
 
       chrome = {
         enable = lib.mkDefault true;
       };
 
-      clickup = {
-        enable = lib.mkDefault true;
-      };
+      # clickup = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      deezer = {
-        enable = lib.mkDefault true;
-      };
+      # deezer = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      discord = {
-        enable = lib.mkDefault true;
-      };
+      # discord = {
+      #   enable = lib.mkDefault true;
+      # };
 
       dock = {
         enable = lib.mkDefault false;
       };
 
-      docker = {
-        enable = lib.mkDefault true;
-      };
+      # docker = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      element = {
-        enable = lib.mkDefault true;
-      };
+      # element = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      etcher = {
-        enable = lib.mkDefault true;
-      };
+      # etcher = {
+      #   enable = lib.mkDefault true;
+      # };
 
       finder = {
         enable = lib.mkDefault false;
       };
 
-      franz = {
-        enable = lib.mkDefault true;
-      };
+      # franz = {
+      #   enable = lib.mkDefault true;
+      # };
 
       git = {
         enable = lib.mkDefault true;
@@ -121,77 +121,77 @@
         enable = lib.mkDefault true;
       };
 
-      hammerspoon = {
-        enable = lib.mkDefault true;
-      };
+      # hammerspoon = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      istatmenus = {
-        enable = lib.mkDefault true;
-      };
+      # istatmenus = {
+      #   enable = lib.mkDefault true;
+      # };
 
       iterm = {
         enable = lib.mkDefault true;
       };
 
-      jabra = {
-        enable = lib.mkDefault true;
-      };
+      # jabra = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      kya = {
-        enable = lib.mkDefault true;
-      };
+      # kya = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      lastpass = {
-        enable = lib.mkDefault true;
-      };
+      # lastpass = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      lens = {
-        enable = lib.mkDefault true;
-      };
+      # lens = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      macdown = {
-        enable = lib.mkDefault true;
-      };
+      # macdown = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      mattermost = {
-        enable = lib.mkDefault true;
-      };
+      # mattermost = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      minecraft = {
-        enable = lib.mkDefault true;
-      };
+      # minecraft = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      multipass = {
-        enable = lib.mkDefault true;
-      };
+      # multipass = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      ngrok = {
-        enable = lib.mkDefault true;
-      };
+      # ngrok = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      owncloud = {
-        enable = lib.mkDefault true;
-      };
+      # owncloud = {
+      #   enable = lib.mkDefault true;
+      # };
 
       rectangle = {
         enable = lib.mkDefault true;
       };
 
-      signal = {
-        enable = lib.mkDefault true;
-      };
+      # signal = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      slack = {
-        enable = lib.mkDefault true;
-      };
+      # slack = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      steam = {
-        enable = lib.mkDefault true;
-      };
+      # steam = {
+      #   enable = lib.mkDefault true;
+      # };
 
-      teams = {
-        enable = lib.mkDefault true;
-      };
+      # teams = {
+      #   enable = lib.mkDefault true;
+      # };
     };
   };
 }
