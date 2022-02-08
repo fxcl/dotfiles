@@ -23,9 +23,9 @@
         enable = true;
       };
 
-      kube = {
-        enable = true;
-      };
+      # kube = {
+      #   enable = true;
+      # };
 
       nix = {
         enable = true;
