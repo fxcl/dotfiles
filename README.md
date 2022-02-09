@@ -28,6 +28,7 @@ bought, especially Xcode, otherwise it fails to build macOS applications.
 
 ### Bootstrap
 
+online:
 ```console
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 sh <(curl -L https://nixos.org/nix/install)
@@ -44,16 +45,34 @@ nix \
     --flake github:zxfstd/dotfiles\#tony
 ```
 
+
+local:
+
+```
+nix \
+    --extra-experimental-features "nix-command flakes" \
+    build \
+    .\#tony
+
+./result/sw/bin/darwin-rebuild switch \
+    --flake .\#tony
+```    
 ### Updates
 
 If the repository had been cloned you could just execute `make switch`,
 otherwise there is still this long option to update the deployment:
 
+onlone:
 ```console
 darwin-rebuild switch \
     --flake github:zxfstd/dotfiles\#tony
 ```
 
+local:
+```console
+darwin-rebuild switch \
+  --flake .\#tony
+```    
 ## Hathor
 
 ### Bootstrap
