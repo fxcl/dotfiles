@@ -138,7 +138,7 @@ in
           };
 
           dock = {
-            autohide = true;
+            autohide = false;
             autohide-delay = "0.2";
             mineffect = "scale";
             show-recents = false;

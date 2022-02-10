@@ -7,6 +7,7 @@ let
     ansible-core
     requests
     passlib
+    # pkgs.ansible-later
   ]);
 in
 
@@ -37,19 +38,19 @@ in
           minio-client
           #ngrok
           nmap
-          #p7zip
+          p7zip
           platinum-searcher
-          #pwgen
+          pwgen
           python
           reflex
           rsync
           #s3cmd
           shellcheck
-          #sops
-          #terraform
+          sops
+          terraform
           tmux
           tree
-          #upx
+          upx
           vim
           wget
           yq

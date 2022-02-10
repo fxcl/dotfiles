@@ -5,7 +5,7 @@
     ./settings.nix
     ./macos.nix
 
-    #./acrobat.nix
+    ./acrobat.nix
     ./raycast.nix
     ./appcleaner.nix
     #./authy.nix
@@ -15,20 +15,20 @@
     #./deezer.nix
     #./discord.nix
     ./dock.nix
-    #./docker.nix
+    ./docker.nix
     #./element.nix
-    #./etcher.nix
+    ./etcher.nix
     ./finder.nix
-    #./franz.nix
+    ./franz.nix
     ./git.nix
     ./gpg.nix
     #./hammerspoon.nix
-    #./istatmenus.nix
+    #./eulz.nix
     ./iterm.nix
     #./jabra.nix
-    #./kya.nix
+    ./kya.nix
     #./lastpass.nix
-    #./lens.nix
+    ./lens.nix
     #./macdown.nix
     #./mattermost.nix
     #./minecraft.nix
@@ -48,13 +48,13 @@
         enable = lib.mkDefault true;
       };
 
-      # acrobat = {
-      #   enable = lib.mkDefault true;
-      # };
+      acrobat = {
+        enable = lib.mkDefault true;
+      };
 
-      # alfred = {
-      #   enable = lib.mkDefault true;
-      # };
+      raycast = {
+        enable = lib.mkDefault true;
+      };
 
       appcleaner = {
         enable = lib.mkDefault true;
@@ -84,29 +84,29 @@
       #   enable = lib.mkDefault true;
       # };
 
-      dock = {
-        enable = lib.mkDefault false;
-      };
-
-      # docker = {
-      #   enable = lib.mkDefault true;
+      # dock = {
+      #   enable = lib.mkDefault false;
       # };
+
+      docker = {
+        enable = lib.mkDefault true;
+      };
 
       # element = {
       #   enable = lib.mkDefault true;
       # };
 
-      # etcher = {
-      #   enable = lib.mkDefault true;
-      # };
+      etcher = {
+        enable = lib.mkDefault true;
+      };
 
       finder = {
         enable = lib.mkDefault false;
       };
 
-      # franz = {
-      #   enable = lib.mkDefault true;
-      # };
+      franz = {
+        enable = lib.mkDefault true;
+      };
 
       git = {
         enable = lib.mkDefault true;
@@ -120,7 +120,7 @@
       #   enable = lib.mkDefault true;
       # };
 
-      # istatmenus = {
+      # eul = {
       #   enable = lib.mkDefault true;
       # };
 
@@ -132,17 +132,17 @@
       #   enable = lib.mkDefault true;
       # };
 
-      # kya = {
-      #   enable = lib.mkDefault true;
-      # };
+      kya = {
+        enable = lib.mkDefault true;
+      };
 
       # lastpass = {
       #   enable = lib.mkDefault true;
       # };
 
-      # lens = {
-      #   enable = lib.mkDefault true;
-      # };
+      lens = {
+        enable = lib.mkDefault true;
+      };
 
       # macdown = {
       #   enable = lib.mkDefault true;

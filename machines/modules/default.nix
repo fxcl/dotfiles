@@ -6,7 +6,7 @@
     ./homebrew.nix
 
     ./fonts.nix
-    #./kube.nix
+    ./kube.nix
     ./nix.nix
     ./shells.nix
     ./sudoers.nix
@@ -23,9 +23,9 @@
         enable = true;
       };
 
-      # kube = {
-      #   enable = true;
-      # };
+      kube = {
+        enable = true;
+      };
 
       nix = {
         enable = true;

@@ -1,7 +1,7 @@
 { pkgs, lib, config, options, ... }:
 
 let
-  cfg = config.my.modules.istatmenus;
+  cfg = config.my.modules.eul;
 
 in
 
@@ -9,9 +9,9 @@ in
   options = with lib; {
     my = {
       modules = {
-        istatmenus = {
+        eul = {
           enable = mkEnableOption ''
-            Whether to enable istatmenus module
+            Whether to enable eul module
           '';
         };
       };
@@ -22,7 +22,7 @@ in
     mkIf cfg.enable {
       homebrew = {
         casks = [
-          "istat-menus"
+          "eul"
         ];
       };
     };

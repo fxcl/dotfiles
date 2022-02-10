@@ -53,6 +53,12 @@
     hgrep = "fc -El 0 | grep";
     history = "fc -l 1";
     sha256sum = "shasum -a 256";
+
+    emptytrash = "sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'";
+
+    nix-cleanup = "nix-collect-garbage -d --delete-older-than 30d";
+    nixupgrade = "nix-channel --update && nix-env -u && nix-collect-garbage -d";
+
   };
 
   sessionVariables = {
@@ -67,7 +73,17 @@
     GREP_COLOR = "1;33";
     IGNOREEOF = "1";
   };
-
+  envExtra = ''
+          export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+          export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+          export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+          export HOMEBREW_INSTALL_CLEANUP=1
+          export HOMEBREW_NO_INSECURE_REDIRECT=1
+          export HOMEBREW_NO_ANALYTICS=1
+          #export HOMEBREW_CASK_OPTS=--require-sha
+          export HOMEBREW_CASK_OPTS=""
+          export HOMEBREW_INSTALL_BADGE="🍵"
+          '';
   oh-my-zsh = {
     enable = true;
 

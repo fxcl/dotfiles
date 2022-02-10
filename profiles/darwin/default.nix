@@ -43,9 +43,9 @@ in
           # {
           #   path = "/Applications/LastPass.app";
           # }
-          # {
-          #   path = "/Applications/Franz.app";
-          # }
+          {
+            path = "/Applications/Franz.app";
+          }
           # {
           #   path = "/Applications/Slack.app";
           # }

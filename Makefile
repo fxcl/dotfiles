@@ -6,4 +6,4 @@ update:
 
 .PHONY: switch
 switch:
-	darwin-rebuild switch --flake .
+	darwin-rebuild switch --flake .\#tony
