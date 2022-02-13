@@ -11,37 +11,19 @@
     ./shells.nix
     ./sudoers.nix
     ./tools.nix
+    #./rust.nix
   ];
 
   my = {
     modules = {
-      homebrew = {
-        enable = true;
-      };
-
-      fonts = {
-        enable = true;
-      };
-
-      kube = {
-        enable = true;
-      };
-
-      nix = {
-        enable = true;
-      };
-
-      shells = {
-        enable = true;
-      };
-
-      sudoers = {
-        enable = true;
-      };
-
-      tools = {
-        enable = true;
-      };
+      homebrew.enable = true;
+      fonts.enable = true;
+      nix.enable = true;
+      shells.enable = true;
+      sudoers.enable = true;
+      tools.enable = true;
+      kube.enable = true;
+      #rust.enable = true;
     };
   };
 }

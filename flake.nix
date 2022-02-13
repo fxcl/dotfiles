@@ -18,6 +18,11 @@
     homemanager.url = "github:nix-community/home-manager/release-21.11";
     homemanager.inputs.nixpkgs.follows = "nixpkgs"; # Ensure versions are consistent.
 
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = { self, nur, ... }@inputs:
@@ -31,6 +36,7 @@
           '';
 
           binaryCaches = [
+            "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
             "https://cache.nixos.org"
             "https://nix-community.cachix.org"
             "https://nixpkgs.cachix.org"
@@ -58,6 +64,7 @@
             )
             self.overlay
             nur.overlay
+            inputs.rust-overlay.overlay
           ];
         };
       };

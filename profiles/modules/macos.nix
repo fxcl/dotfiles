@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        macos = {
-          enable = mkEnableOption ''
-            Whether to enable macos module
-          '';
-        };
-      };
+    my.modules.macos = {
+      enable = mkEnableOption ''
+        Whether to enable macos module
+      '';
     };
 
     system.defaults.dock.wvous-tl-corner = mkOption {
@@ -68,6 +64,15 @@ in
 
   config = with lib;
     mkIf cfg.enable {
+      environment.variables = {
+        LANG = "en_US.UTF-8";
+        LC_TIME = "en_GB.UTF-8";
+      };
+
+      environment.systemPackages = with pkgs; [
+          m-cli
+        ];
+
       homebrew = {
         taps = [
           "homebrew/cask"
@@ -88,17 +93,9 @@ in
         };
       };
 
-      environment = {
-        systemPackages = with pkgs; [
-          m-cli
-        ];
-      };
-
       system = {
         defaults = {
-          LaunchServices = {
-            LSQuarantine = false;
-          };
+          LaunchServices.LSQuarantine = false;
 
           NSGlobalDomain = {
             # AppleFontSmoothing = 2;

@@ -32,7 +32,7 @@ in
           git-chglog
           gnumake
           gomplate
-          #hub
+          hub
           ipcalc
           jq
           minio-client
