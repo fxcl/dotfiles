@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        hammerspoon = {
-          enable = mkEnableOption ''
-            Whether to enable hammerspoon module
-          '';
-        };
-      };
+    my.modules.hammerspoon = {
+      enable = mkEnableOption ''
+        Whether to enable hammerspoon module
+      '';
     };
   };
 

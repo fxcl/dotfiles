@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        iterm = {
-          enable = mkEnableOption ''
-            Whether to enable iterm module
-          '';
-        };
-      };
+    my.modules.iterm = {
+      enable = mkEnableOption ''
+        Whether to enable iterm module
+      '';
     };
   };
 

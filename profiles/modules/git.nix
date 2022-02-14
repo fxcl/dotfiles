@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        git = {
-          enable = mkEnableOption ''
-            Whether to enable git module
-          '';
-        };
-      };
+    my.modules.git = {
+      enable = mkEnableOption ''
+        Whether to enable git module
+      '';
     };
   };
 

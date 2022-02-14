@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        multipass = {
-          enable = mkEnableOption ''
-            Whether to enable multipass module
-          '';
-        };
-      };
+    my.modules.multipass = {
+      enable = mkEnableOption ''
+        Whether to enable multipass module
+      '';
     };
   };
 

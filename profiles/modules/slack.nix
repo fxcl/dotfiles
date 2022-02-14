@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        slack = {
-          enable = mkEnableOption ''
-            Whether to enable slack module
-          '';
-        };
-      };
+    my.modules.slack = {
+      enable = mkEnableOption ''
+        Whether to enable slack module
+      '';
     };
   };
 

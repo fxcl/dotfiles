@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        macdown = {
-          enable = mkEnableOption ''
-            Whether to enable macdown module
-          '';
-        };
-      };
+    my.modules.macdown = {
+      enable = mkEnableOption ''
+        Whether to enable macdown module
+      '';
     };
   };
 

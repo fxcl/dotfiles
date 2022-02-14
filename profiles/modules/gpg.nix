@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        gpg = {
-          enable = mkEnableOption ''
-            Whether to enable gpg module
-          '';
-        };
-      };
+    my.modules.gpg = {
+      enable = mkEnableOption ''
+        Whether to enable gpg module
+      '';
     };
   };
 

@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        signal = {
-          enable = mkEnableOption ''
-            Whether to enable signal module
-          '';
-        };
-      };
+    my.modules.signal = {
+      enable = mkEnableOption ''
+        Whether to enable signal module
+      '';
     };
   };
 

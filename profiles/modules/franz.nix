@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        franz = {
-          enable = mkEnableOption ''
-            Whether to enable franz module
-          '';
-        };
-      };
+    my.modules.franz = {
+      enable = mkEnableOption ''
+        Whether to enable franz module
+      '';
     };
   };
 

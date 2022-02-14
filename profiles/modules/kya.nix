@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        kya = {
-          enable = mkEnableOption ''
-            Whether to enable kya module
-          '';
-        };
-      };
+    my.modules.kya = {
+      enable = mkEnableOption ''
+        Whether to enable kya module
+      '';
     };
   };
 

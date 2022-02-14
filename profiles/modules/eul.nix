@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        eul = {
-          enable = mkEnableOption ''
-            Whether to enable eul module
-          '';
-        };
-      };
+    my.modules.eul = {
+      enable = mkEnableOption ''
+        Whether to enable eul module
+      '';
     };
   };
 

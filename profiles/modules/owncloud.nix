@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        owncloud = {
-          enable = mkEnableOption ''
-            Whether to enable owncloud module
-          '';
-        };
-      };
+    my.modules.owncloud = {
+      enable = mkEnableOption ''
+        Whether to enable owncloud module
+      '';
     };
   };
 

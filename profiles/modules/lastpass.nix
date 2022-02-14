@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        lastpass = {
-          enable = mkEnableOption ''
-            Whether to enable lastpass module
-          '';
-        };
-      };
+    my.modules.lastpass = {
+      enable = mkEnableOption ''
+        Whether to enable lastpass module
+      '';
     };
   };
 

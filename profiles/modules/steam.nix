@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        steam = {
-          enable = mkEnableOption ''
-            Whether to enable steam module
-          '';
-        };
-      };
+    my.modules.steam = {
+      enable = mkEnableOption ''
+        Whether to enable steam module
+      '';
     };
   };
 

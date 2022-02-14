@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        mattermost = {
-          enable = mkEnableOption ''
-            Whether to enable mattermost module
-          '';
-        };
-      };
+    my.modules.mattermost = {
+      enable = mkEnableOption ''
+        Whether to enable mattermost module
+      '';
     };
   };
 

@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        raycast = {
-          enable = mkEnableOption ''
-            Whether to enable raycast module
-          '';
-        };
-      };
+    my.modules.raycast = {
+      enable = mkEnableOption ''
+        Whether to enable raycast module
+      '';
     };
   };
 

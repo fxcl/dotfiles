@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        rectangle = {
-          enable = mkEnableOption ''
-            Whether to enable rectangle module
-          '';
-        };
-      };
+    my.modules.rectangle = {
+      enable = mkEnableOption ''
+        Whether to enable rectangle module
+      '';
     };
   };
 

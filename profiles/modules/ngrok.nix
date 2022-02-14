@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        ngrok = {
-          enable = mkEnableOption ''
-            Whether to enable ngrok module
-          '';
-        };
-      };
+    my.modules.ngrok = {
+      enable = mkEnableOption ''
+        Whether to enable ngrok module
+      '';
     };
   };
 

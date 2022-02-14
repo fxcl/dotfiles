@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        teams = {
-          enable = mkEnableOption ''
-            Whether to enable teams module
-          '';
-        };
-      };
+    my.modules.teams = {
+      enable = mkEnableOption ''
+        Whether to enable teams module
+      '';
     };
   };
 

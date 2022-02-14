@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        jabra = {
-          enable = mkEnableOption ''
-            Whether to enable jabra module
-          '';
-        };
-      };
+    my.modules.jabra = {
+      enable = mkEnableOption ''
+        Whether to enable jabra module
+      '';
     };
   };
 

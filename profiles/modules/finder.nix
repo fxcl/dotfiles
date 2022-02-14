@@ -6,31 +6,27 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        finder = {
-          enable = mkEnableOption ''
-            Whether to enable finder module
-          '';
+    my.modules.finder = {
+      enable = mkEnableOption ''
+        Whether to enable finder module
+      '';
 
-          entries = mkOption {
-            description = ''
-              Entries for the Finder
-            '';
-            type = with types; listOf (submodule {
-              options = {
-                path = lib.mkOption {
-                  type = str;
-                };
+      entries = mkOption {
+        description = ''
+          Entries for the Finder
+        '';
+        type = with types; listOf (submodule {
+          options = {
+            path = lib.mkOption {
+              type = str;
+            };
 
-                alias = lib.mkOption {
-                  type = str;
-                  default = "";
-                };
-              };
-            });
+            alias = lib.mkOption {
+              type = str;
+              default = "";
+            };
           };
-        };
+        });
       };
     };
   };
