@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        shells = {
-          enable = mkEnableOption ''
-            Whether to enable shells module
-          '';
-        };
-      };
+    my.modules.shells = {
+      enable = mkEnableOption ''
+        Whether to enable shells module
+      '';
     };
   };
 

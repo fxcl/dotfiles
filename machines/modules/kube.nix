@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        kube = {
-          enable = mkEnableOption ''
-            Whether to enable kube module
-          '';
-        };
-      };
+    my.modules.kube = {
+      enable = mkEnableOption ''
+        Whether to enable kube module
+      '';
     };
   };
 

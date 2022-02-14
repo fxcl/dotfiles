@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        fonts = {
-          enable = mkEnableOption ''
-            Whether to enable fonts module
-          '';
-        };
-      };
+    my.modules.fonts = {
+      enable = mkEnableOption ''
+        Whether to enable fonts module
+      '';
     };
   };
 

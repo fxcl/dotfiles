@@ -13,14 +13,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        tools = {
-          enable = mkEnableOption ''
-            Whether to enable tools module
-          '';
-        };
-      };
+    my.modules.tools = {
+      enable = mkEnableOption ''
+        Whether to enable tools module
+      '';
     };
   };
 

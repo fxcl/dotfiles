@@ -95,8 +95,9 @@ in
 
       system = {
         defaults = {
+          # ".GlobalPreferences".com.apple.sound.beep.sound = "Funk";
           LaunchServices.LSQuarantine = false;
-
+          SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
           NSGlobalDomain = {
             # AppleFontSmoothing = 2;
             # AppleKeyboardUIMode = 3;
@@ -130,18 +131,25 @@ in
             "com.apple.trackpad.trackpadCornerClickBehavior" = 1;
           };
 
-          SoftwareUpdate = {
-            AutomaticallyInstallMacOSUpdates = true;
-          };
-
           dock = {
             autohide = false;
             autohide-delay = "0.2";
             mineffect = "scale";
+            #mineffect = "genie";
             show-recents = false;
-            tilesize = 32;
+            tilesize = 48;
             largesize = 64;
             magnification = true;
+            autohide-time-modifier = "0";
+            dashboard-in-overlay = true;
+            expose-animation-duration = "0.1";
+            expose-group-by-app = false;
+            launchanim = false;
+            minimize-to-application = true;
+            mouse-over-hilite-stack = true;
+            show-process-indicators = false;
+            showhidden = true;
+            static-only = true;
 
             wvous-tl-corner = 2;
             wvous-bl-corner = 3;

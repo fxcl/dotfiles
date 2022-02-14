@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        nix = {
-          enable = mkEnableOption ''
-            Whether to enable nix module
-          '';
-        };
-      };
+    my.modules.nix = {
+      enable = mkEnableOption ''
+        Whether to enable nix module
+      '';
     };
   };
 

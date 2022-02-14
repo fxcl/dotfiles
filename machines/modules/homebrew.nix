@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        homebrew = {
-          enable = mkEnableOption ''
-            Whether to enable homebrew module
-          '';
-        };
-      };
+    my.modules.homebrew = {
+      enable = mkEnableOption ''
+        Whether to enable homebrew module
+      '';
     };
   };
 
@@ -24,6 +20,8 @@ in
         enable = true;
         autoUpdate = true;
         cleanup = "zap";
+        # brewfile = true;
+        # noLock = true;
       };
     };
 }

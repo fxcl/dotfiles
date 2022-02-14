@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        rust = {
-          enable = mkEnableOption ''
-            Whether to enable rust module
-          '';
-        };
-      };
+    my.modules.rust = {
+      enable = mkEnableOption ''
+        Whether to enable rust module
+      '';
     };
   };
 

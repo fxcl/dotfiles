@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        sudoers = {
-          enable = mkEnableOption ''
-            Whether to enable sudoers module
-          '';
-        };
-      };
+    my.modules.sudoers = {
+      enable = mkEnableOption ''
+        Whether to enable sudoers module
+      '';
     };
   };
 
