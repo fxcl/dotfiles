@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        chrome = {
-          enable = mkEnableOption ''
-            Whether to enable chrome module
-          '';
-        };
-      };
+    my.modules.chrome = {
+      enable = mkEnableOption ''
+        Whether to enable chrome module
+      '';
     };
   };
 

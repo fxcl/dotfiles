@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        authy = {
-          enable = mkEnableOption ''
-            Whether to enable authy module
-          '';
-        };
-      };
+    my.modules.authy = {
+      enable = mkEnableOption ''
+        Whether to enable authy module
+      '';
     };
   };
 

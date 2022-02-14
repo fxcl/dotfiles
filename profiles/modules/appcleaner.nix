@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        appcleaner = {
-          enable = mkEnableOption ''
-            Whether to enable appcleaner module
-          '';
-        };
-      };
+    my.modules.appcleaner = {
+      enable = mkEnableOption ''
+        Whether to enable appcleaner module
+      '';
     };
   };
 

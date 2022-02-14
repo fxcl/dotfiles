@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        battle = {
-          enable = mkEnableOption ''
-            Whether to enable battle module
-          '';
-        };
-      };
+    my.modules.battle = {
+      enable = mkEnableOption ''
+        Whether to enable battle module
+      '';
     };
   };
 

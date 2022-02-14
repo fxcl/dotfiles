@@ -105,6 +105,10 @@ in
           }
         ];
       };
+
+      rust = {
+        enable = true;
+      };
     };
   };
 

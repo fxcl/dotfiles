@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        acrobat = {
-          enable = mkEnableOption ''
-            Whether to enable acrobat module
-          '';
-        };
-      };
+    my.modules.acrobat = {
+      enable = mkEnableOption ''
+        Whether to enable acrobat module
+      '';
     };
   };
 

@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        discord = {
-          enable = mkEnableOption ''
-            Whether to enable discord module
-          '';
-        };
-      };
+    my.modules.discord = {
+      enable = mkEnableOption ''
+        Whether to enable discord module
+      '';
     };
   };
 

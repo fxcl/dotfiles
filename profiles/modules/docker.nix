@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        docker = {
-          enable = mkEnableOption ''
-            Whether to enable docker module
-          '';
-        };
-      };
+    my.modules.docker = {
+      enable = mkEnableOption ''
+        Whether to enable docker module
+      '';
     };
   };
 

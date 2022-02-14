@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        etcher = {
-          enable = mkEnableOption ''
-            Whether to enable etcher module
-          '';
-        };
-      };
+    my.modules.etcher = {
+      enable = mkEnableOption ''
+        Whether to enable etcher module
+      '';
     };
   };
 

@@ -6,36 +6,32 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        dock = {
-          enable = mkEnableOption ''
-            Whether to enable dock module
-          '';
+    my.modules.dock = {
+      enable = mkEnableOption ''
+        Whether to enable dock module
+      '';
 
-          entries = mkOption {
-            description = ''
-              Entries for the Dock
-            '';
-            type = with types; listOf (submodule {
-              options = {
-                path = lib.mkOption {
-                  type = str;
-                };
+      entries = mkOption {
+        description = ''
+          Entries for the Dock
+        '';
+        type = with types; listOf (submodule {
+          options = {
+            path = lib.mkOption {
+              type = str;
+            };
 
-                section = lib.mkOption {
-                  type = str;
-                  default = "apps";
-                };
+            section = lib.mkOption {
+              type = str;
+              default = "apps";
+            };
 
-                options = lib.mkOption {
-                  type = str;
-                  default = "";
-                };
-              };
-            });
+            options = lib.mkOption {
+              type = str;
+              default = "";
+            };
           };
-        };
+        });
       };
     };
   };

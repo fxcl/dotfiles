@@ -7,14 +7,10 @@ in
 
 {
   options = with lib; {
-    my = {
-      modules = {
-        deezer = {
-          enable = mkEnableOption ''
-            Whether to enable deezer module
-          '';
-        };
-      };
+    my.modules.deezer = {
+      enable = mkEnableOption ''
+        Whether to enable deezer module
+      '';
     };
   };
 
