@@ -51,6 +51,22 @@ in
           wget
           yq
           coreutils
+
+          vale # Prose linter
+          ripgrep # grep
+          exa # ls
+          fd # find
+          bat # bat
+          httpie # curl
+          curlie # curl
+          tealdeer # TLDR
+          du-dust # du
+          htop # top
+          procs # ps
+          dogdns # dig
+          gping # ping with a graph
+          shfmt
+
         ];
       };
     };

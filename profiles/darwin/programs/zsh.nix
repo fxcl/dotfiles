@@ -10,9 +10,23 @@
     size = 10000000;
     save = 10000000;
     extended = true;
+    ignorePatterns = [
+        "ls"
+        "cd"
+        "cd -"
+        "pwd"
+        "exit"
+        "date"
+        "* --help"
+        "man *"
+        "zstyle *"
+    ];
   };
 
   shellAliases = {
+    # Reload
+    "reshell!" = "exec $SHELL -l";
+
     ".." = "cd ..";
     "..." = "cd ../..";
 
@@ -83,6 +97,7 @@
           #export HOMEBREW_CASK_OPTS=--require-sha
           export HOMEBREW_CASK_OPTS=""
           export HOMEBREW_INSTALL_BADGE="🍵"
+          . "~/.asdf/asdf.sh"
           '';
   oh-my-zsh = {
     enable = true;
