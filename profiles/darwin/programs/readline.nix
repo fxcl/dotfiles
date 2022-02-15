@@ -2,6 +2,7 @@
 
 {
   enable = true;
+  variables = { editing-mode = "vi"; };
 
   bindings = {
     "\e[5~" = "history-search-backward";

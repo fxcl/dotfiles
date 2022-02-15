@@ -2,6 +2,7 @@
 
 {
   enable = true;
+  serverAliveInterval = 20;
 
   matchBlocks = {
     "bous" = {

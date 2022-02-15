@@ -11,22 +11,22 @@
     save = 10000000;
     extended = true;
     ignorePatterns = [
-        "ls"
-        "cd"
-        "cd -"
-        "pwd"
-        "exit"
-        "date"
-        "* --help"
-        "man *"
-        "zstyle *"
+      "ls"
+      "cd"
+      "cd -"
+      "pwd"
+      "exit"
+      "date"
+      "* --help"
+      "man *"
+      "zstyle *"
     ];
   };
 
   shellAliases = {
     # Reload
     "reshell!" = "exec $SHELL -l";
-
+    cat = "bat";
     ".." = "cd ..";
     "..." = "cd ../..";
 
@@ -88,17 +88,17 @@
     IGNOREEOF = "1";
   };
   envExtra = ''
-          export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
-          export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
-          export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
-          export HOMEBREW_INSTALL_CLEANUP=1
-          export HOMEBREW_NO_INSECURE_REDIRECT=1
-          export HOMEBREW_NO_ANALYTICS=1
-          #export HOMEBREW_CASK_OPTS=--require-sha
-          export HOMEBREW_CASK_OPTS=""
-          export HOMEBREW_INSTALL_BADGE="🍵"
-          . "~/.asdf/asdf.sh"
-          '';
+    export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+    export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+    export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+    export HOMEBREW_INSTALL_CLEANUP=1
+    export HOMEBREW_NO_INSECURE_REDIRECT=1
+    export HOMEBREW_NO_ANALYTICS=1
+    #export HOMEBREW_CASK_OPTS=--require-sha
+    export HOMEBREW_CASK_OPTS=""
+    export HOMEBREW_INSTALL_BADGE="🍵"
+    . "/Users/kelvin/.asdf/asdf.sh"
+  '';
   oh-my-zsh = {
     enable = true;
 
