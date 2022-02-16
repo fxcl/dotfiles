@@ -26,7 +26,8 @@ in
         user = {
           packages = with pkgs; [
             rust-bin.stable.latest.default
-            rust-analyzer-unwrapped
+            rust-analyzer
+            #rust-analyzer-unwrapped
             # rustup rustc cargo
           ];
         };

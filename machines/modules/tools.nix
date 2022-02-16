@@ -66,7 +66,6 @@ in
           dogdns # dig
           gping # ping with a graph
           shfmt
-
         ];
       };
     };
