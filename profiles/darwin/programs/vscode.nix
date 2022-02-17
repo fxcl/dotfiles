@@ -10,12 +10,12 @@
   extensions = with pkgs.vscode-extensions; [
     scalameta.metals # Scala Language Server
     scala-lang.scala # Scala Language
-    bbenoist.nix        # Nix
+    bbenoist.nix # Nix
     # requires rnix-lsp
     jnoortheen.nix-ide
     a5huynh.vscode-ron
     antfu.icons-carbon
-    brettm12345.nixfmt-vscode
+    #brettm12345.nixfmt-vscode
     dracula-theme.theme-dracula
     eamodio.gitlens
     elmtooling.elm-ls-vscode
@@ -152,7 +152,7 @@
       "editor.formatOnSave" = true;
     };
     "nix.enableLanguageServer" = true;
-    "nixfmt.path" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
+    "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
     "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
   };
 
