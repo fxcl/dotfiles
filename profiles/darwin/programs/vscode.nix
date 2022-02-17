@@ -151,6 +151,11 @@
       "editor.defaultFormatter" = "denoland.vscode-deno";
       "editor.formatOnSave" = true;
     };
+    "yaml.schemaStore.enable" = true;
+    "yaml.schemas" = {
+      "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.yaml";
+    };
+
     "nix.enableLanguageServer" = true;
     "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
     "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
