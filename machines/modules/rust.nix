@@ -25,7 +25,7 @@ in
         };
         user = {
           packages = with pkgs; [
-            rust-bin.stable.latest.default
+            (rust-bin.stable.latest.default.override { extensions = ["rust-src"]; })
             rust-analyzer
             #rust-analyzer-unwrapped
             # rustup rustc cargo

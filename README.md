@@ -13,6 +13,7 @@ the SSH keys from the `secrets` stick with these commands:
 mkdir -p $HOME/.ssh
 cp /Volumes/secrets/ssh/id_* $HOME/.ssh/
 chmod u=rw,g=,o= $HOME/.ssh/id_*
+sudo chmod -R 777 ~/.local/share/nvim
 ```
 
 ## Prepare
