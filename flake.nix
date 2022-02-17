@@ -58,9 +58,9 @@
 
           overlays = [
             (
-            final: prev: {
-              unstable = inputs.nixpkgs-unstable.legacyPackages.${prev.system}; # Make available unstable channel.
-            }
+              final: prev: {
+                unstable = inputs.nixpkgs-unstable.legacyPackages.${prev.system}; # Make available unstable channel.
+              }
             )
             self.overlay
             nur.overlay

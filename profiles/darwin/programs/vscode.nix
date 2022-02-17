@@ -10,10 +10,11 @@
   extensions = with pkgs.vscode-extensions; [
     scalameta.metals # Scala Language Server
     scala-lang.scala # Scala Language
-    #bbenoist.Nix        # Nix
+    bbenoist.nix        # Nix
+    # requires rnix-lsp
+    jnoortheen.nix-ide
     a5huynh.vscode-ron
     antfu.icons-carbon
-    #bbenoist.nix
     brettm12345.nixfmt-vscode
     dracula-theme.theme-dracula
     eamodio.gitlens
@@ -37,7 +38,7 @@
     tomoki1207.pdf
     vadimcn.vscode-lldb
     xaver.clang-format
-    vscodevim.vim
+    #vscodevim.vim
     xaver.clang-format
     yzhang.markdown-all-in-one
     # aaron-bond.better-comments

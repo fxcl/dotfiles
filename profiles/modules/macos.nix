@@ -70,8 +70,8 @@ in
       };
 
       environment.systemPackages = with pkgs; [
-          m-cli
-        ];
+        m-cli
+      ];
 
       homebrew = {
         taps = [
