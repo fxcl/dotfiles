@@ -40,7 +40,7 @@
     vscodevim.vim
     xaver.clang-format
     yzhang.markdown-all-in-one
-   # aaron-bond.better-comments
+    # aaron-bond.better-comments
     foam.foam-vscode
     formulahendry.auto-close-tag
     msjsdiag.debugger-for-chrome
@@ -67,13 +67,13 @@
       version = "1.13.0";
       sha256 = "18h42vfxngix8x22nqslvnzwfvfq5kl35xs6fldi211dzwhw905j";
     }
-  # {
-  #   name = "elm-ls-vscode";
-  #   publisher = "elmTooling";
-  #   version = "2.4.1";
-  #   sha256 = "1idhsrl9w8sc0qk58dvmyyjbmfznk3f4gz2zl6s9ksyz9d06vfrd";
-  # }
- 
+    # {
+    #   name = "elm-ls-vscode";
+    #   publisher = "elmTooling";
+    #   version = "2.4.1";
+    #   sha256 = "1idhsrl9w8sc0qk58dvmyyjbmfznk3f4gz2zl6s9ksyz9d06vfrd";
+    # }
+
     # {
     #   name = "vscode-direnv";
     #   publisher = "cab404";
@@ -151,7 +151,7 @@
       "editor.formatOnSave" = true;
     };
     "nix.enableLanguageServer" = true;
-    "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
+    "nixfmt.path" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
     "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
   };
 
