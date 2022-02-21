@@ -40,7 +40,7 @@
     #./slack.nix
     #./steam.nix
     #./teams.nix
-
+    ./java.nix
   ];
 
   my.modules = {
@@ -59,7 +59,7 @@
     kya.enable = lib.mkDefault true;
     lens.enable = lib.mkDefault true;
     rectangle.enable = lib.mkDefault true;
-
+    java.enable = lib.mkDefault true;
     #authy.enable = lib.mkDefault true;
     #bartender.enable = lib.mkDefault true;
     #blizzard.enable = lib.mkDefault true;
