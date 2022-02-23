@@ -81,9 +81,9 @@ in
     # files easily to my $HOME, but 'home-manager.users.${config.my.username}.home.file.*'
     # is much too long and harder to maintain, so I've made aliases in:
     #
-    #   my.hm.file        ->  home-manager.users.ahmed.home.file
-    #   my.hm.configFile  ->  home-manager.users.ahmed.home.xdg.configFile
-    #   my.hm.dataFile    ->  home-manager.users.ahmed.home.xdg.dataFile
+    #   my.hm.file        ->  home-manager.users.zxfstd.home.file
+    #   my.hm.configFile  ->  home-manager.users.zxfstd.home.xdg.configFile
+    #   my.hm.dataFile    ->  home-manager.users.zxfstd.home.xdg.dataFile
     home-manager.users."${config.my.username}" = {
       xdg = {
         enable = true;

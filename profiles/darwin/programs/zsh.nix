@@ -97,6 +97,12 @@
     #export HOMEBREW_CASK_OPTS=--require-sha
     export HOMEBREW_CASK_OPTS=""
     export HOMEBREW_INSTALL_BADGE="🍵"
+    export XDG_CONFIG_HOME="$HOME"/.config
+    export XDG_DATA_HOME="$XDG_CONFIG_HOME"/local/share
+    export XDG_CACHE_HOME="$XDG_CONFIG_HOME"/cache
+    export XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir"
+
+
     . "/Users/kelvin/.asdf/asdf.sh"
   '';
   oh-my-zsh = {

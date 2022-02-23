@@ -22,11 +22,13 @@ in
           RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup";
           RUSTUP_HOME = "$XDG_DATA_HOME/rustup";
           CARGO_HOME = "$XDG_DATA_HOME/cargo";
+          PATH = [ "$CARGO_HOME/bin" ];
         };
         user = {
           packages = with pkgs; [
             (rust-bin.stable.latest.default.override { extensions = ["rust-src"]; })
             rust-analyzer
+            rls
             #rust-analyzer-unwrapped
             # rustup rustc cargo
           ];

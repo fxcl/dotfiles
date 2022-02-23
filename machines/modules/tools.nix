@@ -3,12 +3,12 @@
 let
   cfg = config.my.modules.tools;
 
-  python = pkgs.python39.withPackages (p: with p; [
-    ansible-core
-    requests
-    passlib
-    # pkgs.ansible-later
-  ]);
+  # python = pkgs.python39.withPackages (p: with p; [
+  #   ansible-core
+  #   requests
+  #   passlib
+  #   # pkgs.ansible-later
+  # ]);
 in
 
 {
@@ -37,7 +37,7 @@ in
           p7zip
           platinum-searcher
           pwgen
-          python
+          #python
           reflex
           rsync
           #s3cmd
