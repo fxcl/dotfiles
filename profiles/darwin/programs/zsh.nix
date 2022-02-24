@@ -92,6 +92,21 @@
     XDG_BIN_HOME = "$HOME/.local/bin";
     XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir";
     #XDG_RUNTIME_DIR="/tmp/xdg-runtime-dir";
+    NPM_CONFIG_USERCONFIG = "$XDG_CONFIG_HOME/npm/config";
+    NPM_CONFIG_TMP = "$XDG_RUNTIME_DIR/npm";
+    NPM_CONFIG_CACHE = "$XDG_CACHE_HOME/npm";
+    NPM_CONFIG_PREFIX = "$XDG_CACHE_HOME/npm";
+    NODE_REPL_HISTORY = "$XDG_CACHE_HOME/node/repl_history";
+
+    IPYTHONDIR = "$XDG_CONFIG_HOME/ipython";
+    PIP_CONFIG_FILE = "$XDG_CONFIG_HOME/pip/pip.conf";
+    PYLINTRC = "$XDG_CONFIG_HOME/pylint/pylintrc";
+    PYTHONSTARTUP = "$XDG_CONFIG_HOME/python/pythonrc";
+    JUPYTER_CONFIG_DIR = "$XDG_CONFIG_HOME/jupyter";
+    PIP_LOG_FILE = "$XDG_DATA_HOME/pip/log";
+    PYLINTHOME = "$XDG_DATA_HOME/pylint";
+    PYTHON_EGG_CACHE = "$XDG_CACHE_HOME/python-eggs";
+
   };
   envExtra = ''
     export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
