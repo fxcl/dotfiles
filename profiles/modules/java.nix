@@ -26,12 +26,13 @@ in
       };
 
       package = mkOption {
+        type = types.package;
         default = pkgs.jdk;
-        defaultText = "pkgs.jdk";
+        defaultText = literalExpression "pkgs.jdk";
         description = ''
           Java package to install. Typical values are pkgs.jdk or pkgs.jre.
         '';
-        type = types.package;
+       
       };
 
 

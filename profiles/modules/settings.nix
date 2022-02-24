@@ -24,7 +24,7 @@ let
     mkOption {
       inherit default;
       type = types.bool;
-      example = true;
+      example = literalExpression "true";
     };
 
 in

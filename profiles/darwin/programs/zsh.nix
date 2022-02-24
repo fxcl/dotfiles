@@ -86,12 +86,12 @@
     CLICOLOR = "1";
     GREP_COLOR = "1;33";
     IGNOREEOF = "1";
-    # XDG_CACHE_HOME = "$HOME/.cache";
-    # XDG_CONFIG_HOME = "$HOME/.config";
-    # XDG_DATA_HOME = "$HOME/.local/share";
-    # #XDG_BIN_HOME = "$HOME/.local/bin";
-    # #XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir";
-    # XDG_RUNTIME_DIR="/tmp/xdg-runtime-dir";
+    XDG_CACHE_HOME = "$HOME/.cache";
+    XDG_CONFIG_HOME = "$HOME/.config";
+    XDG_DATA_HOME = "$HOME/.local/share";
+    XDG_BIN_HOME = "$HOME/.local/bin";
+    XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir";
+    #XDG_RUNTIME_DIR="/tmp/xdg-runtime-dir";
   };
   envExtra = ''
     export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
