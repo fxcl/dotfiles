@@ -22,7 +22,7 @@ in
           RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup";
           RUSTUP_HOME = "$XDG_DATA_HOME/rustup";
           CARGO_HOME = "$XDG_DATA_HOME/cargo";
-          PATH = [ "$CARGO_HOME/bin" ];
+          #PATH = [ "$CARGO_HOME/bin" ];
         };
         user = {
           packages = with pkgs; [
