@@ -23,7 +23,7 @@ in
           NPM_CONFIG_CACHE = "$XDG_CACHE_HOME/npm";
           NPM_CONFIG_PREFIX = "$XDG_CACHE_HOME/npm";
           NODE_REPL_HISTORY = "$XDG_CACHE_HOME/node/repl_history";
-          PATH = [ "$(yarn global bin)" ];
+          #PATH = [ "$(yarn global bin)" ];
         };
         user = {
           packages = with pkgs; [
