@@ -86,6 +86,12 @@
     CLICOLOR = "1";
     GREP_COLOR = "1;33";
     IGNOREEOF = "1";
+    # XDG_CACHE_HOME = "$HOME/.cache";
+    # XDG_CONFIG_HOME = "$HOME/.config";
+    # XDG_DATA_HOME = "$HOME/.local/share";
+    # #XDG_BIN_HOME = "$HOME/.local/bin";
+    # #XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir";
+    # XDG_RUNTIME_DIR="/tmp/xdg-runtime-dir";
   };
   envExtra = ''
     export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
@@ -97,13 +103,6 @@
     #export HOMEBREW_CASK_OPTS=--require-sha
     export HOMEBREW_CASK_OPTS=""
     export HOMEBREW_INSTALL_BADGE="🍵"
-    export XDG_CONFIG_HOME="$HOME"/.config
-    export XDG_DATA_HOME="$XDG_CONFIG_HOME"/local/share
-    export XDG_CACHE_HOME="$XDG_CONFIG_HOME"/cache
-    export XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir"
-
-
-    . "/Users/kelvin/.asdf/asdf.sh"
   '';
   oh-my-zsh = {
     enable = true;
