@@ -38,7 +38,6 @@
     tomoki1207.pdf
     vadimcn.vscode-lldb
     xaver.clang-format
-    #vscodevim.vim
     xaver.clang-format
     yzhang.markdown-all-in-one
     # aaron-bond.better-comments
@@ -102,6 +101,13 @@
     "editor.tabSize" = 2; # Because I prefer smaller tab sizes.
     "editor.formatOnPaste" = false; # Do not mess with my code by default. Will trust automatic rules language by language.
     "editor.formatOnSave" = false; # Do not mess with my code by default. Will trust automatic rules language by language.
+    "editor.acceptSuggestionOnEnter" = "off";
+    "editor.fontSize" = 16;
+    "editor.letterSpacing" = 1.0;
+    "editor.lineHeight" = 22;
+    "editor.renderWhitespace" = "all";
+    "editor.suggestSelection" = "first";
+
     "workbench.editorAssociations" = {
       "*.ipynb" = "jupyter.notebook.ipynb";
     };
@@ -115,13 +121,47 @@
     "workbench.editor.enablePreview" = false; # I often prefer small files therefore I thank the extra space.
     "window.zoomLevel" = 0;
     "workbench.statusBar.feedback.visible" = false;
-    "rust-analyzer.checkOnSave.command" = "clippy";
-    "rust-analyzer.lens.methodReferences" = true;
-    "rust-analyzer.lens.references" = true;
-    "rust-analyzer.trace.extension" = true;
-    "rust-analyzer.cargo.allFeatures" = true;
-    "rust-analyzer.procMacro.enable" = true;
-    "rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+    "workbench.activityBar.visible" = true;
+    "workbench.colorTheme" = "Ayu Dark Bordered";
+    "workbench.iconTheme" = "ayu";
+    "workbench.settings.editor" = "json";
+
+    "window.menuBarVisibility" = "default";
+    "window.titleBarStyle" = "custom";
+
+    "terminal.external.linuxExec" = "konsole";
+    "terminal.integrated.cursorStyle" = "line";
+    "terminal.integrated.cursorBlinking" = true;
+    "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
+    "terminal.integrated.fontSize" = 16;
+    "terminal.integrated.letterSpacing" = 1.0;
+    "terminal.integrated.lineHeight" = 1.2;
+    "terminal.integrated.shell.linux" = "/bin/zsh";
+
+    "telemetry.enableCrashReporter" = false;
+    "telemetry.enableTelemetry" = false;
+    "extensions.ignoreRecommendations" = true;
+    "npm.fetchOnlinePackageInfo" = false;
+
+    "debug.allowBreakpointsEverywhere" = true;
+
+    "bracket-pair-colorizer-2.colorMode" = "Consecutive";
+    "bracket-pair-colorizer-2.forceIterationColorCycle" = true;
+    "bracket-pair-colorizer-2.showBracketsInGutter" = true;
+
+    "evenBetterToml.formatter.alignEntries" = true;
+    "evenBetterToml.formatter.compactArrays" = false;
+    "evenBetterToml.formatter.compactInlineTables" = false;
+    "evenBetterToml.formatter.indentTables" = true;
+    "evenBetterToml.formatter.reorderKeys" = false;
+
+    "gitlens.defaultDateStyle" = "absolute";
+    "gitlens.views.fileHistory.location" = "explorer";
+    "scm.diffDecorations" = "all";
+
+    "vsintellicode.modify.editor.suggestSelection" = "automaticallyOverrodeDefaultValue";
+
+
     # Markdown
     "markdown.preview.scrollEditorWithPreview" = true; # Syncronize editor with preview.
     "markdown.preview.scrollPreviewWithEditor" = true; # Syncronize preview with editor.editor with preview.
@@ -140,6 +180,23 @@
       "editorBracketHighlight.foreground5" = "#7CFC00";
       "editorBracketHighlight.foreground6" = "#FF8C00";
     };
+
+    "rust-analyzer.cargo.allFeatures" = true;
+    "rust-analyzer.checkOnSave.command" = "clippy";
+    "rust-analyzer.debug.engine" = "vadimcn.vscode-lldb";
+    "rust-analyzer.updates.channel" = "stable";
+    "rust-analyzer.lens.methodReferences" = true;
+    "rust-analyzer.lens.references" = true;
+    "rust-analyzer.trace.extension" = true;
+
+    "rust-analyzer.procMacro.enable" = true;
+    "rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+
+    "go.useLanguageServer" = true;
+
+    "python.languageServer" = "Microsoft";
+    "python.showStartPage" = false;
+
     "deno.enable" = true;
     "deno.lint" = true;
     "deno.unstable" = true;
@@ -147,10 +204,7 @@
     "deno.suggest.imports.hosts" = {
       "https://deno.land" = false;
     };
-    "[typescript]" = {
-      "editor.defaultFormatter" = "denoland.vscode-deno";
-      "editor.formatOnSave" = true;
-    };
+
     "yaml.schemaStore.enable" = true;
     "yaml.schemas" = {
       "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.yaml";
@@ -159,6 +213,53 @@
     "nix.enableLanguageServer" = true;
     "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
     "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
+    "[typescript]" = {
+      "editor.defaultFormatter" = "denoland.vscode-deno";
+      "editor.formatOnSave" = true;
+    };
+    "[c]" = {
+      "editor.defaultFormatter" = "ms-vscode.cpptools";
+    };
+
+    "[javascript]" = {
+      "editor.defaultFormatter" = "esbenp.prettier-vscode";
+    };
+
+    "[json]" = {
+      "editor.defaultFormatter" = "esbenp.prettier-vscode";
+    };
+
+    "[jsonc]" = {
+      "editor.defaultFormatter" = "esbenp.prettier-vscode";
+    };
+
+    "[markdown]" = {
+      "editor.defaultFormatter" = "esbenp.prettier-vscode";
+    };
+
+    "[python]" = {
+      "editor.renderFinalNewline" = true;
+      "editor.rulers" = [ 88 ];
+      "editor.trimAutoWhitespace" = true;
+      "files.trimFinalNewlines" = true;
+      "files.trimTrailingWhitespace" = true;
+      "files.insertFinalNewline" = true;
+    };
+
+    "[rust]" = {
+      "editor.defaultFormatter" = "matklad.rust-analyzer";
+      "editor.renderFinalNewline" = true;
+      "editor.rulers" = [ 99 ];
+      "editor.trimAutoWhitespace" = true;
+      "files.trimFinalNewlines" = true;
+      "files.trimTrailingWhitespace" = true;
+      "files.insertFinalNewline" = true;
+    };
+
+    "[shellscript]" = {
+      "editor.tabSize" = 2;
+      "files.eol" = "\n";
+    };
   };
 
   keybindings = [
@@ -169,6 +270,6 @@
     { key = "f14"; command = "workbench.action.quickOpen"; }
     { key = "alt+left"; command = "workbench.action.navigateBack"; }
     { key = "alt+right"; command = "workbench.action.navigateForward"; }
-    { key = "Enter"; command = "rust-analyzer.onEnter"; when = "editorTextFocus && !suggestWidgetVisible && editorLangId == rust"; }
+    #{ key = "Enter"; command = "rust-analyzer.onEnter"; when = "editorTextFocus && !suggestWidgetVisible && editorLangId == rust"; }
   ];
 }

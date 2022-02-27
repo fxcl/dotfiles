@@ -3,11 +3,12 @@ with lib;
 
 stdenv.mkDerivation rec {
   pname = "dockutil";
-  version = "2.0.5";
+  version = "3.0.0b2";
+  versions = "3.0.0-beta.2";
 
   src = fetchurl {
-    url = "https://github.com/kcrawford/dockutil/releases/download/${version}/dockutil-${version}.pkg";
-    sha256 = "sha256-kZ7dOG8SSh25DgcbvkgPvEFGZIVz4fv0kWN41pbeNlw=";
+    url = "https://github.com/kcrawford/dockutil/releases/download/${version}/dockutil-${versions}.pkg";
+    sha256 = "sha256-IaO+sQVqB5niT2xm2COK8N30KYgF5Ak5WGX+PQhwiFk=";
   };
 
   dontBuild = true;
