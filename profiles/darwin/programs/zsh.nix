@@ -90,8 +90,8 @@
     XDG_CONFIG_HOME = "$HOME/.config";
     XDG_DATA_HOME = "$HOME/.local/share";
     XDG_BIN_HOME = "$HOME/.local/bin";
-    XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir";
-    #XDG_RUNTIME_DIR="/tmp/xdg-runtime-dir";
+    #XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir";
+    XDG_RUNTIME_DIR="$HOME/.run";
     NPM_CONFIG_USERCONFIG = "$XDG_CONFIG_HOME/npm/config";
     NPM_CONFIG_TMP = "$XDG_RUNTIME_DIR/npm";
     NPM_CONFIG_CACHE = "$XDG_CACHE_HOME/npm";
@@ -118,6 +118,7 @@
     #export HOMEBREW_CASK_OPTS=--require-sha
     export HOMEBREW_CASK_OPTS=""
     export HOMEBREW_INSTALL_BADGE="🍵"
+    export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/library
   '';
   oh-my-zsh = {
     enable = true;

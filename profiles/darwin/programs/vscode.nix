@@ -165,10 +165,10 @@
     { key = "cmd+g"; command = "workbench.scm.focus"; }
     { key = "cmd+b"; command = "workbench.files.action.focusFilesExplorer"; }
     { key = "cmd+escape"; command = "workbench.action.closeSidebar"; }
-    {
-      key = "Enter";
-      command = "rust-analyzer.onEnter";
-      when = "editorTextFocus && !suggestWidgetVisible && editorLangId == rust";
-    }
+    { key = "f13"; command = "workbench.action.showCommands"; }
+    { key = "f14"; command = "workbench.action.quickOpen"; }
+    { key = "alt+left"; command = "workbench.action.navigateBack"; }
+    { key = "alt+right"; command = "workbench.action.navigateForward"; }
+    { key = "Enter"; command = "rust-analyzer.onEnter"; when = "editorTextFocus && !suggestWidgetVisible && editorLangId == rust"; }
   ];
 }

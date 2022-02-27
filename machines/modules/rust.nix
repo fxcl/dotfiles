@@ -27,6 +27,7 @@ in
         user = {
           packages = with pkgs; [
             (rust-bin.stable.latest.default.override { extensions = ["rust-src"]; })
+            carnix
             rust-analyzer
             rls
             #rust-analyzer-unwrapped

@@ -11,7 +11,7 @@
     ./sudoers.nix
     ./tools.nix
     ./rust.nix
-    #./cc.nix
+    ./cc.nix
     ./python.nix
     ./node.nix
   ];
@@ -25,7 +25,7 @@
     tools.enable = true;
     kube.enable = true;
     rust.enable = true;
-    #cc.enable = true;
+    cc.enable = true;
     python.enable = true;
     node.enable = true;
   };
