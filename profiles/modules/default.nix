@@ -36,6 +36,7 @@
     #./ngrok.nix
     #./owncloud.nix
     ./rectangle.nix
+    ./mpv.nix
     #./signal.nix
     #./slack.nix
     #./steam.nix
@@ -62,6 +63,7 @@
     kya.enable = lib.mkDefault true;
     lens.enable = lib.mkDefault true;
     rectangle.enable = lib.mkDefault true;
+    mpv.enable = lib.mkDefault true;
     #authy.enable = lib.mkDefault true;
     #bartender.enable = lib.mkDefault true;
     #blizzard.enable = lib.mkDefault true;
