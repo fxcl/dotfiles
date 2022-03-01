@@ -166,7 +166,6 @@ in
       dircolors = import ./programs/dircolors.nix { inherit pkgs; };
       direnv = import ./programs/direnv.nix { inherit pkgs; };
       fzf = import ./programs/fzf.nix { inherit pkgs; };
-      go = import ./programs/go.nix { inherit pkgs; };
       lsd = import ./programs/lsd.nix { inherit pkgs; };
       neovim = import ./programs/neovim.nix { inherit pkgs; };
       octant = import ./programs/octant.nix { inherit pkgs; };

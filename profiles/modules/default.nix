@@ -41,6 +41,9 @@
     #./steam.nix
     #./teams.nix
     ./java.nix
+    ./node.nix
+    ./rust.nix
+    ./go.nix
   ];
 
   my.modules = {
@@ -59,7 +62,6 @@
     kya.enable = lib.mkDefault true;
     lens.enable = lib.mkDefault true;
     rectangle.enable = lib.mkDefault true;
-    java.enable = lib.mkDefault true;
     #authy.enable = lib.mkDefault true;
     #bartender.enable = lib.mkDefault true;
     #blizzard.enable = lib.mkDefault true;
@@ -81,5 +83,9 @@
     #slack.enable = lib.mkDefault true;
     #steam.enable = lib.mkDefault true;
     #teams.enable = lib.mkDefault true;
+    java.enable = lib.mkDefault true;
+    node.enable = lib.mkDefault true;
+    rust.enable = lib.mkDefault true;
+    go.enable = lib.mkDefault true;
   };
 }

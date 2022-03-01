@@ -20,11 +20,21 @@ in
         env = {
           #PATH = [ "$(yarn global bin)" ];
         };
+        # TODO gatsby-cli
+        # TODO prettier-eslint-cli
         user = {
           packages = with pkgs; [
             nodejs
             yarn
             nodePackages.npm-check-updates
+            nodePackages.create-react-app
+            nodePackages.eslint
+            nodePackages.eslint_d
+            nodePackages.javascript-typescript-langserver
+            nodePackages.prettier
+            nodePackages.typescript
+            nodePackages.typescript-language-server
+            nodePackages.webpack-cli
           ];
         };
         hm = {

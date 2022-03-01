@@ -17,19 +17,17 @@ in
   config = with lib;
     mkIf cfg.enable {
       my = {
-        user = {
-          packages = with pkgs; [
-            cmake # Yo dawg, I heard you like Make.
-            #clang # A C compiler frontend for LLVM.
-            #clang-tools
-            #lldb
-            #ccls # Language server
-            #      gcc # A compiler toolchain.
-            gdb # GNU Debugger.
-            #tinycc # A tiny c compiler
-            #llvmPackages.libcxx # When GCC has become too bloated for someone's taste.
-          ];
-        };
+        user.packages = with pkgs; [
+          cmake # Yo dawg, I heard you like Make.
+          #clang # A C compiler frontend for LLVM.
+          #clang-tools
+          #lldb
+          #ccls # Language server
+          #      gcc # A compiler toolchain.
+          gdb # GNU Debugger.
+          #tinycc # A tiny c compiler
+          #llvmPackages.libcxx # When GCC has become too bloated for someone's taste.
+        ];
       };
     };
 }

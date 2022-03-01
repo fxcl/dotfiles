@@ -10,10 +10,9 @@
     ./shells.nix
     ./sudoers.nix
     ./tools.nix
-    ./rust.nix
     ./cc.nix
     ./python.nix
-    ./node.nix
+    
   ];
 
   my.modules = {
@@ -27,6 +26,5 @@
     rust.enable = true;
     cc.enable = true;
     python.enable = true;
-    node.enable = true;
   };
 }

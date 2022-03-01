@@ -40,6 +40,8 @@
     commit = "git commit";
     push = "git push";
     pull = "git pull";
+    
+    mvnag = "mvn archetype:generate";
 
     k = "kubectl";
     kaf = "kubectl apply -f";
@@ -106,7 +108,9 @@
     PIP_LOG_FILE = "$XDG_DATA_HOME/pip/log";
     PYLINTHOME = "$XDG_DATA_HOME/pylint";
     PYTHON_EGG_CACHE = "$XDG_CACHE_HOME/python-eggs";
-
+    #RUSTUP_HOME = "$XDG_DATA_HOME/rustup";
+    #CARGO_HOME = "$XDG_DATA_HOME/cargo";
+    #PATH = [ "$CARGO_HOME/bin" ];
   };
   envExtra = ''
     export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"

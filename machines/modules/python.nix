@@ -18,7 +18,6 @@ in
     mkIf cfg.enable {
       my = {
         env = {
-         
         };
         user = {
           packages = with pkgs; [
