@@ -132,7 +132,7 @@
     "terminal.external.linuxExec" = "konsole";
     "terminal.integrated.cursorStyle" = "line";
     "terminal.integrated.cursorBlinking" = true;
-    "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
+    "terminal.integrated.fontFamily" = "Fira Code";
     "terminal.integrated.fontSize" = 16;
     "terminal.integrated.letterSpacing" = 1.0;
     "terminal.integrated.lineHeight" = 1.2;
