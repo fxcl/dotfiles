@@ -35,6 +35,7 @@ in
             nodePackages.typescript
             nodePackages.typescript-language-server
             nodePackages.webpack-cli
+            nodePackages."@vue/cli"
           ];
         };
         hm = {

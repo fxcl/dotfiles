@@ -28,6 +28,10 @@ in
             python39Packages.setuptools
             python39Packages.pylint # Linter
             python39Packages.poetry # Better package manager
+            python39Packages.python-lsp-server
+            python39Packages.virtualenv
+            python39Packages.flake8
+            python39Packages.black
           ];
         };
 
