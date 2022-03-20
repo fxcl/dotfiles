@@ -4,6 +4,7 @@
   imports = [
     ./settings.nix
     ./homebrew.nix
+
     ./fonts.nix
     ./kube.nix
     ./nix.nix

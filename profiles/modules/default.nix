@@ -53,7 +53,7 @@
     finder.enable = lib.mkDefault false;
     iterm.enable = lib.mkDefault true;
     chrome.enable = lib.mkDefault true;
-    acrobat.enable = lib.mkDefault true;
+    acrobat.enable = lib.mkDefault false;
     raycast.enable = lib.mkDefault true;
     appcleaner.enable = lib.mkDefault true;
     etcher.enable = lib.mkDefault true;
