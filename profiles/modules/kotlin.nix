@@ -20,9 +20,9 @@ in
         user = {
           packages = with pkgs; [
             kotlin
+            ktlint
             gradle
             my.kotlin-language-server
-            ktlint
           ];
         };
       };

@@ -40,7 +40,7 @@
     commit = "git commit";
     push = "git push";
     pull = "git pull";
-    
+
     mvnag = "mvn archetype:generate";
 
     k = "kubectl";
@@ -78,8 +78,8 @@
   };
 
   sessionVariables = {
+    LESS = "--RAW-CONTROL-CHARS --quit-if-one-screen";
     GITHUB_TOKEN = "";
-
     CLOUDFLARE_EMAIL = "me@gnux.cn";
     CLOUDFLARE_API_KEY = "";
 
@@ -94,6 +94,7 @@
     XDG_BIN_HOME = "$HOME/.local/bin";
     #XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir";
     #XDG_RUNTIME_DIR="$HOME/.run";
+
     NPM_CONFIG_USERCONFIG = "$XDG_CONFIG_HOME/npm/config";
     NPM_CONFIG_TMP = "$XDG_RUNTIME_DIR/npm";
     NPM_CONFIG_CACHE = "$XDG_CACHE_HOME/npm";
@@ -108,9 +109,12 @@
     PIP_LOG_FILE = "$XDG_DATA_HOME/pip/log";
     PYLINTHOME = "$XDG_DATA_HOME/pylint";
     PYTHON_EGG_CACHE = "$XDG_CACHE_HOME/python-eggs";
-    #RUSTUP_HOME = "$XDG_DATA_HOME/rustup";
-    #CARGO_HOME = "$XDG_DATA_HOME/cargo";
+    RUSTUP_HOME = "$XDG_DATA_HOME/rustup";
+    CARGO_HOME = "$XDG_DATA_HOME/cargo";
     #PATH = [ "$CARGO_HOME/bin" ];
+
+    M2_HOME = "$XDG_CACHE_HOME/maven";
+    NIX_PAGER = "less --RAW-CONTROL-CHARS --quit-if-one-screen";
   };
   envExtra = ''
     export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"

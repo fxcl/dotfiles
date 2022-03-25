@@ -17,6 +17,10 @@ in
   config = with lib;
     mkIf cfg.enable {
       my = {
+        env = {
+          GOPATH = "/Users/kelvin/workspace/go";
+          GOBIN = "/Users/kelvin/workspace/go/bin";
+        };
         user.packages = with pkgs; [
           go_1_17 gopls gore
         ];
@@ -27,6 +31,5 @@ in
 
         # add delve to system packages
       };
-
     };
 }
