@@ -25,7 +25,7 @@ in
           jdk11
           gradle
           maven
-          vagrant
+          #vagrant
         ];
         # env = {
         #   "_JAVA_OPTIONS" =
