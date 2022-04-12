@@ -45,6 +45,7 @@
     ./node.nix
     ./rust.nix
     ./go.nix
+    ./mysql.nix
   ];
 
   my.modules = {
@@ -89,5 +90,6 @@
     node.enable = lib.mkDefault true;
     rust.enable = lib.mkDefault true;
     go.enable = lib.mkDefault true;
+    mysql.enable = lib.mkDefault true;
   };
 }

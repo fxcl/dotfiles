@@ -75,7 +75,10 @@ in
 
       homebrew = {
         taps = [
+          "homebrew/bundle"
           "homebrew/cask"
+          "homebrew/core"
+          "homebrew/services"
         ];
 
         casks = [
