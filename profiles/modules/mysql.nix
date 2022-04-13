@@ -16,7 +16,7 @@ in
     mkIf cfg.enable {
       homebrew = {
         extraConfig = ''
-          brew "mysql@8.0", restart_service: true, link: true, conflicts_with: ['mysql']
+          brew "mysql", restart_service: true, link: true, conflicts_with: ['mysql']
           brew "redis", restart_service: true
           '';
       };
