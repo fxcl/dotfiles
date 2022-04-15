@@ -67,9 +67,9 @@ in
           gping # ping with a graph
           shfmt
         ];
-        shellInit = ''
-          test -e ${pkgs.jdk11}/nix-support/setup-hook && source ${pkgs.jdk11}/nix-support/setup-hook
-        '';
+        # shellInit = ''
+        #   test -e ${pkgs.graalvm17-ce}/nix-support/setup-hook && source ${pkgs.graalvm17-ce}/nix-support/setup-hook
+        # '';
       };
     };
 }

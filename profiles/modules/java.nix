@@ -18,16 +18,18 @@ in
     mkIf cfg.enable {
       my = {
         user.packages = with pkgs; [
-          jdk11
+          graalvm17-ce
           gradle
           maven
+          java-language-server
+          # replitPackages.jdt-language-server
+          # replitPackages.java-debug
           #vagrant
         ];
-        # env = {
-        #   "_JAVA_OPTIONS" =
-        #     ''-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"'';
-        # };
+      environment = {
+        shellInit =  ''
+          test -e ${pkgs.graalvm17-ce}/nix-support/setup-hook && source ${pkgs.graalvm17-ce}/nix-support/setup-hook
+        '';
       };
-
     };
 }
