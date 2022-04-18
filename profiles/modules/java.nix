@@ -26,10 +26,21 @@ in
           # replitPackages.java-debug
           #vagrant
         ];
+      };
+
       environment = {
-        shellInit =  ''
+        systemPackages = [
+          pkgs.intellij-idea
+        ];
+        shellInit = ''
           test -e ${pkgs.graalvm17-ce}/nix-support/setup-hook && source ${pkgs.graalvm17-ce}/nix-support/setup-hook
         '';
+        variables = {
+          LANG = "en_US.UTF-8";
+          LC_TIME = "en_GB.UTF-8";
+          JAVA_HOME = ''${pkgs.graalvm17-ce.home}'';
+          JAVA_CPPFLAGS = ''-I${pkgs.graalvm17-ce}/include/'';
+        };
       };
     };
 }
