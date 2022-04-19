@@ -3,7 +3,7 @@ with lib;
 
 stdenv.mkDerivation rec {
   pname = "intellij-idea";
-  version = "2020.3";
+  version = "2021.2";
 
   buildInputs = [ undmg];
   sourceRoot = ".";
@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   src = fetchurl {
     name = "ideaIU-${version}.dmg";
     url = "https://download-cdn.jetbrains.com/idea/ideaIU-${version}.dmg";
-    sha256 = "1pgjsk5hgy1vmn1cbamjlg6rwllhwpd4pbdr4plsnpzxpvvh6a0r";
+    sha256 = "wj7p9oq71QPlAZx0XMW/KjCPgejCu9IQzPr7wRJMHlk=";
   };
 
   meta = {

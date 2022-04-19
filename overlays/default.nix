@@ -5,5 +5,5 @@ self: super:
   # ansible-later = super.callPackage ./ansible-later {};
   dockutil = super.callPackage ./dockutil { };
   mysides = super.callPackage ./mysides { };
-  intellij-idea = super.callPackage ./intellij { };
+  idea-community-app = super.callPackage ./intellij { };
 }
