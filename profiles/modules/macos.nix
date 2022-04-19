@@ -67,8 +67,6 @@ in
       environment.variables = {
         LANG = "en_US.UTF-8";
         LC_TIME = "en_GB.UTF-8";
-        JAVA_HOME = ''${pkgs.graalvm17-ce}'';
-        JAVA_CPPFLAGS=''-I${pkgs.graalvm17-ce}/include/'';
       };
 
       environment.systemPackages = with pkgs; [
