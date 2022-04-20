@@ -37,6 +37,7 @@
     #./owncloud.nix
     ./rectangle.nix
     ./mpv.nix
+    ./firefox.nix
     #./signal.nix
     #./slack.nix
     #./steam.nix
@@ -86,6 +87,7 @@
     #slack.enable = lib.mkDefault true;
     #steam.enable = lib.mkDefault true;
     #teams.enable = lib.mkDefault true;
+    firefox.enable = lib.mkDefault true;
     java.enable = lib.mkDefault true;
     node.enable = lib.mkDefault true;
     rust.enable = lib.mkDefault true;

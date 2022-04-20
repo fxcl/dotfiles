@@ -22,8 +22,6 @@ in
           gradle
           maven
           java-language-server
-          # replitPackages.jdt-language-server
-          # replitPackages.java-debug
           #vagrant
         ];
       };

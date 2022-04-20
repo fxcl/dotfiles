@@ -1,5 +1,4 @@
 { lib, stdenv, fetchurl, undmg }:
-with lib;
 
 stdenv.mkDerivation rec {
   pname = "Firefox";
@@ -9,9 +8,9 @@ stdenv.mkDerivation rec {
   sourceRoot = ".";
   phases = [ "unpackPhase" "installPhase" ];
   installPhase = ''
-      mkdir -p "$out/Applications"
-      cp -r Firefox.app "$out/Applications/Firefox.app"
-    '';
+    mkdir -p "$out/Applications"
+    cp -r Firefox.app "$out/Applications/Firefox.app"
+  '';
 
   src = fetchurl {
     name = "Firefox-${version}.dmg";
@@ -22,7 +21,9 @@ stdenv.mkDerivation rec {
   meta = with lib; {
     description = "The Firefox web browser";
     homepage = "https://www.mozilla.org/en-GB/firefox";
-    maintainers = [ maintainers.cmacrae ];
+    license = licenses.mpl20;
+    maintainers = [];
     platforms = platforms.darwin;
   };
+
 }

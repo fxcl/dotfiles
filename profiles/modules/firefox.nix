@@ -45,3 +45,33 @@
 #       };
 #     };
 # }
+{ pkgs, lib, config, options, ... }:
+
+let
+  cfg = config.my.modules.firefox;
+
+in
+
+{
+  options = with lib; {
+    my.modules.firefox = {
+      enable = mkEnableOption ''
+        Whether to enable firefox module
+      '';
+    };
+  };
+
+  config = with lib;
+    mkIf cfg.enable {
+      # my = {
+      #   user.packages = with pkgs; [
+      #     firefox-mac
+      #   ];
+      # };
+      environment = {
+        systemPackages = [
+          pkgs.firefox-mac
+        ];
+      };
+    };
+}
