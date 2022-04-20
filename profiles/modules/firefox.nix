@@ -15,21 +15,22 @@ in
 
   config = with lib;
     mkIf cfg.enable {
+      environment = {
+        systemPackages = [
+          pkgs.firefox-mac
+        ];
+      };
+
       my = {
         user.packages = with pkgs; [
           firefox-mac
         ];
         # Wire up Tridactyl native for macOS.
         hm.file."Library/Application Support/Mozilla/NativeMessagingHosts" = {
-        source =
-          "${pkgs.tridactyl-native}/lib/mozilla/native-messaging-hosts";
+          source =
+            "${pkgs.tridactyl-native}/lib/mozilla/native-messaging-hosts";
           recursive = true;
         };
-      };
-      environment = {
-        systemPackages = [
-          pkgs.firefox-mac
-        ];
       };
     };
 }
