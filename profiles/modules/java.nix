@@ -30,7 +30,7 @@ in
 
       environment = {
         systemPackages = [
-          pkgs.idea-community-app
+          pkgs.intellij-idea-ce
         ];
         shellInit = ''
           test -e ${pkgs.graalvm17-ce}/nix-support/setup-hook && source ${pkgs.graalvm17-ce}/nix-support/setup-hook

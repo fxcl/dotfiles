@@ -2,27 +2,27 @@
 with lib;
 
 stdenv.mkDerivation rec {
-  pname = "intellij-idea";
-  version = "2021.2";
+  pname = "intellij-idea-ce";
+  version = "2021.3.2";
 
-  buildInputs = [ undmg];
+  buildInputs = [ undmg ];
   sourceRoot = ".";
   phases = [ "unpackPhase" "installPhase" ];
   installPhase = ''
-    mkdir -p "$out/Applications"
-    cp -r IntelliJ\ IDEA.app "$out/Applications/IntelliJ IDEA.app"
+    mkdir -p $out/Applications
+    cp -r "IntelliJ IDEA CE.app" $out/Applications/IDEA.app
   '';
 
   src = fetchurl {
-    name = "ideaIU-${version}.dmg";
-    url = "https://download-cdn.jetbrains.com/idea/ideaIU-${version}.dmg";
-    sha256 = "wj7p9oq71QPlAZx0XMW/KjCPgejCu9IQzPr7wRJMHlk=";
+    name = "intellij-idea-ce-${version}.dmg";
+    url = "https://download.jetbrains.com/idea/ideaIC-${version}.dmg";
+    sha256 = "1sfkzv4hgg6qq859hklxwmcmpjlfs09mwycg73mb1bpdpgicxn10";
   };
 
-  meta = {
-    description = "Jetbrains";
+  meta =  {
+    description = "Intellij IDEA Community Edition";
     homepage = "https://www.jetbrains.com/idea/";
-    maintainers = [ maintainers.zxfstd ];
+    maintainers = [];
     platforms = platforms.darwin;
   };
 }
