@@ -19,7 +19,6 @@ in
       homebrew = {
         casks = [
           "adobe-acrobat-reader"
-          "lrzsz"
         ];
       };
     };

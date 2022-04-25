@@ -18,6 +18,7 @@ in
         extraConfig = ''
           brew "mysql", restart_service: true, link: true, conflicts_with: ['mysql']
           brew "redis", restart_service: true
+          brew "lrzsz"
           '';
       };
     };
