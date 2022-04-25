@@ -103,6 +103,10 @@ in
             path = "/Users/${username}/ownCloud";
             alias = "ownCloud";
           }
+          {
+            path = "/Users/${username}/workspace";
+            alias = "workspace";
+          }
         ];
       };
 
