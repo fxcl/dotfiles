@@ -12,9 +12,12 @@ nix --extra-experimental-features "nix-command flakes" flake update
 success 'Nix Flake - Complete!'
 
 case "$(uname -s)" in
-    Darwin)     info 'Homebrew - Upgrading...'
-                brew upgrade && brew update
-                success 'Homebrew - Complete!'
-                ;;
-   *)           ;;
+Darwin)
+    info "brew pin mysql..."
+    brew unpin mysql && brew pin mysql
+    info 'Homebrew - Upgrading...'
+    brew upgrade && brew update
+    success 'Homebrew - Complete!'
+    ;;
+*) ;;
 esac

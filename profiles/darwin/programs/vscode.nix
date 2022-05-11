@@ -98,6 +98,7 @@
     "update.mode" = "none";
     "editor.minimap.enabled" = false;
     "editor.fontLigatures" = true;
+    "editor.fontFamily" = "Mensch, Menlo, Monaco, 'Courier New', monospace";
     "editor.tabSize" = 2; # Because I prefer smaller tab sizes.
     "editor.formatOnPaste" = false; # Do not mess with my code by default. Will trust automatic rules language by language.
     "editor.formatOnSave" = false; # Do not mess with my code by default. Will trust automatic rules language by language.
