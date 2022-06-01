@@ -27,6 +27,7 @@ in
           golangci-lint
           gopls
           go-outline
+          delve
         ];
         #goPath = "Golang";
         #goBin = "Golang/bin";
