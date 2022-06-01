@@ -22,7 +22,11 @@ in
           GOBIN = "/Users/kelvin/workspace/go/bin";
         };
         user.packages = with pkgs; [
-          go_1_17 gopls gore
+          go_1_18 gopls gore
+          gotools
+          golangci-lint
+          gopls
+          go-outline
         ];
         #goPath = "Golang";
         #goBin = "Golang/bin";
