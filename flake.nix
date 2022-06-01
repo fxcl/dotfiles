@@ -2,7 +2,7 @@
   description = "NixOS and Darwin configurations";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/21.11"; # Default to stable for most things.
+    nixpkgs.url = "github:nixos/nixpkgs/22.05"; # Default to stable for most things.
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable"; # Unstable for some packages.
 
     nur.url = "github:nix-community/NUR";
@@ -16,7 +16,7 @@
     agenix.inputs.nixpkgs.follows = "nixpkgs";
 
     # Home inputs
-    homemanager.url = "github:nix-community/home-manager/release-21.11";
+    homemanager.url = "github:nix-community/home-manager/release-22.05";
     homemanager.inputs.nixpkgs.follows = "nixpkgs"; # Ensure versions are consistent.
 
     rust-overlay = {
