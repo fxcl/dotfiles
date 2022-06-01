@@ -24,7 +24,6 @@ in
         user.packages = with pkgs; [
           go_1_18 gopls gore
           gotools
-          golangci-lint
           gopls
           go-outline
           delve
