@@ -25,6 +25,9 @@ in
           packages = with pkgs; [
             (rust-bin.stable.latest.default.override { extensions = ["rust-src"]; })
             carnix
+            #cargo-bloat
+            #cargo-watch
+            #evcxr
             rust-analyzer
             rls
             #rust-analyzer-unwrapped

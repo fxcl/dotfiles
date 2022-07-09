@@ -18,14 +18,13 @@ in
     mkIf cfg.enable {
       my = {
         env = {
-          NODE_HOME="${pkgs.nodejs-18_x}";
+          NODE_HOME = "${pkgs.nodejs-18_x}";
         };
         # TODO gatsby-cli
         # TODO prettier-eslint-cli
         user = {
           packages = with pkgs; [
             nodejs-18_x
-            yarn
             nodePackages.npm-check-updates
             nodePackages.create-react-app
             nodePackages.eslint
@@ -36,6 +35,21 @@ in
             nodePackages.typescript-language-server
             nodePackages.webpack-cli
             nodePackages."@vue/cli"
+            nodePackages.js-beautify
+            #nodePackages.lerna
+            #nodePackages.prisma
+            nodePackages."@prisma/language-server"
+            nodePackages.vscode-langservers-extracted
+            # nodePackages.bash-language-server
+            # nodePackages.dockerfile-language-server-nodejs
+            # nodePackages.yaml-language-server
+            # nodePackages.vls
+            # nodePackages.vim-language-server
+            # nodePackages.pyright
+            # nodePackages.svelte-language-server
+            # haskellPackages.dhall-lsp-server
+            # sumneko-lua-language-server
+            yarn
           ];
         };
         hm = {

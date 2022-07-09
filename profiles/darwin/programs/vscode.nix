@@ -182,6 +182,25 @@
       "editorBracketHighlight.foreground6" = "#FF8C00";
     };
 
+    "files.exclude" = {
+      "**/result" = true;
+      "**/.git" = true;
+      "**/.svn" = true;
+      "**/.hg" = true;
+      "**/CVS" = true;
+      "**/.DS_Store" = true;
+      "**/node_modules" = true;
+      "**/shims-tsx.d.ts" = true;
+      "**/shims-vue.d.ts" = true;
+      "**/.browserslistrc" = true;
+      "**/.eslintrc.js" = true;
+      "**/.gitignore" = true;
+      "**/babel.config.js" = true;
+      "**/package-lock.json" = true;
+      "**/README.md" = true;
+      "**/tsconfig.json" = true;
+    };
+
     "rust-analyzer.cargo.allFeatures" = true;
     "rust-analyzer.checkOnSave.command" = "clippy";
     "rust-analyzer.debug.engine" = "vadimcn.vscode-lldb";

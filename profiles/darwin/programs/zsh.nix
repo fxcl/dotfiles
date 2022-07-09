@@ -115,7 +115,6 @@
     PYTHON_EGG_CACHE = "$XDG_CACHE_HOME/python-eggs";
     RUSTUP_HOME = "$XDG_DATA_HOME/rustup";
     CARGO_HOME = "$XDG_DATA_HOME/cargo";
-    #PATH = [ "$CARGO_HOME/bin" ];
 
     M2_HOME = "$XDG_CACHE_HOME/maven";
     NIX_PAGER = "less --RAW-CONTROL-CHARS --quit-if-one-screen";
