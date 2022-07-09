@@ -20,9 +20,12 @@ in
         env = {
           GOPATH = "/Users/kelvin/workspace/go";
           GOBIN = "/Users/kelvin/workspace/go/bin";
+          GOROOT = "${pkgs.go_1_18}/share/go";
         };
         user.packages = with pkgs; [
-          go_1_18 gopls gore
+          go_1_18
+          gopls
+          gore
           gotools
           gopls
           go-outline

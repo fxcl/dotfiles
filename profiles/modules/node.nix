@@ -18,13 +18,13 @@ in
     mkIf cfg.enable {
       my = {
         env = {
-          #PATH = [ "$(yarn global bin)" ];
+          NODE_HOME="${pkgs.nodejs-18_x}";
         };
         # TODO gatsby-cli
         # TODO prettier-eslint-cli
         user = {
           packages = with pkgs; [
-            nodejs
+            nodejs-18_x
             yarn
             nodePackages.npm-check-updates
             nodePackages.create-react-app
