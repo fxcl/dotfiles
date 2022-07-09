@@ -69,8 +69,12 @@
               }
             )
             self.overlay
+
+            # Access to NUR.
             nur.overlay
-            inputs.rust-overlay.overlay
+            
+            # Rust overlay for them ease of setting up Rust toolchains.
+            inputs.rust-overlay.overlays.default
           ];
         };
       };
