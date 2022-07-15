@@ -17,8 +17,7 @@ in
   config = with lib;
     mkIf cfg.enable {
       my = {
-        env = {
-        };
+        env = { };
         user = {
           packages = with pkgs; [
             python39

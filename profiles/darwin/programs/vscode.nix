@@ -199,6 +199,7 @@
       "**/package-lock.json" = true;
       "**/README.md" = true;
       "**/tsconfig.json" = true;
+      "**/.github" = true;
     };
 
     "rust-analyzer.cargo.allFeatures" = true;

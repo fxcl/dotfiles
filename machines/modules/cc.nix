@@ -23,7 +23,7 @@ in
           #clang-tools
           #lldb
           #ccls # Language server
-          #      gcc # A compiler toolchain.
+          #gcc # A compiler toolchain.
           gdb # GNU Debugger.
           #tinycc # A tiny c compiler
           #llvmPackages.libcxx # When GCC has become too bloated for someone's taste.

@@ -16,7 +16,7 @@ Darwin)
     info "brew pin mysql..."
     brew unpin mysql && brew pin mysql
     info 'Homebrew - Upgrading...'
-    brew upgrade && brew update
+    brew upgrade --ignore-pinned && brew update
     success 'Homebrew - Complete!'
     ;;
 *) ;;

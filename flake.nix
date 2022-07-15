@@ -74,7 +74,7 @@
             nur.overlay
             
             # Rust overlay for them ease of setting up Rust toolchains.
-            inputs.rust-overlay.overlay
+            inputs.rust-overlay.overlays.default
           ];
         };
       };

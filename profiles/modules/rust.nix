@@ -26,12 +26,19 @@ in
             (rust-bin.stable.latest.default.override { extensions = ["rust-src"]; })
             carnix
             #cargo-bloat
-            #cargo-watch
-            #evcxr
             rust-analyzer
             rls
             #rust-analyzer-unwrapped
             # rustup rustc cargo
+            
+            #cargo-watch
+            #evcxr
+            # cargo-msrv
+            # cargo-deny
+            # cargo-expand
+            # cargo-bloat
+            # cargo-fuzz
+            # gitlint
           ];
         };
       };

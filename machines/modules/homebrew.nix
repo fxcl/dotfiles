@@ -20,8 +20,6 @@ in
         enable = true;
         autoUpdate = true;
         cleanup = "zap";
-        # brewfile = true;
-        # noLock = true;
       };
     };
 }

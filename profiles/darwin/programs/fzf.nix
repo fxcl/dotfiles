@@ -6,8 +6,8 @@ in
 {
   enable = true;
   enableZshIntegration = true;
-  #defaultOptions = [ "--layout=reverse" "--inline-info" "--color=bg+:0" ];
   defaultCommand = "fd --type f --hidden --follow --exclude .git --color=always";
+  #defaultOptions = [ "--layout=reverse" "--inline-info" "--color=bg+:0" ];
   defaultOptions = [
     "--multi"
     "--ansi"

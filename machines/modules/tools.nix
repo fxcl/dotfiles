@@ -26,7 +26,7 @@ in
         systemPackages = with pkgs; [
           git
           git-chglog
-          gnumake
+          #gnumake
           gomplate
           hub
           ipcalc
@@ -68,9 +68,6 @@ in
           shfmt
           toilet
         ];
-        # shellInit = ''
-        #   test -e ${pkgs.graalvm17-ce}/nix-support/setup-hook && source ${pkgs.graalvm17-ce}/nix-support/setup-hook
-        # '';
       };
     };
 }
