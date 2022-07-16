@@ -96,7 +96,7 @@ clone_default_repos() {
     info 'Cloning Repos - dotfiles...'
     # Unfortunately, can't create the hidden folder directly.
     tmp=$(mktemp -d)
-    git clone https://github.com/zxfstd/dotfiles.git "$tmp" && mv "$tmp" "$DOTFILES_LOCATION"
+    git clone https://github.com/fxcl/dotfiles.git "$tmp" && mv "$tmp" "$DOTFILES_LOCATION"
   fi
   success 'Cloning Repos - finished!'
 }

@@ -1,6 +1,6 @@
-# workstation
+# Nix Configs for Darwin
 
-[![Build](https://github.com/zxfstd/dotfiles/actions/workflows/build.yml/badge.svg)](https://github.com/zxfstd/dotfiles/actions/workflows/build.yml)
+[![Build](https://github.com/fxcl/dotfiles/actions/workflows/build.yml/badge.svg)](https://github.com/fxcl/dotfiles/actions/workflows/build.yml)
 
 Provisioning for my Macbook's based on [Nix][nix].
 
@@ -57,7 +57,7 @@ nix \
 
 ./result/sw/bin/darwin-rebuild switch \
     --flake .\#tony
-```    
+```
 ### Updates
 
 If the repository had been cloned you could just execute `make switch`,
@@ -73,7 +73,7 @@ local:
 ```console
 darwin-rebuild switch \
   --flake .\#tony
-```    
+```
 ## Hathor
 
 ### Bootstrap
@@ -114,7 +114,7 @@ Fork -> Patch -> Push -> Pull Request
 
 ## Authors
 
--   [Zxfstd](https://github.com/zxfstd)
+-   [Zxfstd](https://github.com/fxcl)
 
 ## License
 
@@ -123,7 +123,7 @@ Apache-2.0
 ## Copyright
 
 ```console
-Copyright (c) 2021 ZXFTech <me@zxf.me>
+Copyright (c) 2014 ZXFTech <me@zxf.me>
 ```
 
 [nix]: https://nixos.org/manual/nix/stable/
