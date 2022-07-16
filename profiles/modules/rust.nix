@@ -25,11 +25,10 @@ in
           packages = with pkgs; [
             (rust-bin.stable.latest.default.override { extensions = [ "rust-src" ]; })
             carnix
-            #cargo-bloat
-
             rust-analyzer
             rls
 
+            #cargo-bloat
             #rust-analyzer-unwrapped
             # rustup rustc cargo
             #cargo-watch
@@ -43,7 +42,7 @@ in
 
             (writeScriptBin "rust-doc" ''
               #! ${stdenv.shell} -e
-              exec firefox "${rustc.doc}/share/doc/rust/html/index.html"
+              exec ${pkgs.firefox-mac}/Applications/Firefox.app/Contents/MacOS/firefox "${rustc.doc}/share/doc/rust/html/index.html"
             '')
           ];
         };
