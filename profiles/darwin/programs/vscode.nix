@@ -30,6 +30,7 @@
     #ms-azuretools.vscode-docker
     #ms-kubernetes-tools.vscode-kubernetes-tools
     #ms-python.vscode-pylance
+    ms-python.python
     #ms-vscode.cpptools
     redhat.vscode-yaml
     serayuzgur.crates
@@ -40,7 +41,7 @@
     xaver.clang-format
     xaver.clang-format
     yzhang.markdown-all-in-one
-    # aaron-bond.better-comments
+    #aaron-bond.better-comments
     foam.foam-vscode
     formulahendry.auto-close-tag
     msjsdiag.debugger-for-chrome
@@ -48,6 +49,14 @@
     shardulm94.trailing-spaces
     golang.go
     hashicorp.terraform
+
+    dbaeumer.vscode-eslint
+    editorconfig.editorconfig
+    james-yu.latex-workshop
+    ms-vscode-remote.remote-ssh
+    pkief.material-icon-theme
+
+
   ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
       name = "nix-env-selector";
@@ -67,6 +76,38 @@
       version = "1.13.0";
       sha256 = "18h42vfxngix8x22nqslvnzwfvfq5kl35xs6fldi211dzwhw905j";
     }
+
+    {
+      name = "doxdocgen";
+      publisher = "cschlosser";
+      version = "1.3.2";
+      sha256 = "08dp9bqxsxxqw8pm1sryl14xrvicagqwlxi5cc1vmksjh30dmn1a";
+    }
+    {
+      name = "better-cpp-syntax";
+      publisher = "jeff-hykin";
+      version = "1.15.6";
+      sha256 = "1s7wpglvwisyw6yq5ia720wmb7fhdk3gan9x5xsf2h2z35pz947k";
+    }
+    {
+      name = "remote-containers";
+      publisher = "ms-vscode-remote";
+      version = "0.183.0";
+      sha256 = "12v7037rn46svv6ff2g824hdkk7l95g4gbzrp5zdddwxs0a62jlg";
+    }
+    {
+      name = "cmake-tools";
+      publisher = "ms-vscode";
+      version = "1.7.3";
+      sha256 = "0jisjyk5n5y59f1lbpbg8kmjdpnp1q2bmhzbc1skq7fa8hj54hp9";
+    }
+    {
+      name = "cmake";
+      publisher = "twxs";
+      version = "0.0.17";
+      sha256 = "11hzjd0gxkq37689rrr2aszxng5l9fwpgs9nnglq3zhfa1msyn08";
+    }
+
     # {
     #   name = "elm-ls-vscode";
     #   publisher = "elmTooling";
@@ -113,75 +154,6 @@
       "*.ipynb" = "jupyter.notebook.ipynb";
     };
 
-    "window.title" = "\${activeEditorLong}\${separator}\${rootName}"; # Let me use the free space!
-    "explorer.confirmDragAndDrop" = false; # Don't bother me when I want to drag-and-drop files.
-    "files.trimFinalNewlines" = true; # Keep files trimmed.
-    "files.insertFinalNewline" = true; # Because POSIX compliance (todo: read why is that really important, maybe to identify the last line?)
-    "files.autoSave" = "onFocusChange"; # Because I am lazy and I often source control the files.
-    "workbench.editor.highlightModifiedTabs" = true; # Better highlight on modified tabs.
-    "workbench.editor.enablePreview" = false; # I often prefer small files therefore I thank the extra space.
-    "window.zoomLevel" = 0;
-    "workbench.statusBar.feedback.visible" = false;
-    "workbench.activityBar.visible" = true;
-    "workbench.colorTheme" = "Ayu Dark Bordered";
-    "workbench.iconTheme" = "ayu";
-    "workbench.settings.editor" = "json";
-
-    "window.menuBarVisibility" = "default";
-    "window.titleBarStyle" = "custom";
-
-    "terminal.external.linuxExec" = "konsole";
-    "terminal.integrated.cursorStyle" = "line";
-    "terminal.integrated.cursorBlinking" = true;
-    "terminal.integrated.fontFamily" = "Fira Code";
-    "terminal.integrated.fontSize" = 16;
-    "terminal.integrated.letterSpacing" = 1.0;
-    "terminal.integrated.lineHeight" = 1.2;
-    "terminal.integrated.shell.linux" = "/bin/zsh";
-
-    "telemetry.enableCrashReporter" = false;
-    "telemetry.enableTelemetry" = false;
-    "extensions.ignoreRecommendations" = true;
-    "npm.fetchOnlinePackageInfo" = false;
-
-    "debug.allowBreakpointsEverywhere" = true;
-
-    "bracket-pair-colorizer-2.colorMode" = "Consecutive";
-    "bracket-pair-colorizer-2.forceIterationColorCycle" = true;
-    "bracket-pair-colorizer-2.showBracketsInGutter" = true;
-
-    "evenBetterToml.formatter.alignEntries" = true;
-    "evenBetterToml.formatter.compactArrays" = false;
-    "evenBetterToml.formatter.compactInlineTables" = false;
-    "evenBetterToml.formatter.indentTables" = true;
-    "evenBetterToml.formatter.reorderKeys" = false;
-
-    "gitlens.defaultDateStyle" = "absolute";
-    "gitlens.views.fileHistory.location" = "explorer";
-    "scm.diffDecorations" = "all";
-
-    "vsintellicode.modify.editor.suggestSelection" = "automaticallyOverrodeDefaultValue";
-
-
-    # Markdown
-    "markdown.preview.scrollEditorWithPreview" = true; # Syncronize editor with preview.
-    "markdown.preview.scrollPreviewWithEditor" = true; # Syncronize preview with editor.editor with preview.
-
-    # bracket
-    # "editor.guides.bracketPairs" = true;
-    # "editor.guides.bracketPairsHorizontal" = "active";
-    # "editor.guides.highlightActiveIndentation" = true;
-    # "editor.bracketPairColorization.enabled" = true;
-
-    "workbench.colorCustomizations" = {
-      "editorBracketHighlight.foreground1" = "#FFD700";
-      "editorBracketHighlight.foreground2" = "#DA70D6";
-      "editorBracketHighlight.foreground3" = "#87CEFA";
-      "editorBracketHighlight.foreground4" = "#FA8072";
-      "editorBracketHighlight.foreground5" = "#7CFC00";
-      "editorBracketHighlight.foreground6" = "#FF8C00";
-    };
-
     "files.exclude" = {
       "**/result" = true;
       "**/.git" = true;
@@ -201,6 +173,77 @@
       "**/tsconfig.json" = true;
       "**/.github" = true;
     };
+
+    "files.associations" = {
+      "*.config" = "makefile";
+    };
+
+    "git.autofetch" = true;
+    "window.title" = "\${activeEditorLong}\${separator}\${rootName}"; # Let me use the free space!
+    "explorer.confirmDragAndDrop" = false; # Don't bother me when I want to drag-and-drop files.
+    "files.trimFinalNewlines" = true; # Keep files trimmed.
+    "files.insertFinalNewline" = true; # Because POSIX compliance (todo: read why is that really important, maybe to identify the last line?)
+    "files.autoSave" = "onFocusChange"; # Because I am lazy and I often source control the files.
+    "workbench.editor.highlightModifiedTabs" = true; # Better highlight on modified tabs.
+    "workbench.editor.enablePreview" = false; # I often prefer small files therefore I thank the extra space.
+    "window.zoomLevel" = 0;
+    "workbench.statusBar.feedback.visible" = false;
+    "workbench.activityBar.visible" = true;
+    "workbench.colorTheme" = "Quiet Light";
+    "workbench.iconTheme" = "Quiet Light";
+    "workbench.settings.editor" = "json";
+
+    "window.menuBarVisibility" = "default";
+    "window.titleBarStyle" = "custom";
+
+    "terminal.external.linuxExec" = "konsole";
+    "terminal.integrated.cursorStyle" = "line";
+    "terminal.integrated.cursorBlinking" = true;
+    "terminal.integrated.fontFamily" = "Fira Code";
+    "terminal.integrated.fontSize" = 16;
+    "terminal.integrated.letterSpacing" = 1.0;
+    "terminal.integrated.lineHeight" = 1.2;
+    "terminal.integrated.shell.linux" = "/bin/zsh";
+
+    "telemetry.enableCrashReporter" = false;
+    "telemetry.enableTelemetry" = false;
+    "extensions.ignoreRecommendations" = true;
+    "npm.fetchOnlinePackageInfo" = false;
+    "workbench.colorCustomizations" = {
+      "editorBracketHighlight.foreground1" = "#FFD700";
+      "editorBracketHighlight.foreground2" = "#DA70D6";
+      "editorBracketHighlight.foreground3" = "#87CEFA";
+      "editorBracketHighlight.foreground4" = "#FA8072";
+      "editorBracketHighlight.foreground5" = "#7CFC00";
+      "editorBracketHighlight.foreground6" = "#FF8C00";
+    };
+    "debug.allowBreakpointsEverywhere" = true;
+
+    "bracket-pair-colorizer-2.colorMode" = "Consecutive";
+    "bracket-pair-colorizer-2.forceIterationColorCycle" = true;
+    "bracket-pair-colorizer-2.showBracketsInGutter" = true;
+
+    "evenBetterToml.formatter.alignEntries" = true;
+    "evenBetterToml.formatter.compactArrays" = false;
+    "evenBetterToml.formatter.compactInlineTables" = false;
+    "evenBetterToml.formatter.indentTables" = true;
+    "evenBetterToml.formatter.reorderKeys" = false;
+
+    "gitlens.defaultDateStyle" = "absolute";
+    "gitlens.views.fileHistory.location" = "explorer";
+    "scm.diffDecorations" = "all";
+
+    "vsintellicode.modify.editor.suggestSelection" = "automaticallyOverrodeDefaultValue";
+
+    # Markdown
+    "markdown.preview.scrollEditorWithPreview" = true; # Syncronize editor with preview.
+    "markdown.preview.scrollPreviewWithEditor" = true; # Syncronize preview with editor.editor with preview.
+
+    # bracket
+    # "editor.guides.bracketPairs" = true;
+    # "editor.guides.bracketPairsHorizontal" = "active";
+    # "editor.guides.highlightActiveIndentation" = true;
+    # "editor.bracketPairColorization.enabled" = true;
 
     "rust-analyzer.cargo.allFeatures" = true;
     "rust-analyzer.checkOnSave.command" = "clippy";
