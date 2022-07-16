@@ -24,15 +24,13 @@ in
         };
         user.packages = with pkgs; [
           go_1_18
-          gore
           #gotests
           #gomodifytags
           #go-migrate
-           gotools
+          gotools
           gopls
-          go-outline
-          gocode
-          gopkgs
+          #go-outline
+          #gopkgs
           gocode-gomod
           godef
           golint

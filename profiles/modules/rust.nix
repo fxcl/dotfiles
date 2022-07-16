@@ -23,14 +23,15 @@ in
         };
         user = {
           packages = with pkgs; [
-            (rust-bin.stable.latest.default.override { extensions = ["rust-src"]; })
+            (rust-bin.stable.latest.default.override { extensions = [ "rust-src" ]; })
             carnix
             #cargo-bloat
+
             rust-analyzer
             rls
+
             #rust-analyzer-unwrapped
             # rustup rustc cargo
-            
             #cargo-watch
             #evcxr
             # cargo-msrv
@@ -39,6 +40,11 @@ in
             # cargo-bloat
             # cargo-fuzz
             # gitlint
+
+            (writeScriptBin "rust-doc" ''
+              #! ${stdenv.shell} -e
+              exec firefox "${rustc.doc}/share/doc/rust/html/index.html"
+            '')
           ];
         };
       };
