@@ -322,15 +322,12 @@
     "files.insertFinalNewline" = true; # Because POSIX compliance (todo: read why is that really important, maybe to identify the last line?)
     #"files.autoSave" = "onFocusChange"; # Because I am lazy and I often source control the files.
     "files.autoSave" = "onWindowChange";
-
     "workbench.editor.highlightModifiedTabs" = true; # Better highlight on modified tabs.
     "workbench.editor.enablePreview" = false; # I often prefer small files therefore I thank the extra space.
-
     "workbench.statusBar.feedback.visible" = false;
     "workbench.activityBar.visible" = true;
-    "workbench.colorTheme" = "Quiet Light";
-    "workbench.iconTheme" = "Quiet Light";
-
+    "workbench.colorTheme"= "Gruvbox Light (Medium)";
+    "workbench.iconTheme" = "Gruvbox Light";
     "workbench.editor.wrapTabs" = true;
     "workbench.editor.tabSizing" = "fit";
     "workbench.editor.decorations.colors" = true;
@@ -414,7 +411,6 @@
     "dart.flutterCreateIOSLanguage" = "swift";
     "dart.previewFlutterUiGuides" = true;
 
-    "nix.enableLanguageServer" = true;
     # "oneDarkPro.editorTheme" = "oneDarkPro";
     # "oneDarkPro.vivid" = true;
     # "oneDarkPro.bold" = true;
@@ -431,6 +427,7 @@
       "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.yaml";
     };
 
+    "nix.enableLanguageServer" = true;
     "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
     "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
     "[typescript]" = {

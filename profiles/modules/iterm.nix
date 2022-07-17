@@ -19,6 +19,7 @@ in
       homebrew = {
         casks = [
           "iterm2"
+          "notunes"
         ];
       };
     };
