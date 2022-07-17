@@ -47,7 +47,6 @@ in
         dataFile = mkOpt' attrs { } "Files to place in $XDG_DATA_HOME";
       };
       env = mkOption {
-        #type = attrsOf (oneOf [ str path (listOf (either str path)) ]);
         type = attrsOf (either (either str path) (listOf (either str path)));
         apply = mapAttrs (n: v:
           if isList v then
@@ -83,7 +82,7 @@ in
     ## PATH should always start with its old value
     # must already begin with pre-existing PATH. Also, can't use binDir here,
     # because it contains a nix store path.
-    #my.env.PATH  = [ <bin> "$PATH" ];
+    # my.env.PATH  = [ <bin> "$PATH" ];
     my.env.PATH = [ "$NODE_HOME/bin" "/Users/kelvin/.cache/npm/bin" ./bin "$XDG_BIN_HOME" "$PATH" ];
     home-manager = {
       useGlobalPkgs = true;
@@ -124,8 +123,8 @@ in
       let exportLines = mapAttrsToList (n: v: "export ${n}=\"${v}\"") config.my.env;
       in
       ''
-        #export XAUTHORITY=/tmp/Xauthority
-        #[ -e ~/.Xauthority ] && mv -f ~/.Xauthority "$XAUTHORITY"
+        # export XAUTHORITY=/tmp/Xauthority
+        # [ -e ~/.Xauthority ] && mv -f ~/.Xauthority "$XAUTHORITY"
         ${concatStringsSep "\n" exportLines}
       '';
 

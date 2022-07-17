@@ -70,7 +70,6 @@ in
           zola # static site generator # lieber in flake ?
           himalaya # cli email client
           nix-index # locate files of nix packages
-
         ];
       };
     };
