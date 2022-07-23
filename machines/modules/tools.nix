@@ -25,24 +25,22 @@ in
       environment = {
         systemPackages = with pkgs; [
           git
-          git-chglog
-          #gnumake
-          gomplate
           hub
-          ipcalc
           jq
-          minio-client
+          #gnumake
+          #ipcalc
+          #minio-client
           #ngrok
+          #python
+          #s3cmd
+          reflex
           nmap
           p7zip
-          platinum-searcher
           pwgen
-          #python
-          reflex
-          rsync
-          #s3cmd
+          #rsync
+
           shellcheck
-          sops
+          #sops
           terraform
           tmux
           tree
