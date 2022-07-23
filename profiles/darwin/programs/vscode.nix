@@ -80,6 +80,12 @@
     #pflannery.vscode-versionlens
   ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
+      name = "ccls";
+      publisher = "ccls-project";
+      version = "0.1.29";
+      sha256 = "RjMYBLgbi+lgPqaqN7yh8Q8zr9euvQ+YLEoQaV3RDOA=";
+    }
+    {
       name = "gruvbox-themes";
       publisher = "tomphilbin";
       version = "1.0.0";
@@ -436,6 +442,9 @@
     };
     "[c]" = {
       "editor.defaultFormatter" = "ms-vscode.cpptools";
+    };
+    "[cpp]" = {
+      "editor.defaultFormatter" = "ccls-project.ccls";
     };
 
     "[javascript]" = {
