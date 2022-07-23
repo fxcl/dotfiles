@@ -27,42 +27,41 @@ in
           git
           hub
           jq
-          #gnumake
-          #ipcalc
-          #minio-client
-          #ngrok
-          #python
-          #s3cmd
+          # htop # top
+          # gnumake
+          # ipcalc
+          # minio-client
+          # ngrok
+          # python
+          # s3cmd
+          # sops
+          # terraform
+          # rsync
+          # upx
+          # httpie # curl
+          # curlie # curl
+          # vale # Prose linter
+          # gping # ping with a graph
           reflex
           nmap
           p7zip
           pwgen
-          #rsync
-
           shellcheck
-          #sops
-          terraform
           tmux
           tree
-          upx
           vim
           wget
           yq
           coreutils
-
-          vale # Prose linter
           ripgrep # grep
           exa # ls
           fd # find
           bat # bat
-          httpie # curl
-          curlie # curl
           tealdeer # TLDR
           du-dust # du
-          htop # top
+
           procs # ps
           dogdns # dig
-          gping # ping with a graph
           shfmt
           toilet
           zola # static site generator # lieber in flake ?
