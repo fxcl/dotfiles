@@ -18,12 +18,15 @@ in
     mkIf cfg.enable {
       my = {
         user.packages = with pkgs; [
-          cmake # Yo dawg, I heard you like Make.
           gdb # GNU Debugger.
+          ccls # Language server
+          cmake # Yo dawg, I heard you like Make.
+          boost
+          gnumake
+          gcc-unwrapped
           #clang # A C compiler frontend for LLVM.
           #clang-tools
           #lldb
-          #ccls # Language server
           #gcc # A compiler toolchain.
           #tinycc # A tiny c compiler
           #llvmPackages.libcxx # When GCC has become too bloated for someone's taste.

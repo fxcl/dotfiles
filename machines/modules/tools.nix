@@ -36,6 +36,7 @@ in
           vim
           wget
           yq
+          # GNU > BSD :)
           coreutils
           ripgrep # grep
           exa # ls
