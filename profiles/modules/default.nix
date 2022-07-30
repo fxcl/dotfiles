@@ -5,7 +5,7 @@
     ./settings.nix
     ./macos.nix
 
-    ./acrobat.nix
+    #./acrobat.nix
     ./raycast.nix
     ./appcleaner.nix
     #./authy.nix
@@ -19,7 +19,7 @@
     #./element.nix
     ./etcher.nix
     ./finder.nix
-    ./franz.nix
+    #./franz.nix
     ./git.nix
     ./gpg.nix
     #./hammerspoon.nix
@@ -28,7 +28,7 @@
     #./jabra.nix
     ./kya.nix
     #./lastpass.nix
-    ./lens.nix
+    #./lens.nix
     #./macdown.nix
     #./mattermost.nix
     #./minecraft.nix
@@ -55,15 +55,15 @@
     finder.enable = lib.mkDefault false;
     iterm.enable = lib.mkDefault true;
     chrome.enable = lib.mkDefault true;
-    acrobat.enable = lib.mkDefault false;
+    # acrobat.enable = lib.mkDefault false;
     raycast.enable = lib.mkDefault true;
     appcleaner.enable = lib.mkDefault true;
     etcher.enable = lib.mkDefault true;
-    franz.enable = lib.mkDefault true;
+    # franz.enable = lib.mkDefault true;
     git.enable = lib.mkDefault true;
     gpg.enable = lib.mkDefault true;
     kya.enable = lib.mkDefault true;
-    lens.enable = lib.mkDefault true;
+    #lens.enable = lib.mkDefault true;
     rectangle.enable = lib.mkDefault true;
     mpv.enable = lib.mkDefault true;
     #authy.enable = lib.mkDefault true;

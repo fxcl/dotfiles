@@ -503,7 +503,7 @@
       # # "perl" = "${perl}/bin/perl";
       # # "perl6" = "perl6";
       # #"ruby" = "${ruby}/bin/ruby";
-      # "go" = "${pkgs.go_1_18}/bin/go run";
+      # "go" = "${pkgs.go_1_17}/bin/go run";
       #"lua" = "${lua}/bin/lua";
       # "groovy" = "${groovy}/bin/groovy";
       # "powershell" = "${powershell}/bin/powershell -ExecutionPolicy ByPass -File";
