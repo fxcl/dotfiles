@@ -36,6 +36,7 @@ in
           vim
           wget
           yq
+          ffmpeg
           # GNU > BSD :)
           coreutils
           ripgrep # grep
