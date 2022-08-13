@@ -11,5 +11,13 @@
       user = "root";
       forwardAgent = true;
     };
+    "github.com" = {
+      hostname = "github.com";
+      identityFile = "~/.ssh/github_rsa";
+    };
+    "haas.hackclub.com" = {
+      hostname = "haas.hackclub.com";
+      identityFile = "~/.ssh/old_haas_rsa";
+    };
   };
 }

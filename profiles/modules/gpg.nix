@@ -18,15 +18,20 @@ in
     mkIf cfg.enable {
       environment = {
         systemPackages = with pkgs; [
+          # GPG pinentry
           pinentry_mac
         ];
       };
 
       home-manager.users."${config.my.username}" = { config, ... }: {
         programs = {
-          gpg = {
-            enable = true;
-          };
+          gpg.enable = true;
+        };
+      };
+      # pinentry-program ${pkgs.pinentry_mac}/Applications/pinentry-mac.app/Contents/MacOS/pinentry-mac
+      my.hm.file = {
+        ".gnupg/gpg-agent.conf" = {
+          text = "pinentry-program ${pkgs.pinentry_mac}/${pkgs.pinentry_mac.passthru.binaryPath}";
         };
       };
 

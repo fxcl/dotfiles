@@ -21,11 +21,11 @@ in
           git = {
             enable = true;
 
-            userName = "zxfstd";
+            userName = "fxcl";
             userEmail = "me@gnux.cn";
 
             signing = {
-              key = "A1D5E71704576393F461C60F4E578E4BF7B2292C";
+              key = "7D403DD25CCB0C0C";
               signByDefault = true;
             };
 
