@@ -35,14 +35,17 @@ in
         };
       };
 
-      programs = {
-        gnupg = {
-          agent = {
-            enable = true;
-            enableSSHSupport = true;
-          };
-
+      programs.gnupg = {
+        agent = {
+          enable = true;
+          enableSSHSupport = true;
         };
+        # publicKeys = [{
+        #   source = ./shyim.gpg;
+        #   trust = "ultimate";
+        # }];
+        # Fixes somehow Yubikey on macOs
+        #scdaemonSettings = { disable-ccid = true; };
       };
     };
 }

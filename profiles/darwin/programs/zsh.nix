@@ -120,6 +120,7 @@
     NIX_PAGER = "less --RAW-CONTROL-CHARS --quit-if-one-screen";
   };
   envExtra = ''
+    export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
     export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
     export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
     export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
