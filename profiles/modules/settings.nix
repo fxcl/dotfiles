@@ -35,7 +35,7 @@ in
       timezone = mkOptStr "Asia/Shanghai ";
       username = mkOptStr "kelvin";
       website = mkOptStr "https://gabri.me";
-      github_username = mkOptStr "zxfstd";
+      github_username = mkOptStr "fxcl";
       email = mkOptStr "me@zxf.me";
       terminal = mkOptStr "kitty";
       nix_managed = mkOptStr
