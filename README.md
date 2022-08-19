@@ -1,8 +1,6 @@
 # Nix Configs for Darwin
 
-# ❄️ ≃ 💙
-
-[![Build](https://github.com/fxcl/dotfiles/actions/workflows/build.yml/badge.svg)](https://github.com/fxcl/dotfiles/actions/workflows/build.yml)
+ ❄️ ≃ 💙 [![Build](https://github.com/fxcl/dotfiles/actions/workflows/build.yml/badge.svg)](https://github.com/fxcl/dotfiles/actions/workflows/build.yml)
 
 Provisioning for my Macbook's based on [Nix][nix].
 
