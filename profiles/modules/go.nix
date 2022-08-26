@@ -21,6 +21,8 @@ in
           GOPATH = "/Users/kelvin/workspace/go";
           GOBIN = "/Users/kelvin/workspace/go/bin";
           GOROOT = "${pkgs.go_1_17}/share/go";
+          GOPROXY = "https://goproxy.cn,direct";
+          GOSUMDB = "goproxy.cn/sumdb/sum.golang.org";
         };
         user.packages = with pkgs; [
           go_1_17

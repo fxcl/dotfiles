@@ -260,6 +260,7 @@
     "editor.renderWhitespace" = "all";
     "editor.suggestSelection" = "first";
     "editor.tabCompletion" = "onlySnippets";
+    "editor.accessibilitySupport" = "on";
     "editor.quickSuggestions" = {
       "strings" = true;
     };
@@ -404,7 +405,7 @@
 
     "go.useLanguageServer" = true;
     "javascript.validate.enable" = false;
-    "python.languageServer" = "Microsoft";
+    "python.languageServer" = "Default";
     "python.showStartPage" = false;
     "python.insidersChannel" = "off";
     "pascal.format.indent" = 4;
