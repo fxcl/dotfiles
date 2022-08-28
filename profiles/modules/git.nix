@@ -19,6 +19,7 @@ in
       home-manager.users."${config.my.username}" = { config, ... }: {
         programs.git = {
           enable = true;
+          package = with pkgs; (if stdenv.isDarwin then git else gitFull);
           userName = "fxcl";
           userEmail = "me@gnux.cn";
 

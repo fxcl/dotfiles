@@ -36,7 +36,7 @@
             experimental-features = nix-command flakes
           '';
 
-          binaryCaches = [
+          settings.substituters = [
             "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
             "https://cache.nixos.org"
             "https://nix-community.cachix.org"
@@ -44,7 +44,7 @@
             #"https://zxfstd.cachix.org"
           ];
 
-          binaryCachePublicKeys = [
+          settings.trusted-public-keys = [
             "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
             "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
             "nixpkgs.cachix.org-1:q91R6hxbwFvDqTSDKwDAV4T5PxqXGxswD8vhONFMeOE="
@@ -72,7 +72,7 @@
 
             # Access to NUR.
             nur.overlay
-            
+
             # Rust overlay for them ease of setting up Rust toolchains.
             inputs.rust-overlay.overlays.default
           ];

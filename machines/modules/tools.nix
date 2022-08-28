@@ -33,7 +33,6 @@ in
           shellcheck
           tmux
           tree
-          vim
           wget
           yq
           ffmpeg
@@ -45,12 +44,14 @@ in
           bat # bat
           tealdeer # TLDR
           du-dust # du
-
+          global
           procs # ps
           dogdns # dig
           shfmt
           nix-index # locate files of nix packages
-        ];
+          nix-output-monitor
+          global
+        ]++ (if stdenv.isDarwin then [ vim-darwin ] else [ vimHugeX ]);
       };
     };
 }
