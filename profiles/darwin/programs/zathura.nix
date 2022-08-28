@@ -56,7 +56,7 @@ let
   };
 in
 {
-  enable = true;
+  enable = false;
   options = {
     default-bg = light.bg;
     default-fg = light.fg;

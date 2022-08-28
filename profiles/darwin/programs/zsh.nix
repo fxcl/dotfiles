@@ -136,7 +136,7 @@
     enable = true;
 
     plugins = [
-      "systemd"
+      # "systemd"
       "sudo"
       "history-substring-search"
       "encode64"

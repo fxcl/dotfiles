@@ -10,43 +10,35 @@
   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/vscode-extensions/default.nix
   extensions = with pkgs.vscode-extensions; [
     # Languages
-    scalameta.metals # Scala Language Server
-    scala-lang.scala # Scala Language
-    bbenoist.nix # Nix
-    jnoortheen.nix-ide
-    a5huynh.vscode-ron
-    antfu.icons-carbon
+    #scalameta.metals # Scala Language Server
+    #scala-lang.scala # Scala Language
     #brettm12345.nixfmt-vscode
+    bbenoist.nix # Nix
+    arrterian.nix-env-selector
     dracula-theme.theme-dracula
-    elmtooling.elm-ls-vscode
-    file-icons.file-icons
+    #file-icons.file-icons
     foxundermoon.shell-format
-    github.vscode-pull-request-github
-    haskell.haskell
-    jock.svg
-    justusadam.language-haskell
+    redhat.vscode-yaml
+    #timonwong.shellcheck
+    #tomoki1207.pdf
+    xaver.clang-format
+    #haskell.haskell
+    #justusadam.language-haskell
     #ms-azuretools.vscode-docker
     #ms-kubernetes-tools.vscode-kubernetes-tools
     #ms-python.vscode-pylance
-    redhat.vscode-yaml
-    timonwong.shellcheck
-    tomoki1207.pdf
-    xaver.clang-format
     #aaron-bond.better-comments
-    foam.foam-vscode
-    formulahendry.auto-close-tag
+    #foam.foam-vscode
+    #formulahendry.auto-close-tag
     msjsdiag.debugger-for-chrome
     octref.vetur
     shardulm94.trailing-spaces
     golang.go
-    hashicorp.terraform
+    #hashicorp.terraform
     editorconfig.editorconfig
-    james-yu.latex-workshop
-    ms-vscode-remote.remote-ssh
+    #james-yu.latex-workshop
     #nash.awesome-flutter-snippets
-    formulahendry.code-runner
     #github.vscode-codeql
-    adpyke.codesnap
     #ms-vscode.cpptools
     #dzhavat.css-initial-value
     #dart-code.dart-code
@@ -55,15 +47,10 @@
     mikestead.dotenv
     dbaeumer.vscode-eslint
     tamasfe.even-better-toml
-    eamodio.gitlens
     #zignd.html-css-class-completion
     #mathiasfrohlich.kotlin
     vadimcn.vscode-lldb
     yzhang.markdown-all-in-one
-    #shd101wyy.markdown-preview-enhanced
-    zhuangtongfa.material-theme
-    pkief.material-icon-theme
-    arrterian.nix-env-selector
     #b4dm4n.nixpkgs-fmt
     ibm.output-colorizer
     #alefragnani.pascal
@@ -73,7 +60,6 @@
     #msjsdiag.vscode-react-native
     humao.rest-client
     matklad.rust-analyzer
-    xaver.clang-format
     #matklad.rust-analyzer-nightly
     #svelte.svelte-vscode
     bradlc.vscode-tailwindcss
@@ -152,12 +138,6 @@
       sha256 = "0ww0x28m83fv5zdqkmz108rsxb60fyy5y0ksknb2xchirzwhayi0";
     }
     {
-      name = "vscode-markdownlint";
-      publisher = "DavidAnson";
-      version = "0.48.0";
-      sha256 = "1yzbpbqp8hsp24sx44wy73j26cf29mc7yrg8r7hlrzcy17hnkg2v";
-    }
-    {
       name = "prettier-vscode";
       publisher = "esbenp";
       version = "9.8.0";
@@ -205,13 +185,12 @@
       version = "0.5.10";
       sha256 = "1dbhd6xbawbnf9p090lpmn8i5gg1f7y8xk2whc9zhg4432kdv3vd";
     }
-    # {
-    #   name = "elm-ls-vscode";
-    #   publisher = "elmTooling";
-    #   version = "2.4.1";
-    #   sha256 = "1idhsrl9w8sc0qk58dvmyyjbmfznk3f4gz2zl6s9ksyz9d06vfrd";
-    # }
-
+    {
+      name = "elm-ls-vscode";
+      publisher = "elmTooling";
+      version = "2.4.1";
+      sha256 = "1idhsrl9w8sc0qk58dvmyyjbmfznk3f4gz2zl6s9ksyz9d06vfrd";
+    }
     # {
     #   name = "vscode-direnv";
     #   publisher = "cab404";
@@ -236,7 +215,7 @@
     "update.mode" = "none";
     "editor.minimap.enabled" = false;
     "editor.fontLigatures" = true;
-    "editor.fontFamily" = "Mensch, Menlo, Iosevka Nerd Font, Consolas, Monaco, 'Courier New', monospace";
+    "editor.fontFamily" = "'Consolas ligaturized v3', Mensch, Menlo, Iosevka Nerd Font, Consolas, Monaco, 'Courier New', monospace";
     "editor.tabSize" = 2; # Because I prefer smaller tab sizes.
     "editor.formatOnPaste" = false; # Do not mess with my code by default. Will trust automatic rules language by language.
     "editor.formatOnSave" = false; # Do not mess with my code by default. Will trust automatic rules language by language.
@@ -405,9 +384,6 @@
     "dart.flutterCreateIOSLanguage" = "swift";
     "dart.previewFlutterUiGuides" = true;
 
-    # "oneDarkPro.editorTheme" = "oneDarkPro";
-    # "oneDarkPro.vivid" = true;
-    # "oneDarkPro.bold" = true;
     "deno.enable" = true;
     "deno.lint" = true;
     "deno.unstable" = true;
@@ -477,60 +453,6 @@
     "[shellscript]" = {
       "editor.tabSize" = 2;
       "files.eol" = "\n";
-    };
-
-    "code-runner.runInTerminal" = true;
-    "code-runner.executorMap" = {
-      # "javascript" = "${pkgs.nodejs-18_x}/bin/node";
-      # "java" = "cd $dir && ${pkgs.graalvm17-ce}/bin/javac $fileName && mv $fileNameWithoutExt $fileNameWithoutExt.o && ${pkgs.graalvm17-ce}/bin/java $fileNameWithoutExt.o";
-      # "c" = "cd $dir && /usr/bin/gcc $fileName -o $fileNameWithoutExt.o && $dir$fileNameWithoutExt.o";
-      # "cpp" = "cd $dir && /usr/bin/g++ $fileName -o $fileNameWithoutExt.o && $dir$fileNameWithoutExt.o";
-      # # "objective-c" = "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt.o && $dir$fileNameWithoutExt.o";
-      # # "php" = "${php}/bin/php";
-      # "python" = "${pkgs.python39}/bin/python -u";
-      # # "perl" = "${perl}/bin/perl";
-      # # "perl6" = "perl6";
-      # #"ruby" = "${ruby}/bin/ruby";
-      # "go" = "${pkgs.go_1_17}/bin/go run";
-      #"lua" = "${lua}/bin/lua";
-      # "groovy" = "${groovy}/bin/groovy";
-      # "powershell" = "${powershell}/bin/powershell -ExecutionPolicy ByPass -File";
-      # "bat" = "cmd /c";
-      "shellscript" = "${pkgs.zsh}/bin/zsh";
-      # "fsharp" = "${fsharp}/bin/fsi";
-      # "csharp" = "scriptcs";
-      # "vbscript" = "cscript //Nologo";
-      # "typescript" = "${nodePackages.typescript}/bin/ts-node";
-      # "coffeescript" = "coffee";
-      # "scala" = "${scala}/bin/scala";
-      # "swift" = "${swift}/bin/swift";
-      # "julia" = "${julia}/bin/julia";
-      # "crystal" = "${crystal}/bin/crystal";
-      # "ocaml" = "${ocaml}/bin/ocaml";
-      # "r" = "${rWrapper}/bin/Rscript";
-      # "applescript" = "osascript";
-      # "clojure" = "${clojure}/bin/lein exec";
-      # "haxe" = "${haxe}/bin/haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt";
-      #"rust" = "cd $dir && ${pkgs.rust-bin}/bin/rustc $fileName && mv $fileNameWithoutExt $fileNameWithoutExt.o && $dir$fileNameWithoutExt.o";
-      # "racket" = "${racket}/bin/racket";
-      # "scheme" = "${scheme48}/bin/csi -script";
-      # "ahk" = "autohotkey";
-      # "autoit" = "autoit3";
-      # "dart" = "${dart}/bin/dart";
-      # "pascal" = "cd $dir && ${fpc}/bin/fpc $fileName && mv $fileNameWithoutExt $fileNameWithoutExt.o && $dir$fileNameWithoutExt.o";
-      # "d" = "cd $dir && dmd $fileName && mv $fileNameWithoutExt $fileNameWithoutExt.o && $dir$fileNameWithoutExt.o";
-      # "haskell" = "${haskell}/bin/runhaskell";
-      # "nim" = "${nim}/bin/nim compile --verbosity:0 --hints:off --run";
-      # "lisp" = "${lisp}/bin/sbcl --script";
-      "kit" = "kitc --run";
-      # "v" = "${vlang}/bin/v run";
-      # "sass" = "${sass}/bin/sass --style expanded";
-      # "scss" = "${sass}/bin/scss --style expanded";
-      # "less" = "cd $dir && ${lessc}/bin/lessc $fileName $fileNameWithoutExt.css";
-      # "FortranFreeForm" = "cd $dir && gfortran $fileName -o $fileNameWithoutExt.o && $dir$fileNameWithoutExt.o";
-      # "fortran-modern" = "cd $dir && ${gfortran}/bin/gfortran $fileName -o $fileNameWithoutExt.o && $dir$fileNameWithoutExt.o";
-      # "fortran_fixed-form" = "cd $dir && gfortran $fileName -o $fileNameWithoutExt.o && $dir$fileNameWithoutExt.o";
-      # "fortran" = "cd $dir && ${gfortran}/bin/gfortran $fileName -o $fileNameWithoutExt.o && $dir$fileNameWithoutExt.o";
     };
   };
 

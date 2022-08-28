@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  enable = true;
+  enable = false;
 
   settings = {
     env = {

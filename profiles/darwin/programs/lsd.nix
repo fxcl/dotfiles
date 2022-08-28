@@ -1,6 +1,6 @@
 { pkgs, ... }:
 
 {
-  enable = true;
-  enableAliases = true;
+  enable = false;
+  enableAliases = false;
 }
