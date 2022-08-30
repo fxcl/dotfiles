@@ -213,9 +213,11 @@
 
   userSettings = {
     "update.mode" = "none";
+    "http.proxy"= "127.0.0.1:7890";
+    "http.proxySupport" = "on";
     "editor.minimap.enabled" = false;
     "editor.fontLigatures" = true;
-    "editor.fontFamily" = "'Consolas ligaturized v3', Mensch, Menlo, Iosevka Nerd Font, Consolas, Monaco, 'Courier New', monospace";
+    "editor.fontFamily" = "Mensch, Menlo, Consolas, Monaco, 'Courier New', monospace";
     "editor.tabSize" = 2; # Because I prefer smaller tab sizes.
     "editor.formatOnPaste" = false; # Do not mess with my code by default. Will trust automatic rules language by language.
     "editor.formatOnSave" = false; # Do not mess with my code by default. Will trust automatic rules language by language.
@@ -367,8 +369,8 @@
     "rust-analyzer.lens.references" = true;
     "rust-analyzer.trace.extension" = true;
     "rust-analyzer.procMacro.enable" = true;
-    "rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-
+    #"rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+    "rust-analyzer.server.path" = "rust-analyzer";
     "go.useLanguageServer" = true;
     "javascript.validate.enable" = false;
     "python.languageServer" = "Default";

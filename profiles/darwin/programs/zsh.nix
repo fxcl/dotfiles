@@ -64,6 +64,7 @@
     kgdsw = "kgds --watch";
     kgall = "kubectl get all --all-namespaces";
     kunusedrs = "kubectl get replicaset -o jsonpath=\"{ .items[?(@.spec.replicas==0)].metadata.name }\"";
+    wemacs="/Applications/Emacs.app/Contents/MacOS/Emacs $*";
 
     rgrep = "grep -Rn";
     hgrep = "fc -El 0 | grep";

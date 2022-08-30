@@ -77,7 +77,7 @@ in
     # must already begin with pre-existing PATH. Also, can't use binDir here,
     # because it contains a nix store path.
     # my.env.PATH  = [ <bin> "$PATH" ];
-    my.env.PATH = [ "$NODE_HOME/bin" "/Users/kelvin/.cache/npm/bin" ./bin "$XDG_BIN_HOME" "$PATH" ];
+    my.env.PATH = [ "$NODE_HOME/bin" "/Users/kelvin/.local/share/cargo/bin" "/Users/kelvin/.cache/npm/bin" ./bin "$XDG_BIN_HOME" "$PATH" ];
     home-manager = {
       useGlobalPkgs = true;
       useUserPackages = true;
