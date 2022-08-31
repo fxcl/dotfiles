@@ -232,15 +232,19 @@
     "editor.quickSuggestions" = {
       "strings" = true;
     };
-    "editor.guides.bracketPairs" = true;
 
-    "breadcrumbs.enabled" = true;
-    "debug.console.fontFamily" = "Iosevka Term";
+      "editor.rulers" = [ 80 120 ];
+      "telemetry.enableTelemetry" = false;
+      "telemetry.enableCrashReporter" = false;
+      "editor.useTabStops" = false;
+      "workbench.fontAliasing" = "antialiased";
+      "files.trimTrailingWhitespace" = true;
+      "terminal.integrated.fontFamily" = "PragmataPro Liga";
+
+    "editor.guides.bracketPairs" = true;
+    "debug.console.fontFamily" = "PragmataPro Liga";
     "debug.console.fontSize" = 16;
     "debug.allowBreakpointsEverywhere" = true;
-
-    "terminal.integrated.fontFamily" = "Iosevka Term, Fira Code";
-    "terminal.integrated.fontSize" = 16;
     #"terminal.external.linuxExec" = "konsole";
     #"terminal.external.linuxExec" = "${alacritty}/bin/alacritty";
     "terminal.integrated.cursorStyle" = "line";
@@ -325,8 +329,7 @@
     "window.titleBarStyle" = "custom";
     "window.zoomLevel" = 0;
 
-    "telemetry.enableCrashReporter" = false;
-    "telemetry.enableTelemetry" = false;
+
     "extensions.ignoreRecommendations" = true;
     "npm.fetchOnlinePackageInfo" = false;
 
@@ -466,6 +469,7 @@
     { key = "f14"; command = "workbench.action.quickOpen"; }
     { key = "alt+left"; command = "workbench.action.navigateBack"; }
     { key = "alt+right"; command = "workbench.action.navigateForward"; }
+    { key = "shift+cmd+d"; command = "editor.action.copyLinesDownAction"; when = "editorTextFocus && !editorReadonly"; }
     #{ key = "Enter"; command = "rust-analyzer.onEnter"; when = "editorTextFocus && !suggestWidgetVisible && editorLangId == rust"; }
   ];
 }
