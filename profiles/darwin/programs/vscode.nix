@@ -12,9 +12,12 @@
     # Languages
     #scalameta.metals # Scala Language Server
     #scala-lang.scala # Scala Language
-    #brettm12345.nixfmt-vscode
-    bbenoist.nix # Nix
+
+    bbenoist.nix
+    jnoortheen.nix-ide
+    brettm12345.nixfmt-vscode
     arrterian.nix-env-selector
+
     dracula-theme.theme-dracula
     #file-icons.file-icons
     foxundermoon.shell-format
@@ -233,6 +236,28 @@
       "strings" = true;
     };
 
+
+      "diffEditor.maxComputationTime" = 0;
+      "diffEditor.wordWrap" = "off";
+      "editor.bracketPairColorization.enabled" = true;
+      "editor.guides.bracketPairs" = "active";
+      "editor.maxTokenizationLineLength" = 10000;
+      "editor.unicodeHighlight.ambiguousCharacters" = false;
+      "editor.wordWrap" = "on";
+      "eslint.format.enable" = true;
+      "eslint.lintTask.enable" = true;
+      "explorer.confirmDelete" = false;
+      "git.confirmSync" = false;
+      "git.enableSmartCommit" = true;
+      "go.toolsManagement.autoUpdate" = true;
+      "javascript.updateImportsOnFileMove.enabled" = "always";
+      "redhat.telemetry.enabled" = false;
+      "security.workspace.trust.untrustedFiles" = "open";
+      "terminal.integrated.defaultProfile.linux" = "zsh";
+      "terminal.integrated.defaultProfile.osx" = "zsh";
+      "terminal.integrated.fontSize" = 12;
+      "typescript.updateImportsOnFileMove.enabled" = "always";
+
       "editor.rulers" = [ 80 120 ];
       "telemetry.enableTelemetry" = false;
       "telemetry.enableCrashReporter" = false;
@@ -241,10 +266,10 @@
       "files.trimTrailingWhitespace" = true;
       "terminal.integrated.fontFamily" = "PragmataPro Liga";
 
-    "editor.guides.bracketPairs" = true;
     "debug.console.fontFamily" = "PragmataPro Liga";
     "debug.console.fontSize" = 16;
     "debug.allowBreakpointsEverywhere" = true;
+    "debug.javascript.autoAttachFilter" = "smart";
     #"terminal.external.linuxExec" = "konsole";
     #"terminal.external.linuxExec" = "${alacritty}/bin/alacritty";
     "terminal.integrated.cursorStyle" = "line";
@@ -295,7 +320,6 @@
     };
 
     "git.autofetch" = true;
-    "window.title" = "\${activeEditorLong}\${separator}\${rootName}"; # Let me use the free space!
     "explorer.confirmDragAndDrop" = false; # Don't bother me when I want to drag-and-drop files.
     "files.trimFinalNewlines" = true; # Keep files trimmed.
     "files.insertFinalNewline" = true; # Because POSIX compliance (todo: read why is that really important, maybe to identify the last line?)
@@ -409,6 +433,10 @@
       "editor.defaultFormatter" = "denoland.vscode-deno";
       "editor.formatOnSave" = true;
     };
+    "[go]" = {
+      "editor.defaultFormatter" = "golang.go";
+      };
+
     "[c]" = {
       "editor.defaultFormatter" = "ms-vscode.cpptools";
     };
@@ -417,17 +445,15 @@
     };
 
     "[javascript]" = {
-      "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
     };
 
     "[json]" = {
-      "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      "editor.defaultFormatter" = "vscode.json-language-features";
     };
-
     "[jsonc]" = {
-      "editor.defaultFormatter" = "esbenp.prettier-vscode";
-    };
-
+        "editor.defaultFormatter" = "vscode.json-language-features";
+      };
     "[markdown]" = {
       "editor.defaultFormatter" = "esbenp.prettier-vscode";
     };
@@ -452,7 +478,8 @@
     };
 
     "[nix]" = {
-      "editor.defaultFormatter" = "jnoortheen.nix-ide";
+      #"editor.defaultFormatter" = "jnoortheen.nix-ide";
+      "editor.defaultFormatter" = "brettm12345.nixfmt-vscode";
     };
 
     "[shellscript]" = {
