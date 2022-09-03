@@ -15,7 +15,6 @@
 
     bbenoist.nix
     jnoortheen.nix-ide
-    brettm12345.nixfmt-vscode
     arrterian.nix-env-selector
 
     dracula-theme.theme-dracula
@@ -427,7 +426,6 @@
     };
 
     "nix.enableLanguageServer" = true;
-    "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
     "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
     "[typescript]" = {
       "editor.defaultFormatter" = "denoland.vscode-deno";
