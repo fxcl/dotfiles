@@ -18,7 +18,7 @@ in
     mkIf cfg.enable (mkMerge [
       (if (builtins.hasAttr "homebrew" options) then {
         # TODO: (automate) Requires homebrew to be installed
-        homebrew.taps = [ "homebrew/cask" "homebrew/cask-versions" ];
+        homebrew.taps = [ "homebrew/cask" "homebrew/cask-fonts" "homebrew/cask-versions" ];
         homebrew.casks = [
           "bitwarden"
           #"hammerspoon"
