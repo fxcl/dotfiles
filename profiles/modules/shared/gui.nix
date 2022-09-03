@@ -20,23 +20,28 @@ in
         # TODO: (automate) Requires homebrew to be installed
         homebrew.taps = [ "homebrew/cask" "homebrew/cask-fonts" "homebrew/cask-versions" ];
         homebrew.casks = [
-          "bitwarden"
+          "iterm2"
+          "notunes"
+          "keepingyouawake"
+          "google-chrome"
+          "mpv"
+          "iina"
+          #"bitwarden"
           #"hammerspoon"
           "appcleaner"
+          "raycast"
+          "rectangle"
           #"adobe-acrobat-reader"
           #"authy"
           #"bartender"
           #"battle-net"
-          "google-chrome"
           #"deezer"
           #"discord"
           #"lima"
           #"element"
           "balenaetcher"
           "eul"
-          "iterm2"
-          "notunes"
-          "keepingyouawake"
+
           #"jabra-direct"
           #"lastpass"
           #"lens"
@@ -44,8 +49,7 @@ in
           #"mattermost"
           #"multipass"
           #"owncloud"
-          "raycast"
-          "rectangle"
+
           #"signal"
           #"slack"
           #"steam"
@@ -76,13 +80,6 @@ in
         #   };
         # };
 
-        # my.hm.file = {
-        #   ".config/mpv" = {
-        #     recursive = true;
-        #     source = ../../config/mpv;
-        #   };
-        # };
-
       } else {
         my.user = {
           packages = with pkgs; [
@@ -103,5 +100,14 @@ in
           ];
         };
       })
+
+       {
+        my.hm.file = {
+          ".config/mpv" = {
+            recursive = true;
+            source = ../../../config/mpv;
+          };
+        };
+       }
     ]);
 }

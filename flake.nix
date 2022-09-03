@@ -28,7 +28,7 @@
 
   outputs = { self, nur, ... }@inputs:
     let
-      sharedDarwinConfiguration = { config, pkgs, ... }: {
+      sharedHostsConfig = { config, pkgs, ... }: {
         nix = {
           package = pkgs.nixFlakes;
 
@@ -58,10 +58,7 @@
         };
 
         nixpkgs = {
-          config = {
-            allowUnfree = true;
-          };
-
+          config = { allowUnfree = true; };
           overlays = [
             (
               final: prev: {
@@ -90,7 +87,7 @@
           modules = [
             inputs.homemanager.darwinModules.home-manager
             inputs.agenix.nixosModules.age
-            sharedDarwinConfiguration
+            sharedHostsConfig
             ./profiles/modules/shared
             ./profiles/modules/darwin
             ./machines/tony
@@ -104,7 +101,7 @@
           modules = [
             inputs.homemanager.darwinModules.home-manager
             inputs.agenix.nixosModules.age
-            sharedDarwinConfiguration
+            sharedHostsConfig
             ./profiles/modules/shared
             ./profiles/modules/darwin
             ./machines/vvh
