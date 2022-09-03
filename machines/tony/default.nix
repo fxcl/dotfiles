@@ -1,9 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [
-    ../modules
-  ];
 
   networking = {
     hostName = "0x746f6e79";

@@ -76,12 +76,12 @@ in
         #   };
         # };
 
-        my.hm.file = {
-          ".config/mpv" = {
-            recursive = true;
-            source = ../../config/mpv;
-          };
-        };
+        # my.hm.file = {
+        #   ".config/mpv" = {
+        #     recursive = true;
+        #     source = ../../config/mpv;
+        #   };
+        # };
 
       } else {
         my.user = {

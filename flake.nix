@@ -91,6 +91,8 @@
             inputs.homemanager.darwinModules.home-manager
             inputs.agenix.nixosModules.age
             sharedDarwinConfiguration
+            ./profiles/modules/shared
+            ./profiles/modules/darwin
             ./machines/tony
             ./profiles/darwin
           ];
@@ -103,6 +105,8 @@
             inputs.homemanager.darwinModules.home-manager
             inputs.agenix.nixosModules.age
             sharedDarwinConfiguration
+            ./profiles/modules/shared
+            ./profiles/modules/darwin
             ./machines/vvh
             ./profiles/darwin
           ];
