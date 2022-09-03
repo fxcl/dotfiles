@@ -45,21 +45,21 @@ in
     #   '';
     # };
 
-    # system.defaults.dock.largesize = mkOption {
-    #   type = types.nullOr types.int;
-    #   default = null;
-    #   description = ''
-    #     Large size of the icons in the dock.  The default is 64.
-    #   '';
-    # };
+    system.defaults.dock.largesize = mkOption {
+      type = types.nullOr types.int;
+      default = null;
+      description = ''
+        Large size of the icons in the dock.  The default is 64.
+      '';
+    };
 
-    # system.defaults.dock.magnification = mkOption {
-    #   type = types.nullOr types.bool;
-    #   default = null;
-    #   description = ''
-    #     Enable magnification for the icons in the dock.  The default is false.
-    #   '';
-    # };
+    system.defaults.dock.magnification = mkOption {
+      type = types.nullOr types.bool;
+      default = null;
+      description = ''
+        Enable magnification for the icons in the dock.  The default is false.
+      '';
+    };
   };
 
   config = with lib;
@@ -68,10 +68,6 @@ in
         LANG = "en_US.UTF-8";
         LC_TIME = "en_GB.UTF-8";
       };
-
-      environment.systemPackages = with pkgs; [
-        m-cli
-      ];
 
       homebrew = {
         taps = [
@@ -137,10 +133,13 @@ in
           dock = {
             # autohide = false;
             # autohide-delay = "0.2";
-            # autohide-time-modifier = "0";
             # mineffect = "scale";
-            # show-recents = false;
-            # tilesize = 48;
+            #mineffect = "genie";
+            show-recents = false;
+            tilesize = 48;
+            largesize = 64;
+            magnification = true;
+            # autohide-time-modifier = "0";
             # dashboard-in-overlay = true;
             # expose-animation-duration = "0.1";
             # expose-group-by-app = false;
@@ -151,10 +150,10 @@ in
             # showhidden = true;
             # static-only = true;
 
-            # wvous-tl-corner = 2;
-            # wvous-bl-corner = 3;
-            # wvous-tr-corner = 2;
-            # wvous-br-corner = 3;
+            wvous-tl-corner = 2;
+            wvous-bl-corner = 3;
+            wvous-tr-corner = 2;
+            wvous-br-corner = 3;
           };
 
           finder = {

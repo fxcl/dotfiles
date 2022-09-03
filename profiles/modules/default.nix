@@ -25,7 +25,7 @@
 
   my.modules = {
     macos.enable = lib.mkDefault true;
-    dock.enable = lib.mkDefault false;
+    # dock.enable = lib.mkDefault false;
     finder.enable = lib.mkDefault false;
     fonts.enable = lib.mkDefault true;
     gui.enable = lib.mkDefault true;
