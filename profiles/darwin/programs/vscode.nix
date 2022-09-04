@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   enable = true;
   package = pkgs.vscode;
 
@@ -12,11 +12,10 @@
       #scalameta.metals # Scala Language Server
       #scala-lang.scala # Scala Language
       bbenoist.nix
-      # jnoortheen.nix-ide
+      jnoortheen.nix-ide
       arrterian.nix-env-selector
-      kamadorueda.alejandra
-      mkhl.shfm
-
+      #b4dm4n.nixpkgs-fmt
+      #kamadorueda.alejandra
       dracula-theme.theme-dracula
       #file-icons.file-icons
       foxundermoon.shell-format
@@ -53,7 +52,7 @@
       #mathiasfrohlich.kotlin
       vadimcn.vscode-lldb
       yzhang.markdown-all-in-one
-      #b4dm4n.nixpkgs-fmt
+
       ibm.output-colorizer
       #alefragnani.pascal
       #alefragnani.pascal-formatter
@@ -257,7 +256,7 @@
     "terminal.integrated.fontSize" = 12;
     "typescript.updateImportsOnFileMove.enabled" = "always";
 
-    "editor.rulers" = [80 120];
+    "editor.rulers" = [ 80 120 ];
     "telemetry.enableTelemetry" = false;
     "telemetry.enableCrashReporter" = false;
     "editor.useTabStops" = false;
@@ -280,7 +279,7 @@
       "PowerShell" = {
         "source" = "PowerShell";
         "icon" = "terminal-powershell";
-        "args" = ["-NoLogo"];
+        "args" = [ "-NoLogo" ];
       };
     };
     "terminal.integrated.experimentalUseTitleEvent" = true;
@@ -360,7 +359,7 @@
       "astro" = "html";
     };
 
-    "discord.workspaceExcludePatterns" = ["nixpkgs"];
+    "discord.workspaceExcludePatterns" = [ "nixpkgs" ];
 
     "bracket-pair-colorizer-2.colorMode" = "Consecutive";
     "bracket-pair-colorizer-2.forceIterationColorCycle" = true;
@@ -400,6 +399,11 @@
     "python.languageServer" = "Default";
     "python.showStartPage" = false;
     "python.insidersChannel" = "off";
+
+    # Language specific settings
+    "[python].editor.rulers" = [ 72 78 ];
+    "[markdown].editor.trimTrailingWhitespace" = false;
+
     "pascal.format.indent" = 4;
     "pascal.formatter.engine" = "ptop";
     "snapcode.transparentBackground" = true;
@@ -417,7 +421,7 @@
     "deno.suggest.imports.hosts" = {
       "https://deno.land" = false;
     };
-    "alejandra.program" = "alejandra";
+    #"alejandra.program" = "alejandra";
     "purescript.formatter" = "purs-tidy";
 
     "settingsSync.keybindingsPerPlatform" = false;
@@ -482,7 +486,7 @@
 
     "[python]" = {
       "editor.renderFinalNewline" = true;
-      "editor.rulers" = [88];
+      "editor.rulers" = [ 88 ];
       "editor.trimAutoWhitespace" = true;
       "files.trimFinalNewlines" = true;
       "files.trimTrailingWhitespace" = true;
@@ -492,7 +496,7 @@
     "[rust]" = {
       "editor.defaultFormatter" = "matklad.rust-analyzer";
       "editor.renderFinalNewline" = true;
-      "editor.rulers" = [99];
+      "editor.rulers" = [ 99 ];
       "editor.trimAutoWhitespace" = true;
       "files.trimFinalNewlines" = true;
       "files.trimTrailingWhitespace" = true;
@@ -500,12 +504,12 @@
     };
 
     "[nix]" = {
-      #"editor.defaultFormatter" = "jnoortheen.nix-ide";
-      "editor.defaultFormatter" = "kamadorueda.alejandra";
+      "editor.defaultFormatter" = "jnoortheen.nix-ide";
+      #"editor.defaultFormatter" = "kamadorueda.alejandra";
     };
 
     "[shellscript]" = {
-      "editor.defaultFormatter" = "mkhl.shfmt";
+      "editor.defaultFormatter" = "foxundermoon.shell-format";
       "editor.tabSize" = 2;
       "files.eol" = "\n";
     };

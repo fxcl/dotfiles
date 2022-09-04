@@ -32,7 +32,7 @@ in
           pwgen
           shellcheck
           tmux
-          alejandra
+          #alejandra
           tree
           wget
           yq
