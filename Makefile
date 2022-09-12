@@ -6,4 +6,4 @@ update:
 
 .PHONY: switch
 switch:
-	darwin-rebuild switch --flake .\#tony
+	NIXPKGS_ALLOW_UNFREE=1 darwin-rebuild switch --impure --flake .\#tony

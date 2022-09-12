@@ -29,7 +29,7 @@ in
           "font-source-code-pro"
           "font-fira-code"
           "font-fontawesome"
-          "font-fira-code-nerd-font"
+          # "font-fira-code-nerd-font"
         ];
       };
     };
