@@ -18,7 +18,11 @@ in
     mkIf cfg.enable (mkMerge [
       (if (builtins.hasAttr "homebrew" options) then {
         # TODO: (automate) Requires homebrew to be installed
-        homebrew.taps = [ "homebrew/cask" "homebrew/cask-fonts" "homebrew/cask-versions" ];
+        homebrew.taps = [
+          "homebrew/cask"
+          "homebrew/cask-versions"
+          "homebrew/cask-fonts"
+        ];
         homebrew.casks = [
           "iterm2"
           "notunes"
@@ -101,13 +105,13 @@ in
         };
       })
 
-       {
+      {
         my.hm.file = {
           ".config/mpv" = {
             recursive = true;
             source = ../../../config/mpv;
           };
         };
-       }
+      }
     ]);
 }

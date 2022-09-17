@@ -27,18 +27,17 @@ in
             carnix
             # rls
             # rust-analyzer
-            #cargo-bloat
-            #rust-analyzer-unwrapped
+            # cargo-bloat
+            # rust-analyzer-unwrapped
             # rustup rustc cargo
-            #cargo-watch
-            #evcxr
+            # cargo-watch
+            # evcxr
             # cargo-msrv
             # cargo-deny
             # cargo-expand
             # cargo-bloat
             # cargo-fuzz
             # gitlint
-
             (writeScriptBin "rust-doc" ''
               #! ${stdenv.shell} -e
               exec ${pkgs.firefox-mac}/Applications/Firefox.app/Contents/MacOS/firefox "${rustc.doc}/share/doc/rust/html/index.html"
@@ -46,6 +45,41 @@ in
           ];
         };
       };
+      my.hm.file = {
+        ".cargo/config" = {
+          text = ''
+            [alias]
+            i = "init"
+            nb = "new --bin"
+            nl = "new --lib"
 
+            r = "run"
+            rr = "run --release"
+            re = "run --example"
+            rer = "run --release --example"
+
+            b = "build"
+            br = "build --release"
+            be = "build --example"
+            ber = "build --release --example"
+
+            c = "check"
+            cl = "clean"
+            clp = "clippy --manifest-path=Cargo.toml --all-targets -- -D warnings"
+            d = "doc"
+            do = "doc --open"
+            t = "test"
+            ben = "bench"
+            u = "update"
+            s = "search"
+            p = "publish"
+            in = "install"
+            un = "uninstall"
+            h = "--help"
+            f = "fmt"
+            ls = "--list"
+          '';
+        };
+      };
     };
 }
