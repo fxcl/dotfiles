@@ -3,16 +3,16 @@
 
 {
   enable = true;
+  enableZshIntegration = true;
 
   settings = {
     format = "$character $directory$git_branch$git_commit$git_status$rust$nodejs$deno";
     right_format = "$cmd_duration";
     continuation_prompt = "[∙](bright-white) ";
     add_newline = true;
-    line_break = {
-      disabled = true;
-    };
+    line_break.disabled = true;
     scan_timeout = 10;
+
     cmd_duration = {
       min_time = 5000;
       format = "[\\(](bold)⏱  [$duration](bold yellow)[\\)](bold) ";
@@ -20,16 +20,24 @@
     };
     character = {
       format = "$symbol";
-      # ▶ ᗌ ᗎ
-      success_symbol = "[ᗎ](bold green)";
-      error_symbol = "[ᗎ](bold red)";
+      # ▶ ᗌ ᗎ 🧨 💥
+      success_symbol = "[➜](bold green)";
+      error_symbol = "[✶](bold red)";
+      vicmd_symbol = "[⌘](bold #ff33b8)";
     };
-    directory = {
-      format = "[\\[](bold)[$path](bold 226)[$read_only](bold)[\\]](bold) ";
-      truncation_length = 2;
-      truncate_to_repo = false;
-      truncation_symbol = "…/";
+    nix_shell = {
+      format = "via [$symbol( $name)$state]($style) ";
+      impure_msg = " ";
+      pure_msg = "";
+      symbol = "❄ ";
     };
+
+    # directory = {
+    #   format = "[\\[](bold)[$path](bold 226)[$read_only](bold)[\\]](bold) ";
+    #   truncation_length = 2;
+    #   truncate_to_repo = false;
+    #   truncation_symbol = "…/";
+    # };
     git_branch = {
       symbol = "";
       # format = "[\\(](bold)[$branch](bold 206) [:](bold) ";
@@ -47,7 +55,8 @@
     };
     git_commit = {
       commit_hash_length = 7;
-      format = "[⤠](bold) [$hash$tag](bold yellow underline) ";
+      # ⤠
+      format = "[ﰖ](bold) [$hash$tag](bold yellow underline) ";
       tag_disabled = false;
       tag_symbol = "🔖 ";
     };

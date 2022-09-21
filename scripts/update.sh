@@ -14,8 +14,8 @@ success 'Nix Flake - Complete!'
 case "$(uname -s)" in
 Darwin)
     info "brew pin mysql..."
-    brew unpin mysql && brew pin mysql
-    #brew pin mysql
+    # brew unpin mysql && brew pin mysql
+    brew pin mysql
     info 'Homebrew - Upgrading...'
     brew upgrade --ignore-pinned && brew update
     success 'Homebrew - Complete!'
