@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
   meta = {
     description = "The browser built by Google";
     homepage = "https://www.google.com/chrome/";
-    maintainers = [ maintainers.vibe ];
+    maintainers = [ maintainers.zxfstd ];
     platforms = platforms.darwin;
   };
 }

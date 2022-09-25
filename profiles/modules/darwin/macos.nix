@@ -2,7 +2,7 @@
 
 let
   cfg = config.my.modules.macos;
-
+  me = "kelvin";
 in
 
 {
@@ -186,6 +186,97 @@ in
             TrackpadThreeFingerDrag = true;
           };
         };
+
       };
+
+      # Copy GUI apps to "~/Applications/Home Manager Apps"
+      # Based on this comment: https://github.com/nix-community/home-manager/issues/1341#issuecomment-778820334
+      # home.activation.darwinApps =
+      #   if pkgs.stdenv.isDarwin then
+      #     let
+      #       apps = pkgs.buildEnv {
+      #         name = "home-manager-applications";
+      #         paths = config.home.packages;
+      #         pathsToLink = "/Applications";
+      #       };
+      #     in
+      #     lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      #       # Install MacOS applications to the user environment.
+      #       HM_APPS="$HOME/Applications/Home Manager Apps"
+      #       # Reset current state
+      #       [ -e "$HM_APPS" ] && $DRY_RUN_CMD rm -r "$HM_APPS"
+      #       $DRY_RUN_CMD mkdir -p "$HM_APPS"
+      #       # .app dirs need to be actual directories for Finder to detect them as Apps.
+      #       # In the env of Apps we build, the .apps are symlinks. We pass all of them as
+      #       # arguments to cp and make it dereference those using -H
+      #       $DRY_RUN_CMD cp --archive -H --dereference ${apps}/Applications/* "$HM_APPS"
+      #       $DRY_RUN_CMD chmod +w -R "$HM_APPS"
+      #     ''
+      #   else
+      #     "";
+
+      # Suppose to fix applications not showing in the applications folder
+      # https://github.com/LnL7/nix-darwin/issues/139#issuecomment-666771621
+      # https://github.com/LnL7/nix-darwin/issues/214
+      system.activationScripts.applications.text =
+        let
+          env = pkgs.buildEnv {
+            name = "applications";
+            paths = config.environment.systemPackages ++ config.users.users.${me}.packages;
+            pathsToLink = "/Applications";
+          };
+        in
+        pkgs.lib.mkForce ''
+          # Set up applications.
+          echo "setting up ~/Applications/Nix..." >&2
+          rm -rf ~/Applications/Nix
+          mkdir -p ~/Applications/Nix
+          srcs=()
+          while read src; do
+            srcs+=("$src")
+          done < <(find ${env}/Applications -maxdepth 1 -type l)
+          if [[ "''${#srcs[@]}" != 0 ]]; then
+            /bin/cp -LR "''${srcs[@]}" ~/Applications/Nix
+          fi
+        '';
+
+      # my.hmg = { config, pkgs, lib, ... }: {
+      #   home.activation = {
+      #     copyApplications =
+      #       let
+      #         apps = pkgs.buildEnv {
+      #           name = "home-manager-applications";
+      #           paths = config.home.packages;
+      #           pathsToLink = "/Applications";
+      #         };
+      #       in
+      #       lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      #         baseDir="/Applications/Home Manager Apps"
+      #         if [ -d "$baseDir" ]; then
+      #           rm -rf "$baseDir"
+      #         fi
+      #         mkdir -p "$baseDir"
+      #         for appFile in ${apps}/Applications/*; do
+      #           target="$baseDir/$(basename "$appFile")"
+      #           $DRY_RUN_CMD cp ''${VERBOSE_ARG:+-v} -fHRL "$appFile" "$baseDir"
+      #           $DRY_RUN_CMD chmod ''${VERBOSE_ARG:+-v} -R +w "$target"
+      #         done
+      #       '';
+      #   };
+      # };
+
+      # system.activationScripts.applications.text = lib.mkForce (
+      #   ''
+      #     echo "setting up ~/Applications/Nix..."
+      #     rm -rf ~/Applications/Nix && mkdir -p ~/Applications/Nix
+      #     chown ${me} ~/Applications/Nix
+      #     IFS='
+      #     '
+      #     for app in $(find ${config.system.build.applications}/Applications -maxdepth 1 -type l); do
+      #       src="$(/usr/bin/stat -f%Y "$app")" && appname="$(basename $src)"
+      #       osascript -e "tell app \"Finder\" to make alias file at POSIX file \"/Users/${me}/Applications/Nix/\" to POSIX file \"$src\" with properties {name: \"$appname\"}";
+      #     done
+      #   ''
+      # );
     };
 }

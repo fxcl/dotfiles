@@ -7,4 +7,5 @@ self: super:
   mysides = super.callPackage ./mysides { };
   intellij-idea-ce = super.callPackage ./intellij { };
   firefox-mac = super.callPackage ./firefox { };
+  speedtest = super.callPackage ./speedtest-cli {};
 }
