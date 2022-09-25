@@ -81,7 +81,7 @@ in
       description = "Primary user account";
     };
 
-    ## PATH should always start with its old value
+    # PATH should always start with its old value
     # must already begin with pre-existing PATH. Also, can't use binDir here,
     # because it contains a nix store path.
     # my.env.PATH  = [ <bin> "$PATH" ];
