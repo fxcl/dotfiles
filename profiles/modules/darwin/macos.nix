@@ -94,97 +94,129 @@ in
 
       system = {
         defaults = {
-          # ".GlobalPreferences".com.apple.sound.beep.sound = "Funk";
+
+          # System - Enable font smoothing
+          # Enables subpixel font rendering on non-Apple LCDs
+          NSGlobalDomain.AppleFontSmoothing = 1;
+
+          # Keyboard - Enable full keyboard access for all controls.
+          # (e.g., enable Tab in modal dialogs)
+          NSGlobalDomain.AppleKeyboardUIMode = 3;
+
+          # Keyboard - Disable press-and-hold for keys in favor of key repeat
+          NSGlobalDomain.ApplePressAndHoldEnabled = false;
+
+          # Finder - Show filename extensions.
+          NSGlobalDomain.AppleShowAllExtensions = true;
+
+          # System - Automatically show scroll bars
+          NSGlobalDomain.AppleShowScrollBars = "Automatic";
+
+          # System - What temperature unit to use
+          NSGlobalDomain.AppleTemperatureUnit = "Celsius";
+
+          # Keyboard - Set a short Delay until key repeat.
+          NSGlobalDomain.InitialKeyRepeat = 15;
+
+          # Keyboard - Set a fast keyboard repeat rate.
+          NSGlobalDomain.KeyRepeat = 1;
+
+          # System - Disable automatic capitalization as it’s annoying when typing code
+          NSGlobalDomain.NSAutomaticCapitalizationEnabled = false;
+
+          # System - Disable smart dashes as they’re annoying when typing code
+          NSGlobalDomain.NSAutomaticDashSubstitutionEnabled = false;
+
+          # System - Disable automatic period substitution as it’s annoying when typing code
+          NSGlobalDomain.NSAutomaticPeriodSubstitutionEnabled = false;
+
+          # System - Disable smart quotes as they’re annoying when typing code
+          NSGlobalDomain.NSAutomaticQuoteSubstitutionEnabled = false;
+
+          # System - Disable auto-correct
+          NSGlobalDomain.NSAutomaticSpellingCorrectionEnabled = false;
+
+          # iCloud - Don't save new documents to iCloud by default
+          NSGlobalDomain.NSDocumentSaveNewDocumentsToCloud = false;
+
+          # System - Expand save panel by default.
+          NSGlobalDomain.NSNavPanelExpandedStateForSaveMode = true;
+          NSGlobalDomain.NSNavPanelExpandedStateForSaveMode2 = true;
+
+          # System - Decrease window resize duration
+          # NSGlobalDomain.NSWindowResizeTime = "0.001";
+
+          # Printer - Expand print panel by default.
+          NSGlobalDomain.PMPrintingExpandedStateForPrint = true;
+          NSGlobalDomain.PMPrintingExpandedStateForPrint2 = true;
+
+          # NSGlobalDomain.AppleMeasurementUnits = "Centimeters";
+          # NSGlobalDomain.AppleMetricUnits = 1;
+          # NSGlobalDomain.NSDisableAutomaticTermination = false;
+          # NSGlobalDomain.NSScrollAnimationEnabled = false;
+          # NSGlobalDomain.NSTableViewDefaultSizeMode = 2;
+          # NSGlobalDomain.NSTextShowsControlCharacters = true;
+          # NSGlobalDomain.NSUseAnimatedFocusRing = false;
+          # NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
+          # NSGlobalDomain."com.apple.trackpad.enableSecondaryClick" = true;
+          # NSGlobalDomain."com.apple.trackpad.trackpadCornerClickBehavior" = 1;
+
+          # Trackpad - Disable natural scrolling
+          # NSGlobalDomain."com.apple.swipescrolldirection" = false;
+
+          # System - Disable 'Are you sure you want to open this application?' dialog
           LaunchServices.LSQuarantine = false;
+
+          # Dock - Don’t show recent applications in Dock
+          dock.show-recents = false;
+
+          # Dock - Make icons of hidden applications translucent
+          dock.showhidden = true;
+
+          # Dock - Don’t automatically rearrange Spaces based on most recent use
+          dock.mru-spaces = false;
+
+          # Dock - Orient to the bottom
+          dock.orientation = "bottom";
+
+          # Dock - Minimize apps to their icon
+          dock.minimize-to-application = true;
+
+          dock.tilesize = 48;
+
+          dock.wvous-tl-corner = 2;
+          dock.wvous-bl-corner = 3;
+          dock.wvous-tr-corner = 2;
+          dock.wvous-br-corner = 3;
+
+          # Finder - Disable the warning when changing a file extension
+          finder.FXEnableExtensionChangeWarning = false;
+
+          # Finder - Add quit option
+          finder.QuitMenuItem = true;
+
+          finder.AppleShowAllExtensions = true;
+          finder._FXShowPosixPathInTitle = true;
+
+          # Screencapture - Save screenshots to the desktop
+          screencapture.location = "/Users/${config.my.username}/Pictures/Screenshots";
+
           SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
-          NSGlobalDomain = {
-            # AppleFontSmoothing = 2;
-            # AppleKeyboardUIMode = 3;
-            AppleMeasurementUnits = "Centimeters";
-            AppleMetricUnits = 1;
-            ApplePressAndHoldEnabled = true;
-            AppleShowAllExtensions = false;
-            AppleShowScrollBars = "Always";
-            AppleTemperatureUnit = "Celsius";
-            # InitialKeyRepeat = 1;
-            # KeyRepeat = 1;
-            NSAutomaticCapitalizationEnabled = false;
-            NSAutomaticDashSubstitutionEnabled = false;
-            NSAutomaticPeriodSubstitutionEnabled = false;
-            NSAutomaticQuoteSubstitutionEnabled = false;
-            NSAutomaticSpellingCorrectionEnabled = false;
-            NSDisableAutomaticTermination = false;
-            NSDocumentSaveNewDocumentsToCloud = false;
-            NSNavPanelExpandedStateForSaveMode = true;
-            NSNavPanelExpandedStateForSaveMode2 = true;
-            NSScrollAnimationEnabled = false;
-            NSTableViewDefaultSizeMode = 2;
-            NSTextShowsControlCharacters = true;
-            NSUseAnimatedFocusRing = false;
-            # NSWindowResizeTime = 0.20;
-            PMPrintingExpandedStateForPrint = true;
-            PMPrintingExpandedStateForPrint2 = true;
-            "com.apple.mouse.tapBehavior" = 1;
-            "com.apple.swipescrolldirection" = true;
-            "com.apple.trackpad.enableSecondaryClick" = true;
-            "com.apple.trackpad.trackpadCornerClickBehavior" = 1;
-          };
 
-          dock = {
-            # autohide = false;
-            # autohide-delay = "0.2";
-            # mineffect = "scale";
-            #mineffect = "genie";
-            show-recents = false;
-            tilesize = 48;
-            largesize = 64;
-            magnification = true;
-            # autohide-time-modifier = "0";
-            # dashboard-in-overlay = true;
-            # expose-animation-duration = "0.1";
-            # expose-group-by-app = false;
-            # launchanim = false;
-            # minimize-to-application = true;
-            # mouse-over-hilite-stack = true;
-            # show-process-indicators = false;
-            # showhidden = true;
-            # static-only = true;
+          loginwindow.DisableConsoleAccess = true;
+          loginwindow.GuestEnabled = false;
+          # LoginwindowText = "";
+          loginwindow.PowerOffDisabledWhileLoggedIn = true;
+          loginwindow.RestartDisabledWhileLoggedIn = true;
+          loginwindow.ShutDownDisabledWhileLoggedIn = true;
+          loginwindow.SHOWFULLNAME = true;
 
-            wvous-tl-corner = 2;
-            wvous-bl-corner = 3;
-            wvous-tr-corner = 2;
-            wvous-br-corner = 3;
-          };
-
-          finder = {
-            AppleShowAllExtensions = false;
-            FXEnableExtensionChangeWarning = false;
-            QuitMenuItem = true;
-            _FXShowPosixPathInTitle = true;
-          };
-
-          loginwindow = {
-            DisableConsoleAccess = true;
-            GuestEnabled = false;
-            # LoginwindowText = "";
-            PowerOffDisabledWhileLoggedIn = true;
-            RestartDisabledWhileLoggedIn = true;
-            ShutDownDisabledWhileLoggedIn = true;
-            SHOWFULLNAME = true;
-          };
-
-          screencapture = {
-            location = "/Users/${config.my.username}/Pictures/Screenshots";
-          };
-
-          trackpad = {
-            ActuationStrength = 1;
-            Clicking = true;
-            FirstClickThreshold = 1;
-            SecondClickThreshold = 1;
-            TrackpadRightClick = true;
-            TrackpadThreeFingerDrag = true;
-          };
+          trackpad.ActuationStrength = 1;
+          trackpad.Clicking = true;
+          trackpad.FirstClickThreshold = 1;
+          trackpad.SecondClickThreshold = 1;
+          trackpad.TrackpadRightClick = true;
+          trackpad.TrackpadThreeFingerDrag = true;
         };
 
       };
