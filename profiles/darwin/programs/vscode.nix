@@ -20,7 +20,8 @@
       #file-icons.file-icons
       foxundermoon.shell-format
       redhat.vscode-yaml
-      #timonwong.shellcheck
+      christian-kohler.path-intellisense
+      timonwong.shellcheck
       #tomoki1207.pdf
       xaver.clang-format
       #haskell.haskell
@@ -50,7 +51,6 @@
       tamasfe.even-better-toml
       #zignd.html-css-class-completion
       #mathiasfrohlich.kotlin
-      vadimcn.vscode-lldb
       yzhang.markdown-all-in-one
 
       ibm.output-colorizer
@@ -58,15 +58,19 @@
       #alefragnani.pascal-formatter
       #jeroen-meijer.pubspec-assist
       ms-python.python
+      ms-python.vscode-pylance
       #msjsdiag.vscode-react-native
       humao.rest-client
+      # Rust
       matklad.rust-analyzer
+      vadimcn.vscode-lldb
       #matklad.rust-analyzer-nightly
       #svelte.svelte-vscode
       bradlc.vscode-tailwindcss
       #pflannery.vscode-versionlens
     ]
     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      # https://www.vsixhub.com/vsix/30/
       {
         name = "ccls";
         publisher = "ccls-project";
@@ -527,6 +531,10 @@
     "[ignore]" = {
       "editor.defaultFormatter" = "foxundermoon.shell-format";
     };
+    "[csharp]" = {
+        "editor.defaultFormatter" = "csharpier.csharpier-vscode";
+        "editor.formatOnSave" = true;
+      };
   };
 
   keybindings = [
