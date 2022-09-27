@@ -8,24 +8,34 @@
   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/vscode-extensions/default.nix
   extensions = with pkgs.vscode-extensions;
     [
+      matklad.rust-analyzer
+      vadimcn.vscode-lldb
+      ms-python.python
+      redhat.vscode-yaml
+      bbenoist.nix
+      justusadam.language-haskell
+      dhall.dhall-lang
+      dhall.vscode-dhall-lsp-server
+      haskell.haskell
+      serayuzgur.crates
+      dbaeumer.vscode-eslint
+      timonwong.shellcheck
+      christian-kohler.path-intellisense
       # Languages
       #scalameta.metals # Scala Language Server
       #scala-lang.scala # Scala Language
-      bbenoist.nix
       jnoortheen.nix-ide
+      llvm-vs-code-extensions.vscode-clangd
+
       arrterian.nix-env-selector
       #b4dm4n.nixpkgs-fmt
       #kamadorueda.alejandra
       dracula-theme.theme-dracula
       #file-icons.file-icons
       foxundermoon.shell-format
-      redhat.vscode-yaml
-      christian-kohler.path-intellisense
-      timonwong.shellcheck
       #tomoki1207.pdf
       xaver.clang-format
-      #haskell.haskell
-      #justusadam.language-haskell
+
       #ms-azuretools.vscode-docker
       #ms-kubernetes-tools.vscode-kubernetes-tools
       #ms-python.vscode-pylance
@@ -47,7 +57,6 @@
       #dart-code.flutter
       #icrawl.discord-vscode
       mikestead.dotenv
-      dbaeumer.vscode-eslint
       tamasfe.even-better-toml
       #zignd.html-css-class-completion
       #mathiasfrohlich.kotlin
@@ -57,26 +66,50 @@
       #alefragnani.pascal
       #alefragnani.pascal-formatter
       #jeroen-meijer.pubspec-assist
-      ms-python.python
       ms-python.vscode-pylance
       #msjsdiag.vscode-react-native
       humao.rest-client
-      # Rust
-      matklad.rust-analyzer
-      vadimcn.vscode-lldb
       #matklad.rust-analyzer-nightly
       #svelte.svelte-vscode
       bradlc.vscode-tailwindcss
       #pflannery.vscode-versionlens
     ]
     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-      # https://www.vsixhub.com/vsix/30/
       {
-        name = "ccls";
-        publisher = "ccls-project";
-        version = "0.1.29";
-        sha256 = "RjMYBLgbi+lgPqaqN7yh8Q8zr9euvQ+YLEoQaV3RDOA=";
+        # https://www.vsixhub.com/vsix/73731/
+        name = "gruvbox-material-icon-theme";
+        publisher = "jonathanharty";
+        version = "1.1.4";
+        sha256 = "2865cc8f59a65e93ad8eefe08e0af7ff666ef5d2fa317494821980ae77bfabf5";
       }
+      {
+        # https://www.vsixhub.com/vsix/1950/
+        name = "liveserver";
+        publisher = "ritwickdey";
+        version = "5.7.9";
+        sha256 = "c3409848439d96dc0c1739b96613b14abc6a435cb8fa02df07c2fe105160cc37";
+      }
+      {
+        # https://www.vsixhub.com/vsix/32677/
+        name = "tauri-vscode";
+        publisher = "tauri-apps";
+        version = "0.1.6";
+        sha256 = "46ce91c29b9e567282fe0c39dad26cba85b00a0571fc7c8b268726b23d318ba6";
+      }
+      # {
+      #   # https://www.vsixhub.com/vsix/8048/
+      #   name = "vscode-lldb";
+      #   publisher = "vadimcn";
+      #   version = "1.7.4";
+      #   sha256 = "5c9c4db3b03cd48612f65d382340f9e5f2506ac3e6b7be65d74ca3de064d9978";
+      # }
+      # https://www.vsixhub.com/vsix/30/
+      # {
+      #   name = "ccls";
+      #   publisher = "ccls-project";
+      #   version = "0.1.29";
+      #   sha256 = "RjMYBLgbi+lgPqaqN7yh8Q8zr9euvQ+YLEoQaV3RDOA=";
+      # }
       {
         name = "gruvbox-themes";
         publisher = "tomphilbin";
@@ -90,12 +123,6 @@
         sha256 = "1y168ar01zxdd2x73ddsckbzqq0iinax2zv3d95nhwp9asjnbpgn";
       }
       {
-        name = "doxdocgen";
-        publisher = "cschlosser";
-        version = "1.4.0";
-        sha256 = "1d95znf2vsdzv9jqiigh9zm62dp4m9jz3qcfaxn0n0pvalbiyw92";
-      }
-      {
         name = "better-cpp-syntax";
         publisher = "jeff-hykin";
         version = "1.15.19";
@@ -106,12 +133,6 @@
         publisher = "ms-vscode-remote";
         version = "0.248.0";
         sha256 = "147hcm98bbd5ww1xps9myay6324n4c5mj6f4zpkkb4c93k2ffxj3";
-      }
-      {
-        name = "cmake-tools";
-        publisher = "ms-vscode";
-        version = "1.12.24";
-        sha256 = "1dlg9yyvcf70k6ykvz0s7zlhm7qjvj6mv34bnl3gdwc1282rs42c";
       }
       # {
       #   name = "cmake";
@@ -186,12 +207,6 @@
         sha256 = "0dlsri0dcligjz3x1ddpjhyvna6dmdswhb86c9k73y22r12fd1zd";
       }
       {
-        name = "crates";
-        publisher = "serayuzgur";
-        version = "0.5.10";
-        sha256 = "1dbhd6xbawbnf9p090lpmn8i5gg1f7y8xk2whc9zhg4432kdv3vd";
-      }
-      {
         name = "elm-ls-vscode";
         publisher = "elmTooling";
         version = "2.4.1";
@@ -221,6 +236,8 @@
     "update.mode" = "none";
     "http.proxy" = "127.0.0.1:7890";
     "http.proxySupport" = "on";
+    # appearance
+
     "editor.minimap.enabled" = false;
     "editor.fontLigatures" = true;
     "editor.fontFamily" = "Mensch, Menlo, Consolas, Monaco, 'Courier New', monospace";
@@ -238,14 +255,17 @@
     "editor.quickSuggestions" = {
       "strings" = true;
     };
-
-    "diffEditor.maxComputationTime" = 0;
-    "diffEditor.wordWrap" = "off";
+    "editor.inlineSuggest.enabled" = true;
+    "editor.stickyScroll.enabled" = true;
     "editor.bracketPairColorization.enabled" = true;
     "editor.guides.bracketPairs" = "active";
     "editor.maxTokenizationLineLength" = 10000;
     "editor.unicodeHighlight.ambiguousCharacters" = false;
     "editor.wordWrap" = "on";
+
+    "diffEditor.maxComputationTime" = 0;
+    "diffEditor.wordWrap" = "off";
+
     "eslint.format.enable" = true;
     "eslint.lintTask.enable" = true;
     "explorer.confirmDelete" = false;
@@ -258,22 +278,7 @@
     "terminal.integrated.defaultProfile.linux" = "zsh";
     "terminal.integrated.defaultProfile.osx" = "zsh";
     "terminal.integrated.fontSize" = 12;
-    "typescript.updateImportsOnFileMove.enabled" = "always";
-
-    "editor.rulers" = [ 80 120 ];
-    "telemetry.enableTelemetry" = false;
-    "telemetry.enableCrashReporter" = false;
-    "editor.useTabStops" = false;
-    "workbench.fontAliasing" = "antialiased";
-    "files.trimTrailingWhitespace" = true;
     "terminal.integrated.fontFamily" = "PragmataPro Liga";
-
-    "debug.console.fontFamily" = "PragmataPro Liga";
-    "debug.console.fontSize" = 16;
-    "debug.allowBreakpointsEverywhere" = true;
-    "debug.javascript.autoAttachFilter" = "smart";
-    #"terminal.external.linuxExec" = "konsole";
-    #"terminal.external.linuxExec" = "${alacritty}/bin/alacritty";
     "terminal.integrated.cursorStyle" = "line";
     "terminal.integrated.cursorBlinking" = true;
     "terminal.integrated.letterSpacing" = 1.0;
@@ -287,9 +292,66 @@
       };
     };
     "terminal.integrated.experimentalUseTitleEvent" = true;
+    "terminal.integrated.shellIntegration.decorationsEnabled" = "never";
+
+    "typescript.updateImportsOnFileMove.enabled" = "always";
+    "editor.rulers" = [ 80 120 ];
+    "telemetry.enableTelemetry" = false;
+    "telemetry.enableCrashReporter" = false;
+    "editor.useTabStops" = false;
+
+    "files.trimTrailingWhitespace" = true;
+
+
+    "debug.console.fontFamily" = "PragmataPro Liga";
+    "debug.console.fontSize" = 16;
+    "debug.allowBreakpointsEverywhere" = true;
+    "debug.javascript.autoAttachFilter" = "smart";
+    #"terminal.external.linuxExec" = "konsole";
+    #"terminal.external.linuxExec" = "${alacritty}/bin/alacritty";
+    "workbench.fontAliasing" = "antialiased";
+    "workbench.editor.highlightModifiedTabs" = true; # Better highlight on modified tabs.
+    "workbench.editor.enablePreview" = false; # I often prefer small files therefore I thank the extra space.
+    "workbench.statusBar.feedback.visible" = false;
+    "workbench.activityBar.visible" = true;
+    "workbench.tree.indent" = 8;
+    "workbench.colorTheme" = "Gruvbox Light (Medium)";
+    # "workbench.iconTheme" = "Gruvbox Light";
+    "workbench.iconTheme" = "gruvbox-material-icon-theme";
+    "workbench.editor.wrapTabs" = true;
+    "workbench.editor.tabSizing" = "fit";
+    "workbench.editor.decorations.colors" = true;
+    "workbench.editor.decorations.badges" = true;
+    "workbench.editor.enablePreviewFromCodeNavigation" = true;
+    "workbench.startupEditor" = "newUntitledFile";
+    "workbench.settings.editor" = "json";
+    "workbench.editor.untitled.experimentalLanguageDetection" = true;
+    "workbench.sideBar.location" = "left";
+
+    "workbench.colorCustomizations" = {
+      "editorBracketHighlight.foreground1" = "#FFD700";
+      "editorBracketHighlight.foreground2" = "#DA70D6";
+      "editorBracketHighlight.foreground3" = "#87CEFA";
+      "editorBracketHighlight.foreground4" = "#FA8072";
+      "editorBracketHighlight.foreground5" = "#7CFC00";
+      "editorBracketHighlight.foreground6" = "#FF8C00";
+    };
+
     "workbench.editorAssociations" = {
       "*.ipynb" = "jupyter.notebook.ipynb";
     };
+
+    "breadcrumbs.enabled" = false;
+    "liveServer.settings.donotShowInfoMsg" = true;
+
+    # copilot
+    # "enable-proposed-api" = ["github.copilot"];
+    # "github.copilot.enable" = {
+    #   "*" = true;
+    #   "yaml" = false;
+    #   "plaintext" = false;
+    #   "markdown" = false;
+    # };
 
     "files.exclude" = {
       "**/result" = true;
@@ -327,29 +389,7 @@
     "files.insertFinalNewline" = true; # Because POSIX compliance (todo: read why is that really important, maybe to identify the last line?)
     #"files.autoSave" = "onFocusChange"; # Because I am lazy and I often source control the files.
     "files.autoSave" = "onWindowChange";
-    "workbench.editor.highlightModifiedTabs" = true; # Better highlight on modified tabs.
-    "workbench.editor.enablePreview" = false; # I often prefer small files therefore I thank the extra space.
-    "workbench.statusBar.feedback.visible" = false;
-    "workbench.activityBar.visible" = true;
-    "workbench.colorTheme" = "Gruvbox Light (Medium)";
-    "workbench.iconTheme" = "Gruvbox Light";
-    "workbench.editor.wrapTabs" = true;
-    "workbench.editor.tabSizing" = "fit";
-    "workbench.editor.decorations.colors" = true;
-    "workbench.editor.decorations.badges" = true;
-    "workbench.editor.enablePreviewFromCodeNavigation" = true;
-    "workbench.startupEditor" = "newUntitledFile";
-    "workbench.settings.editor" = "json";
-    "workbench.colorCustomizations" = {
-      "editorBracketHighlight.foreground1" = "#FFD700";
-      "editorBracketHighlight.foreground2" = "#DA70D6";
-      "editorBracketHighlight.foreground3" = "#87CEFA";
-      "editorBracketHighlight.foreground4" = "#FA8072";
-      "editorBracketHighlight.foreground5" = "#7CFC00";
-      "editorBracketHighlight.foreground6" = "#FF8C00";
-    };
-    "workbench.editor.untitled.experimentalLanguageDetection" = true;
-    "workbench.sideBar.location" = "left";
+
     "window.menuBarVisibility" = "toggle";
     #"window.menuBarVisibility" = "default";
     "window.titleBarStyle" = "custom";
@@ -532,9 +572,9 @@
       "editor.defaultFormatter" = "foxundermoon.shell-format";
     };
     "[csharp]" = {
-        "editor.defaultFormatter" = "csharpier.csharpier-vscode";
-        "editor.formatOnSave" = true;
-      };
+      "editor.defaultFormatter" = "csharpier.csharpier-vscode";
+      "editor.formatOnSave" = true;
+    };
   };
 
   keybindings = [
