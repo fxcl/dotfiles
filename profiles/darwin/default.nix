@@ -179,6 +179,7 @@ in
       vscode = import ./programs/vscode.nix { inherit pkgs; };
       zsh = import ./programs/zsh.nix { inherit pkgs; };
       zathura = import ./programs/zathura.nix { inherit pkgs; };
+      lf = import ./programs/lf.nix { inherit pkgs; };
     };
   };
 }

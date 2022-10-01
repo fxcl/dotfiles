@@ -52,6 +52,10 @@ in
           nix-index # locate files of nix packages
           nix-output-monitor
           global
+          # Perl Language Server
+          perlPackages.PLS
+          # Nix Language Server
+         lsp-nil
         ]++ (if stdenv.isDarwin then [ vim-darwin ] else [ vimHugeX ]);
       };
     };

@@ -21,7 +21,7 @@
   extraPackages = with pkgs; [
     gopls
     shfmt
-    rnix-lsp
+    # rnix-lsp
   ];
 
   extraConfig = builtins.readFile ../../.vimrc;

@@ -26,16 +26,14 @@
       #scala-lang.scala # Scala Language
       jnoortheen.nix-ide
       llvm-vs-code-extensions.vscode-clangd
-
       arrterian.nix-env-selector
-      #b4dm4n.nixpkgs-fmt
-      #kamadorueda.alejandra
       dracula-theme.theme-dracula
-      #file-icons.file-icons
+      xaver.clang-format
       foxundermoon.shell-format
       #tomoki1207.pdf
-      xaver.clang-format
-
+      #file-icons.file-icons
+      #b4dm4n.nixpkgs-fmt
+      #kamadorueda.alejandra
       #ms-azuretools.vscode-docker
       #ms-kubernetes-tools.vscode-kubernetes-tools
       #ms-python.vscode-pylance
@@ -46,8 +44,14 @@
       octref.vetur
       shardulm94.trailing-spaces
       golang.go
-      #hashicorp.terraform
       editorconfig.editorconfig
+      mikestead.dotenv
+      tamasfe.even-better-toml
+      yzhang.markdown-all-in-one
+      ibm.output-colorizer
+      ms-python.vscode-pylance
+      humao.rest-client
+      #hashicorp.terraform
       #james-yu.latex-workshop
       #nash.awesome-flutter-snippets
       #github.vscode-codeql
@@ -56,23 +60,16 @@
       #dart-code.dart-code
       #dart-code.flutter
       #icrawl.discord-vscode
-      mikestead.dotenv
-      tamasfe.even-better-toml
       #zignd.html-css-class-completion
       #mathiasfrohlich.kotlin
-      yzhang.markdown-all-in-one
-
-      ibm.output-colorizer
       #alefragnani.pascal
       #alefragnani.pascal-formatter
       #jeroen-meijer.pubspec-assist
-      ms-python.vscode-pylance
       #msjsdiag.vscode-react-native
-      humao.rest-client
       #matklad.rust-analyzer-nightly
       #svelte.svelte-vscode
-      bradlc.vscode-tailwindcss
       #pflannery.vscode-versionlens
+      bradlc.vscode-tailwindcss
     ]
     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
@@ -96,20 +93,7 @@
         version = "0.1.6";
         sha256 = "46ce91c29b9e567282fe0c39dad26cba85b00a0571fc7c8b268726b23d318ba6";
       }
-      # {
-      #   # https://www.vsixhub.com/vsix/8048/
-      #   name = "vscode-lldb";
-      #   publisher = "vadimcn";
-      #   version = "1.7.4";
-      #   sha256 = "5c9c4db3b03cd48612f65d382340f9e5f2506ac3e6b7be65d74ca3de064d9978";
-      # }
-      # https://www.vsixhub.com/vsix/30/
-      # {
-      #   name = "ccls";
-      #   publisher = "ccls-project";
-      #   version = "0.1.29";
-      #   sha256 = "RjMYBLgbi+lgPqaqN7yh8Q8zr9euvQ+YLEoQaV3RDOA=";
-      # }
+
       {
         name = "gruvbox-themes";
         publisher = "tomphilbin";
@@ -213,6 +197,20 @@
         sha256 = "1idhsrl9w8sc0qk58dvmyyjbmfznk3f4gz2zl6s9ksyz9d06vfrd";
       }
       # {
+      #   # https://www.vsixhub.com/vsix/8048/
+      #   name = "vscode-lldb";
+      #   publisher = "vadimcn";
+      #   version = "1.7.4";
+      #   sha256 = "5c9c4db3b03cd48612f65d382340f9e5f2506ac3e6b7be65d74ca3de064d9978";
+      # }
+      # https://www.vsixhub.com/vsix/30/
+      # {
+      #   name = "ccls";
+      #   publisher = "ccls-project";
+      #   version = "0.1.29";
+      #   sha256 = "RjMYBLgbi+lgPqaqN7yh8Q8zr9euvQ+YLEoQaV3RDOA=";
+      # }
+      # {
       #   name = "vscode-direnv";
       #   publisher = "cab404";
       #   version = "1.0.0";
@@ -262,19 +260,42 @@
     "editor.maxTokenizationLineLength" = 10000;
     "editor.unicodeHighlight.ambiguousCharacters" = false;
     "editor.wordWrap" = "on";
+    "editor.useTabStops" = false;
+    "editor.rulers" = [ 80 120 ];
+     # scroll with an animation
+    "editor.smoothScrolling" = true;
 
-    "diffEditor.maxComputationTime" = 0;
-    "diffEditor.wordWrap" = "off";
-
-    "eslint.format.enable" = true;
-    "eslint.lintTask.enable" = true;
-    "explorer.confirmDelete" = false;
-    "git.confirmSync" = false;
-    "git.enableSmartCommit" = true;
-    "go.toolsManagement.autoUpdate" = true;
-    "javascript.updateImportsOnFileMove.enabled" = "always";
-    "redhat.telemetry.enabled" = false;
-    "security.workspace.trust.untrustedFiles" = "open";
+    "workbench.fontAliasing" = "antialiased";
+    "workbench.editor.highlightModifiedTabs" = true; # Better highlight on modified tabs.
+    "workbench.editor.enablePreview" = false; # I often prefer small files therefore I thank the extra space.
+    "workbench.statusBar.feedback.visible" = false;
+    "workbench.activityBar.visible" = true;
+    "workbench.tree.indent" = 8;
+    #"workbench.colorTheme" = "Gruvbox Light (Medium)";
+    "workbench.colorTheme" = "Gruvbox Dark Hard";
+    #"workbench.iconTheme" = "Gruvbox Light";
+    "workbench.iconTheme" = "gruvbox-material-icon-theme";
+    "workbench.editor.wrapTabs" = true;
+    "workbench.editor.tabSizing" = "fit";
+    "workbench.editor.decorations.colors" = true;
+    "workbench.editor.decorations.badges" = true;
+    "workbench.editor.enablePreviewFromCodeNavigation" = true;
+    "workbench.startupEditor" = "newUntitledFile";
+    "workbench.settings.editor" = "json";
+    "workbench.editor.untitled.experimentalLanguageDetection" = true;
+    "workbench.sideBar.location" = "left";
+    "workbench.colorCustomizations" = {
+      "editorBracketHighlight.foreground1" = "#FFD700";
+      "editorBracketHighlight.foreground2" = "#DA70D6";
+      "editorBracketHighlight.foreground3" = "#87CEFA";
+      "editorBracketHighlight.foreground4" = "#FA8072";
+      "editorBracketHighlight.foreground5" = "#7CFC00";
+      "editorBracketHighlight.foreground6" = "#FF8C00";
+    };
+    "workbench.editorAssociations" = {
+      "*.ipynb" = "jupyter.notebook.ipynb";
+    };
+    "terminal.integrated.drawBoldTextInBrightColors" = false;
     "terminal.integrated.defaultProfile.linux" = "zsh";
     "terminal.integrated.defaultProfile.osx" = "zsh";
     "terminal.integrated.fontSize" = 12;
@@ -293,53 +314,33 @@
     };
     "terminal.integrated.experimentalUseTitleEvent" = true;
     "terminal.integrated.shellIntegration.decorationsEnabled" = "never";
+    #"terminal.external.linuxExec" = "konsole";
+    #"terminal.external.linuxExec" = "${alacritty}/bin/alacritty";
 
+    "diffEditor.maxComputationTime" = 0;
+    "diffEditor.wordWrap" = "off";
+    "eslint.format.enable" = true;
+    "eslint.lintTask.enable" = true;
+    "explorer.confirmDelete" = false;
+    "explorer.confirmDragAndDrop" = false; # Don't bother me when I want to drag-and-drop files.
+
+    "git.confirmSync" = false;
+    "git.enableSmartCommit" = true;
+    "git.autofetch" = true;
+
+
+
+    "redhat.telemetry.enabled" = false;
+    "security.workspace.trust.untrustedFiles" = "open";
     "typescript.updateImportsOnFileMove.enabled" = "always";
-    "editor.rulers" = [ 80 120 ];
     "telemetry.enableTelemetry" = false;
     "telemetry.enableCrashReporter" = false;
-    "editor.useTabStops" = false;
-
-    "files.trimTrailingWhitespace" = true;
-
+    "telemetry.telemetryLevel" = "off";
 
     "debug.console.fontFamily" = "PragmataPro Liga";
     "debug.console.fontSize" = 16;
     "debug.allowBreakpointsEverywhere" = true;
     "debug.javascript.autoAttachFilter" = "smart";
-    #"terminal.external.linuxExec" = "konsole";
-    #"terminal.external.linuxExec" = "${alacritty}/bin/alacritty";
-    "workbench.fontAliasing" = "antialiased";
-    "workbench.editor.highlightModifiedTabs" = true; # Better highlight on modified tabs.
-    "workbench.editor.enablePreview" = false; # I often prefer small files therefore I thank the extra space.
-    "workbench.statusBar.feedback.visible" = false;
-    "workbench.activityBar.visible" = true;
-    "workbench.tree.indent" = 8;
-    "workbench.colorTheme" = "Gruvbox Light (Medium)";
-    # "workbench.iconTheme" = "Gruvbox Light";
-    "workbench.iconTheme" = "gruvbox-material-icon-theme";
-    "workbench.editor.wrapTabs" = true;
-    "workbench.editor.tabSizing" = "fit";
-    "workbench.editor.decorations.colors" = true;
-    "workbench.editor.decorations.badges" = true;
-    "workbench.editor.enablePreviewFromCodeNavigation" = true;
-    "workbench.startupEditor" = "newUntitledFile";
-    "workbench.settings.editor" = "json";
-    "workbench.editor.untitled.experimentalLanguageDetection" = true;
-    "workbench.sideBar.location" = "left";
-
-    "workbench.colorCustomizations" = {
-      "editorBracketHighlight.foreground1" = "#FFD700";
-      "editorBracketHighlight.foreground2" = "#DA70D6";
-      "editorBracketHighlight.foreground3" = "#87CEFA";
-      "editorBracketHighlight.foreground4" = "#FA8072";
-      "editorBracketHighlight.foreground5" = "#7CFC00";
-      "editorBracketHighlight.foreground6" = "#FF8C00";
-    };
-
-    "workbench.editorAssociations" = {
-      "*.ipynb" = "jupyter.notebook.ipynb";
-    };
 
     "breadcrumbs.enabled" = false;
     "liveServer.settings.donotShowInfoMsg" = true;
@@ -378,13 +379,11 @@
       "**/*.exe" = true;
       "**/*.o" = true;
     };
-
+    "files.trimTrailingWhitespace" = true;
     "files.associations" = {
       "*.config" = "makefile";
     };
 
-    "git.autofetch" = true;
-    "explorer.confirmDragAndDrop" = false; # Don't bother me when I want to drag-and-drop files.
     "files.trimFinalNewlines" = true; # Keep files trimmed.
     "files.insertFinalNewline" = true; # Because POSIX compliance (todo: read why is that really important, maybe to identify the last line?)
     #"files.autoSave" = "onFocusChange"; # Because I am lazy and I often source control the files.
@@ -393,7 +392,7 @@
     "window.menuBarVisibility" = "toggle";
     #"window.menuBarVisibility" = "default";
     "window.titleBarStyle" = "custom";
-    "window.zoomLevel" = 0.5;
+    "window.zoomLevel" = -1;
 
     "extensions.ignoreRecommendations" = true;
     "npm.fetchOnlinePackageInfo" = false;
@@ -428,24 +427,53 @@
     "markdown.preview.scrollEditorWithPreview" = true; # Syncronize editor with preview.
     "markdown.preview.scrollPreviewWithEditor" = true; # Syncronize preview with editor.editor with preview.
 
+    ## Language Servers ##
+    "perl.pls" = "${pkgs.perlPackages.PLS}/bin/pls";
+
+    "nix.enableLanguageServer" = true;
+    "nix.serverPath" = "${pkgs.lsp-nil}/bin/nil";
+
     "rust-analyzer.cargo.allFeatures" = true;
-    "rust-analyzer.checkOnSave.command" = "clippy";
     "rust-analyzer.debug.engine" = "vadimcn.vscode-lldb";
     "rust-analyzer.updates.channel" = "stable";
-    "rust-analyzer.lens.methodReferences" = true;
-    "rust-analyzer.lens.references" = true;
     "rust-analyzer.trace.extension" = true;
     "rust-analyzer.procMacro.enable" = true;
     #"rust-analyzer.server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
     "rust-analyzer.server.path" = "rust-analyzer";
+
+    # use clippy over cargo check
+    "rust-analyzer.checkOnSave.command" = "clippy";
+    # use nightly range formatting, should be faster
+    "rust-analyzer.rustfmt.rangeFormatting.enable" = true;
+    # show references for everything
+    "rust-analyzer.hover.actions.references.enable" = true;
+    # "rust-analyzer.lens.references" = true;
+    "rust-analyzer.lens.references.adt.enable" = true;
+    "rust-analyzer.lens.references.enumVariant.enable" = true;
+    "rust-analyzer.lens.references.method.enable" = true;
+    "rust-analyzer.lens.references.trait.enable" = true;
+    "rust-analyzer.lens.methodReferences" = true;
+
+    # enforce consistent imports everywhere
+    "rust-analyzer.imports.granularity.enforce" = true;
+    "rust-analyzer.imports.granularity.group" = "module";
+    "rust-analyzer.imports.prefix" = "self";
+
+    # show hints for elided lifetimes
+    "rust-analyzer.inlayHints.lifetimeElisionHints.enable" = "always";  # or 'skip_trivial'
+    # "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames" = true;
+
     "go.useLanguageServer" = true;
+    "go.toolsManagement.autoUpdate" = true;
+
     "javascript.validate.enable" = false;
+    "javascript.updateImportsOnFileMove.enabled" = "always";
+
     "python.languageServer" = "Default";
     "python.showStartPage" = false;
     "python.insidersChannel" = "off";
-
-    # Language specific settings
     "[python].editor.rulers" = [ 72 78 ];
+
     "[markdown].editor.trimTrailingWhitespace" = false;
 
     "pascal.format.indent" = 4;
@@ -467,20 +495,12 @@
     };
     #"alejandra.program" = "alejandra";
     "purescript.formatter" = "purs-tidy";
-
     "settingsSync.keybindingsPerPlatform" = false;
-
-    "telemetry.telemetryLevel" = "off";
-
-    "terminal.integrated.drawBoldTextInBrightColors" = false;
 
     "yaml.schemaStore.enable" = true;
     "yaml.schemas" = {
       "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.yaml";
     };
-
-    "nix.enableLanguageServer" = true;
-    "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
 
     "[css]" = {
       "editor.defaultFormatter" = "esbenp.prettier-vscode";
@@ -515,6 +535,10 @@
 
     "[go]" = {
       "editor.defaultFormatter" = "golang.go";
+    };
+   "[rust]" = {
+      "editor.fontLigatures" = true;
+      "editor.formatOnSave" = true;
     };
 
     "[c]" = {

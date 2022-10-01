@@ -29,16 +29,34 @@ in
           };
 
           aliases = {
+            a = "add";
+            br = "branch";
+            st = "status";
+            ss = "status --short";
             ci = "commit";
             di = "diff";
-            st = "status";
+            dc = "diff --cached";
+            dt = "difftool";
             co = "checkout";
-            br = "branch";
             pu = "push";
             pl = "pull";
             cat = "cat-file -p";
             rc = "rebase --continue";
             rs = "rebase --skip";
+            cp = "cherry-pick";
+            l = "log";
+            mt = "mergetool";
+            sub = "submodule";
+
+            w = "whatchanged";
+            vimdiff = "difftool --tool=vimdiff -y";
+            vd = "difftool --tool=vimdiff -y";
+            od = "difftool --tool=opendiff -y";
+            lol = "log --oneline --graph --decorate";
+            hist = "log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'";
+            showdiff = "!sh -c 'git difftool --tool=vimdiff -y $1^ $1' -";
+            lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative";
+            wl = "walklog";
 
             unstage = "reset HEAD";
             uncommit = "reset --soft HEAD^";
@@ -47,7 +65,6 @@ in
             branches = "branch -a";
             remotes = "remote -v";
             fap = "fetch --all --prune";
-            hist = "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short";
             amend = "commit --amend -C HEAD";
             assume = "!git update-index --assume-unchanged";
             unassume = "!git update-index --no-assume-unchanged";
@@ -81,14 +98,49 @@ in
 
           extraConfig = {
             core.quotepath = false;
+            core.editor = "nvim";
+            core.preloadingindex = true;
+            core.autocrlf = false;
+            core.eol = "lf";
+
+            color.diff = "auto";
+            color.status = "auto";
+            color.branch = "auto";
+            color.interactive = "auto";
+            color.ui = true;
+            color.pager = true;
+
+
             init.defaultBranch = "main";
             commit.gpgsign = true;
             push.default = "current";
             fetch.prune = true;
             pull.rebase = true;
             github.user = "fxcl";
-            pager.branch = false;
             format.signoff = true;
+
+            pull.ff = "only";
+            advice.detachedHead = false;
+
+            diff.external = "${pkgs.difftastic}/bin/difft";
+            diff.tool = "vimdiff";
+            difftool.prompt = false;
+            diff.wsErrorHighlight = "all";
+            diff.colorMoved = true;
+            diff.colorMovedWS = "allow-indentation-change";
+
+            merge.tool = "vimdiff";
+            merge.conflictstyle = "diff3";
+            mergetool.prompt = false;
+
+            core.pager = "less";
+            pager.branch = "less --quit-if-one-screen";
+            pager.stash = "less --quit-if-one-screen";
+
+            log.date = "local";
+            rebase.autosquash = true;
+            stash.showPath = true;
+            tag.sort = "version:refname";
           };
 
           lfs = {

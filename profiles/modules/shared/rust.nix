@@ -27,6 +27,8 @@ in
             carnix
             # rls
             # rust-analyzer
+            #rust-bin.nightly.latest."rust-analyzer-preview"
+
             # cargo-bloat
             # rust-analyzer-unwrapped
             # rustup rustc cargo
