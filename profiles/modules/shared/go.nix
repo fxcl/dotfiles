@@ -21,7 +21,7 @@ in
           GOPATH = "/Users/kelvin/workspace/go";
           GOBIN = "/Users/kelvin/workspace/go/bin";
           GOROOT = "${pkgs.go_1_17}/share/go";
-          GOPROXY = https://goproxy.cn,direct";
+          GOPROXY = "https://goproxy.cn,direct";
           GO111MODULE = "on";
           #GOSUMDB = "goproxy.cn/sumdb/sum.golang.org";
           #GOSUMDB = "off";
