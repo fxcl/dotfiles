@@ -118,22 +118,23 @@
       };
 
       devShell =
-      let
-        mkDevShell = arch:
-          let pkgs = inputs.unstable.legacyPackages."${arch}";
-          in pkgs.mkShell {
-            buildInputs = [
-              #pkgs.sumneko-lua-language-server
-              inputs.lsp-nil.packages."${arch}".nil
-            ];
-          };
-      in
-      {
-        "x86_64-darwin" = mkDevShell "x86_64-darwin";
-        "aarch64-darwin" = mkDevShell "aarch64-darwin";
-        "x86_64-linux" = mkDevShell "x86_64-linux";
-        "aarch64-linux" = mkDevShell "aarch64-linux";
-      };
+        let
+          mkDevShell = arch:
+            let pkgs = inputs.unstable.legacyPackages."${arch}";
+            in
+            pkgs.mkShell {
+              buildInputs = [
+                #pkgs.sumneko-lua-language-server
+                inputs.lsp-nil.packages."${arch}".nil
+              ];
+            };
+        in
+        {
+          "x86_64-darwin" = mkDevShell "x86_64-darwin";
+          "aarch64-darwin" = mkDevShell "aarch64-darwin";
+          "x86_64-linux" = mkDevShell "x86_64-linux";
+          "aarch64-linux" = mkDevShell "aarch64-linux";
+        };
 
       tony = self.darwinConfigurations.tony.system;
       vvh = self.darwinConfigurations.vvh.system;

@@ -54,9 +54,11 @@ in
           global
           # Perl Language Server
           perlPackages.PLS
+          nixpkgs-fmt
+          rnix-lsp
           # Nix Language Server
-         lsp-nil
-        ]++ (if stdenv.isDarwin then [ vim-darwin ] else [ vimHugeX ]);
+          lsp-nil
+        ] ++ (if stdenv.isDarwin then [ vim-darwin ] else [ vimHugeX ]);
       };
     };
 }

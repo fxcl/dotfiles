@@ -37,7 +37,7 @@
     go.enable = lib.mkDefault true;
     mysql.enable = lib.mkDefault true;
     cc.enable = lib.mkDefault true;
-    kube.enable = lib.mkDefault true;
+    kube.enable = lib.mkDefault false;
     python.enable = lib.mkDefault false;
   };
 }

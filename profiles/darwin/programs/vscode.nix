@@ -262,7 +262,7 @@
     "editor.wordWrap" = "on";
     "editor.useTabStops" = false;
     "editor.rulers" = [ 80 120 ];
-     # scroll with an animation
+    # scroll with an animation
     "editor.smoothScrolling" = true;
 
     "workbench.fontAliasing" = "antialiased";
@@ -431,7 +431,9 @@
     "perl.pls" = "${pkgs.perlPackages.PLS}/bin/pls";
 
     "nix.enableLanguageServer" = true;
-    "nix.serverPath" = "${pkgs.lsp-nil}/bin/nil";
+    #"nix.serverPath" = "${pkgs.lsp-nil}/bin/nil";
+    "nix.formatterPath" = pkgs.nixpkgs-fmt + "/bin/nixpkgs-fmt";
+    "nix.serverPath" = pkgs.rnix-lsp + "/bin/rnix-lsp";
 
     "rust-analyzer.cargo.allFeatures" = true;
     "rust-analyzer.debug.engine" = "vadimcn.vscode-lldb";
@@ -460,7 +462,7 @@
     "rust-analyzer.imports.prefix" = "self";
 
     # show hints for elided lifetimes
-    "rust-analyzer.inlayHints.lifetimeElisionHints.enable" = "always";  # or 'skip_trivial'
+    "rust-analyzer.inlayHints.lifetimeElisionHints.enable" = "always"; # or 'skip_trivial'
     # "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames" = true;
 
     "go.useLanguageServer" = true;
@@ -536,7 +538,7 @@
     "[go]" = {
       "editor.defaultFormatter" = "golang.go";
     };
-   "[rust]" = {
+    "[rust]" = {
       "editor.fontLigatures" = true;
       "editor.formatOnSave" = true;
     };
