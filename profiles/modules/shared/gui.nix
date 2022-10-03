@@ -44,7 +44,7 @@ in
           #"lima"
           #"element"
           "balenaetcher"
-          "eul"
+          #"eul"
 
           #"jabra-direct"
           #"lastpass"

@@ -38,6 +38,6 @@
     mysql.enable = lib.mkDefault true;
     cc.enable = lib.mkDefault true;
     kube.enable = lib.mkDefault true;
-    python.enable = lib.mkDefault true;
+    python.enable = lib.mkDefault false;
   };
 }
