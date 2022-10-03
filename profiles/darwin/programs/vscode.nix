@@ -9,6 +9,9 @@
   extensions = with pkgs.vscode-extensions;
     [
       matklad.rust-analyzer
+      a5huynh.vscode-ron
+      serayuzgur.crates
+
       vadimcn.vscode-lldb
       ms-python.python
       redhat.vscode-yaml
@@ -17,7 +20,6 @@
       dhall.dhall-lang
       dhall.vscode-dhall-lsp-server
       haskell.haskell
-      serayuzgur.crates
       dbaeumer.vscode-eslint
       timonwong.shellcheck
       christian-kohler.path-intellisense
@@ -243,7 +245,7 @@
     "editor.formatOnPaste" = false; # Do not mess with my code by default. Will trust automatic rules language by language.
     "editor.formatOnSave" = false; # Do not mess with my code by default. Will trust automatic rules language by language.
     "editor.acceptSuggestionOnEnter" = "off";
-    "editor.fontSize" = 16;
+    "editor.fontSize" = 18;
     "editor.letterSpacing" = 1.0;
     "editor.lineHeight" = 22;
     "editor.renderWhitespace" = "all";
@@ -467,6 +469,9 @@
 
     "go.useLanguageServer" = true;
     "go.toolsManagement.autoUpdate" = true;
+    "go.docsTool" = "godoc";
+    "go.formatTool" = "goimports";
+    "go.useLanguageServer" = true;
 
     "javascript.validate.enable" = false;
     "javascript.updateImportsOnFileMove.enabled" = "always";

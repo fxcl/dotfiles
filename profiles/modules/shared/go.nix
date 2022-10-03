@@ -31,6 +31,7 @@ in
           #gotests
           #gomodifytags
           #go-migrate
+          godef
           gotools
           gopls
           #go-outline
