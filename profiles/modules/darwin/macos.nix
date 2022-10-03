@@ -84,6 +84,7 @@ in
         brews = [
           "mas"
           # "libolm"
+
         ];
 
         masApps = {
