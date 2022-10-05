@@ -85,8 +85,8 @@ in
         # };
 
       } else {
-        my.user = {
-          packages = with pkgs; [
+        my = {
+          user.packages = with pkgs; [
             ngrok
             mpv
             anki

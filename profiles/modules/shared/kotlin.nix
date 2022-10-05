@@ -17,15 +17,12 @@ in
   config = with lib;
     mkIf cfg.enable {
       my = {
-        user = {
-          packages = with pkgs; [
-            kotlin
-            ktlint
-            gradle
-            my.kotlin-language-server
-          ];
-        };
+        user.packages = with pkgs; [
+          kotlin
+          ktlint
+          gradle
+          my.kotlin-language-server
+        ];
       };
-
     };
 }
