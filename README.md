@@ -39,11 +39,11 @@ reboot
 nix \
     --extra-experimental-features "nix-command flakes" \
     build \
-    github:zxfstd/dotfiles\#tony \
+    github:fxcl/dotfiles\#tony \
     --no-write-lock-file
 
 ./result/sw/bin/darwin-rebuild switch \
-    --flake github:zxfstd/dotfiles\#tony
+    --flake github:fxcl/dotfiles\#tony
 ```
 
 
@@ -66,7 +66,7 @@ otherwise there is still this long option to update the deployment:
 onlone:
 ```console
 darwin-rebuild switch \
-    --flake github:zxfstd/dotfiles\#tony
+    --flake github:fxcl/dotfiles\#tony
 ```
 
 local:
@@ -87,11 +87,11 @@ reboot
 nix \
     --extra-experimental-features "nix-command flakes" \
     build \
-    github:zxfstd/dotfiles\#vvh \
+    github:fxcl/dotfiles\#vvh \
     --no-write-lock-file
 
 ./result/sw/bin/darwin-rebuild switch \
-    --flake github:zxfstd/dotfiles\#vvh
+    --flake github:fxcl/dotfiles\#vvh
 ```
 
 ### Updates
@@ -101,7 +101,7 @@ otherwise there is still this long option to update the deployment:
 
 ```console
 darwin-rebuild switch \
-    --flake github:zxfstd/dotfiles\#vvh
+    --flake github:fxcl/dotfiles\#vvh
 ```
 
 ## Security
@@ -114,7 +114,7 @@ Fork -> Patch -> Push -> Pull Request
 
 ## Authors
 
--   [Zxfstd](https://github.com/fxcl)
+-   [Fxcl](https://github.com/fxcl)
 
 ## License
 

@@ -18,6 +18,7 @@ in
     mkIf cfg.enable {
       homebrew = {
         brews = [
+          # Only needed to install font-source-code-pro. Safe to delete after font installed.
           "svn"
         ];
 
@@ -27,8 +28,8 @@ in
 
         casks = [
           "font-source-code-pro"
-          "font-fira-code"
-          "font-fontawesome"
+          # "font-fontawesome"
+          # "font-fira-code"
           # "font-fira-code-nerd-font"
         ];
       };

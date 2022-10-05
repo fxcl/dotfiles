@@ -32,12 +32,10 @@ in
           #gomodifytags
           #go-migrate
           godef
-          gotools
+          # gotools
           gopls
           #go-outline
           #gopkgs
-          gocode-gomod
-          godef
           golint
           delve
         ];

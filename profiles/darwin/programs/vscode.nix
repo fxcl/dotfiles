@@ -467,7 +467,6 @@
     "rust-analyzer.inlayHints.lifetimeElisionHints.enable" = "always"; # or 'skip_trivial'
     # "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames" = true;
 
-    "go.useLanguageServer" = true;
     "go.toolsManagement.autoUpdate" = true;
     "go.docsTool" = "godoc";
     "go.formatTool" = "goimports";

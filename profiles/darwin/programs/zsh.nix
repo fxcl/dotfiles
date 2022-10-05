@@ -136,27 +136,44 @@
   '';
 
   initExtra = ''
-      extract () {
-        if [ -f $1 ] ; then
-          case $1 in
-            *.tar.bz2)   tar xvjf $1    ;;
-            *.tar.gz)    tar xvzf $1    ;;
-            *.bz2)       bunzip2 $1     ;;
-            *.rar)       unrar x $1       ;;
-            *.gz)        gunzip $1      ;;
-            *.tar)       tar xvf $1     ;;
-            *.tbz2)      tar xvjf $1    ;;
-            *.tgz)       tar xvzf $1    ;;
-            *.zip)       unzip $1       ;;
-            *.Z)         uncompress $1  ;;
-            *.7z)        7z x $1        ;;
-            *)           echo "don't know how to extract '$1'..." ;;
-          esac
-        else
-          echo "'$1' is not a valid file!"
-        fi
-      }
-    '';
+    extract () {
+      if [ -f $1 ] ; then
+        case $1 in
+          *.tar.bz2)   tar xvjf $1    ;;
+          *.tar.gz)    tar xvzf $1    ;;
+          *.bz2)       bunzip2 $1     ;;
+          *.rar)       unrar x $1       ;;
+          *.gz)        gunzip $1      ;;
+          *.tar)       tar xvf $1     ;;
+          *.tbz2)      tar xvjf $1    ;;
+          *.tgz)       tar xvzf $1    ;;
+          *.zip)       unzip $1       ;;
+          *.Z)         uncompress $1  ;;
+          *.7z)        7z x $1        ;;
+          *)           echo "don't know how to extract '$1'..." ;;
+        esac
+      else
+        echo "'$1' is not a valid file!"
+      fi
+    }
+
+    # PROXY="http://127.0.0.1:1080/pac"
+    function proxy_on(){
+      #PROXY="http://$(cat /etc/resolv.conf|grep nameserver|awk '{print $2}'):17890"
+      PROXY="http://127.0.0.1:17890"
+      export all_proxy=$PROXY
+      export http_proxy=$PROXY
+      export https_proxy=$PROXY
+      echo $PROXY
+    }
+    function proxy_off(){
+      unset all_proxy
+      unset http_proxy
+      unset https_proxy
+      echo ‘取消http代理成功!’
+    }
+
+  '';
 
   oh-my-zsh = {
     enable = true;
