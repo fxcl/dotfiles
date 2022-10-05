@@ -25,8 +25,6 @@ in
           #vagrant
         ];
       };
-    };
-
       my.hm.file = {
         ".m2/settings.xml" = {
           target = ".m2/settings.xml";
@@ -85,6 +83,7 @@ in
             </settings>
           '';
         };
+    };
 
     environment = {
       systemPackages = [
