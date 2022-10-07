@@ -19,9 +19,8 @@
   };
 
   extraPackages = with pkgs; [
-    gopls
-    shfmt
-    # rnix-lsp
+    # gopls
+    # shfmt
   ];
 
   extraConfig = builtins.readFile ../../.vimrc;

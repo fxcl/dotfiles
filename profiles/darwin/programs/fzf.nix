@@ -6,32 +6,26 @@ in
 {
   enable = true;
   enableZshIntegration = true;
-  defaultCommand = "fd --type f --hidden --follow --exclude .git --color=always";
-  #defaultOptions = [ "--layout=reverse" "--inline-info" "--color=bg+:0" ];
+
+  defaultCommand = ''rg --files --no-ignore --hidden --follow -g \"!{.git,node_modules}/*\" 2> /dev/null'';
   defaultOptions = [
-    "--multi"
     "--ansi"
+    "--layout=default"
+    "--info=inline"
     "--height=50%"
-    "--min-height=15"
-    "--reverse"
-    "--color=bg:-1,fg:-1,prompt:1,info:3,hl:2,hl+:2"
+    "--multi"
+    "--preview-window=right:50%"
+    "--preview-window=sharp"
+    "--preview-window=cycle"
+    "--prompt='λ -> '"
+    "--pointer='|>'"
+    "--marker='✓'"
+    "--bind 'ctrl-e:execute(vim {} < /dev/tty > /dev/tty 2>&1)' > selected"
+    "--bind 'ctrl-v:execute(code {+})'"
   ];
+  fileWidgetCommand = ''rg --files --no-ignore --hidden --follow -g \"!{.git,node_modules}/*\" 2> /dev/null'';
 
-  historyWidgetOptions = [
-    "--preview 'echo {}'"
-    "--preview-window down:3:hidden:wrap"
-    "--bind '?:toggle-preview'"
-  ];
+  changeDirWidgetCommand = "fd --type d";
+  changeDirWidgetOptions = [ "--preview 'tree -C {} | head -200'" ];
 
-  # fileWidgetCommand = "";
-  fileWidgetOptions = [
-    "--preview '(bat --style=numbers --color=always --line-range :500 {} || exa --tree --level=4 {}) 2> /dev/null'"
-    "--select-1"
-    "--exit-0"
-  ];
-
-  changeDirWidgetCommand = "fd --type directory --color=always . /Users/${username}/Workspace/";
-  changeDirWidgetOptions = [
-    "--preview 'exa --tree --level=4 {} | head -200'"
-  ];
 }

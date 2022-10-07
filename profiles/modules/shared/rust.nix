@@ -23,7 +23,6 @@ in
         };
         user.packages = with pkgs; [
           (rust-bin.stable.latest.default.override { extensions = [ "rust-src" ]; })
-          carnix
           # rls
           # rust-analyzer
           #rust-bin.nightly.latest."rust-analyzer-preview"

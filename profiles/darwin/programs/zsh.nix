@@ -26,11 +26,9 @@
   shellAliases = {
     # Reload
     "reshell!" = "exec $SHELL -l";
-    cat = "bat";
     ".." = "cd ..";
     "..." = "cd ../..";
 
-    git = "hub";
     gs = "git status";
     gc = "git commit";
     gp = "git push";

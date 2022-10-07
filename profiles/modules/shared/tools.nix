@@ -25,7 +25,6 @@ in
       environment = {
         systemPackages = with pkgs; [
           git
-          hub
           jq
           nmap
           p7zip
@@ -40,24 +39,23 @@ in
           # GNU > BSD :)
           coreutils
           ripgrep # grep
-          exa # ls
+          # exa # ls
           fd # find
-          bat # bat
           tealdeer # TLDR
           du-dust # du
           global
-          procs # ps
+          # procs # ps
           dogdns # dig
           shfmt
           nix-index # locate files of nix packages
-          nix-output-monitor
+          # nix-output-monitor
           global
           # Perl Language Server
-          perlPackages.PLS
+          # perlPackages.PLS
           nixpkgs-fmt
-          rnix-lsp
           # Nix Language Server
-          lsp-nil
+          rnix-lsp
+          # lsp-nil
         ] ++ (if stdenv.isDarwin then [ vim-darwin ] else [ vimHugeX ]);
       };
     };
