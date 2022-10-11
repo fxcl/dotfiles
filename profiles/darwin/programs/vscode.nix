@@ -11,7 +11,7 @@
       matklad.rust-analyzer
       a5huynh.vscode-ron
       serayuzgur.crates
-
+      tamasfe.even-better-toml
       vadimcn.vscode-lldb
       ms-python.python
       redhat.vscode-yaml
@@ -48,7 +48,7 @@
       golang.go
       editorconfig.editorconfig
       mikestead.dotenv
-      tamasfe.even-better-toml
+
       yzhang.markdown-all-in-one
       ibm.output-colorizer
       ms-python.vscode-pylance
@@ -251,7 +251,7 @@
     "editor.renderWhitespace" = "all";
     "editor.suggestSelection" = "first";
     "editor.tabCompletion" = "onlySnippets";
-    "editor.accessibilitySupport" = "on";
+    "editor.accessibilitySupport" = "0ff";
     "editor.quickSuggestions" = {
       "strings" = true;
     };

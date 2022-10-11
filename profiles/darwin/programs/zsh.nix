@@ -70,10 +70,9 @@
     sha256sum = "shasum -a 256";
 
     emptytrash = "sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'";
-
     nix-cleanup = "nix-collect-garbage -d --delete-older-than 30d";
     nixupgrade = "nix-channel --update && nix-env -u && nix-collect-garbage -d";
-
+    subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'";
   };
 
   sessionVariables = {
