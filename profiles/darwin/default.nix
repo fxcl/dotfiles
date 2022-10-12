@@ -168,8 +168,8 @@ in
     programs = {
       alacritty = import ./programs/alacritty.nix { inherit pkgs; };
       dircolors = import ./programs/dircolors.nix { inherit pkgs; };
-      direnv = import ./programs/direnv.nix { inherit pkgs; };
-      fzf = import ./programs/fzf.nix { inherit pkgs; };
+      # direnv = import ./programs/direnv.nix { inherit pkgs; };
+      # fzf = import ./programs/fzf.nix { inherit pkgs; };
       lsd = import ./programs/lsd.nix { inherit pkgs; };
       #neovim = import ./programs/neovim.nix { inherit pkgs; };
       octant = import ./programs/octant.nix { inherit pkgs; };
@@ -177,7 +177,7 @@ in
       ssh = import ./programs/ssh.nix { inherit pkgs; };
       starship = import ./programs/starship.nix { inherit pkgs; };
       vscode = import ./programs/vscode.nix { inherit pkgs; };
-      zsh = import ./programs/zsh.nix { inherit pkgs; };
+      # zsh = import ./programs/zsh.nix { inherit pkgs; };
       zathura = import ./programs/zathura.nix { inherit pkgs; };
       lf = import ./programs/lf.nix { inherit pkgs; };
     };

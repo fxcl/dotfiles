@@ -30,8 +30,9 @@ in
       username = mkOptStr "kelvin";
       website = mkOptStr "https://gabri.me";
       github_username = mkOptStr "fxcl";
-      email = mkOptStr "me@zxf.me";
+      email = mkOptStr "me@gnux.cn";
       terminal = mkOptStr "kitty";
+
       nix_managed = mkOptStr
         "vim: set nomodifiable : Nix managed - DO NOT EDIT - see source inside ~/.dotfiles or use `:set modifiable` to force.";
       user = mkOption { type = options.users.users.type.functor.wrapped; };
@@ -65,13 +66,8 @@ in
   };
 
   config = {
-    # let nix manage home-manager profiles and use global nixpkgs
-    home-manager = {
-      useGlobalPkgs = true;
-      useUserPackages = true;
-      backupFileExtension = "backup";
+    users.users."${config.my.username}" = mkAliasDefinitions options.my.user;
 
-    };
     my.user = {
       home =
         if pkgs.stdenv.isDarwin then
@@ -87,7 +83,14 @@ in
     # my.env.PATH  = [ <bin> "$PATH" ];
     my.env.PATH = [ "$NODE_HOME/bin" "/Users/kelvin/.local/share/cargo/bin" "/Users/kelvin/.cache/npm/bin" ./bin "$XDG_BIN_HOME" "$PATH" ];
 
-    users.users."${config.my.username}" = mkAliasDefinitions options.my.user;
+    # let nix manage home-manager profiles and use global nixpkgs
+    home-manager = {
+      useGlobalPkgs = true;
+      useUserPackages = true;
+      backupFileExtension = "backup";
+
+    };
+
     # I only need a subset of home-manager's capabilities. That is, access to
     # its home.file, home.xdg.configFile and home.xdg.dataFile so I can deploy
     # files easily to my $HOME, but 'home-manager.users.${config.my.username}.home.file.*'

@@ -16,17 +16,18 @@ in
 
   config = with lib;
     mkIf cfg.enable {
-      my = {
-        env = {
-          GOPATH = "/Users/kelvin/workspace/go";
-          GOBIN = "/Users/kelvin/workspace/go/bin";
-          GOROOT = "${pkgs.go_1_17}/share/go";
-          GOPROXY = "https://goproxy.cn,direct";
-          GO111MODULE = "on";
-          #GOSUMDB = "goproxy.cn/sumdb/sum.golang.org";
-          #GOSUMDB = "off";
-        };
-        user.packages = with pkgs; [
+      my.env = rec {
+        GOPATH = "$XDG_DATA_HOME/go";
+        GOBIN = "${GOPATH}/bin";
+        GOROOT = "${pkgs.go_1_17}/share/go";
+        GOPROXY = "https://goproxy.cn,direct";
+        GO111MODULE = "on";
+        #GOSUMDB = "goproxy.cn/sumdb/sum.golang.org";
+        #GOSUMDB = "off";
+      };
+
+      my.user = {
+        packages = with pkgs; [
           go_1_17
           #gotests
           #gomodifytags

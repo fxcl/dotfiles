@@ -138,5 +138,18 @@
 
       tony = self.darwinConfigurations.tony.system;
       vvh = self.darwinConfigurations.vvh.system;
+
+      nixosConfigurations = {
+        "nixos" = inputs.nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            inputs.home-manager.nixosModules.home-manager
+            ./nix/modules/shared
+            sharedHostsConfig
+            ./nix/hosts/nixos
+          ];
+        };
+      };
     };
 }

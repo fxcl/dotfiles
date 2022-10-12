@@ -16,34 +16,26 @@ in
 
   config = with lib;
     mkIf cfg.enable {
-      environment = {
-        systemPackages = with pkgs; [
-          pinentry_mac
-        ];
-      };
-
-      home-manager.users."${config.my.username}" = { config, ... }: {
-        programs = {
-          gpg.enable = true;
-        };
+      environment.systemPackages = with pkgs; [ gnupg ];
+      my.env = { GNUPGHOME = "$XDG_CONFIG_HOME/gnupg"; };
+      programs.gnupg.agent = {
+        enable = true;
+        enableSSHSupport = true;
       };
       my.hm.file = {
-        ".gnupg/gpg-agent.conf" = {
-          text = "pinentry-program ${pkgs.pinentry_mac}/${pkgs.pinentry_mac.passthru.binaryPath}";
-        };
-      };
+        ".config/gnupg/gpg-agent.conf".text = ''
+          # ${config.my.nix_managed}
+          allow-preset-passphrase
+          # Default: 600 seconds
+          default-cache-ttl 86400
+          # Default: 7200 seconds
+          max-cache-ttl 86400'';
 
-      programs.gnupg = {
-        agent = {
-          enable = true;
-          enableSSHSupport = true;
+        ".config/gnupg/gpg.conf" = {
+          text = ''
+            # ${config.my.nix_managed}
+            ${builtins.readFile ../../../config/gnupg/gpg.conf}'';
         };
-        # publicKeys = [{
-        #   source = ./shyim.gpg;
-        #   trust = "ultimate";
-        # }];
-        # Fixes somehow Yubikey on macOs
-        #scdaemonSettings = { disable-ccid = true; };
       };
     };
 }

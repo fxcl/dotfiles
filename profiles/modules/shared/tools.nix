@@ -25,28 +25,26 @@ in
       environment = {
         systemPackages = with pkgs; [
           git
-          jq
+          # jq
           nmap
           p7zip
           pwgen
-          shellcheck
+          # shellcheck
           tmux
           #alejandra
           tree
-          wget
           yq
-          ffmpeg
+          # ffmpeg
           # GNU > BSD :)
-          coreutils
-          ripgrep # grep
+          # coreutils
+          # ripgrep # grep
           # exa # ls
-          fd # find
-          tealdeer # TLDR
+          # fd # find
+          # tealdeer # TLDR
           du-dust # du
-          global
           # procs # ps
           dogdns # dig
-          shfmt
+          # shfmt
           nix-index # locate files of nix packages
           # nix-output-monitor
           global

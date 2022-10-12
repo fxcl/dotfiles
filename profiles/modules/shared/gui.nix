@@ -90,12 +90,12 @@ in
             ngrok
             mpv
             anki
-            brave
+            #brave
             firefox
-            obsidian
+            #obsidian
             logseq
-            zoom-us
-            signal-desktop
+            #zoom-us
+            #signal-desktop
             vscodium
             slack
             #docker
