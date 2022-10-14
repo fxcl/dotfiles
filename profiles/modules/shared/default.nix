@@ -7,10 +7,11 @@
     ./nix.nix
     ./shells.nix
     ./sudoers.nix
-    ./fonts.nix
+    # ./fonts.nix
     ./gui.nix
     ./git.nix
     ./gpg.nix
+    ./vim.nix
     ./java.nix
     ./node.nix
     ./rust.nix
@@ -19,18 +20,17 @@
     ./cc.nix
     ./kube.nix
     ./python.nix
-    ./tools.nix
   ];
 
   my.modules = {
     nix.enable = lib.mkDefault true;
     shells.enable = lib.mkDefault true;
     sudoers.enable = lib.mkDefault true;
-    fonts.enable = lib.mkDefault true;
-    tools.enable = lib.mkDefault true;
+    # fonts.enable = lib.mkDefault true;
     gui.enable = lib.mkDefault true;
     git.enable = lib.mkDefault true;
     gpg.enable = lib.mkDefault true;
+    vim.enable = lib.mkDefault true;
     java.enable = lib.mkDefault true;
     node.enable = lib.mkDefault true;
     rust.enable = lib.mkDefault true;

@@ -22,23 +22,23 @@ in
         GOROOT = "${pkgs.go_1_17}/share/go";
         GOPROXY = "https://goproxy.cn,direct";
         GO111MODULE = "on";
-        #GOSUMDB = "goproxy.cn/sumdb/sum.golang.org";
-        #GOSUMDB = "off";
+        # GOSUMDB = "goproxy.cn/sumdb/sum.golang.org";
+        # GOSUMDB = "off";
       };
 
       my.user = {
         packages = with pkgs; [
           go_1_17
-          #gotests
-          #gomodifytags
-          #go-migrate
           godef
-          # gotools
           gopls
-          #go-outline
-          #gopkgs
           golint
           delve
+          # go-outline
+          # gopkgs
+          # gotools
+          # gotests
+          # gomodifytags
+          # go-migrate
         ];
       };
     };

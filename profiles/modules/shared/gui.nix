@@ -29,7 +29,7 @@ in
           "keepingyouawake"
           "google-chrome"
           "mpv"
-          "iina"
+          #"iina"
           #"bitwarden"
           #"hammerspoon"
           "appcleaner"

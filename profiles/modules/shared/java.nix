@@ -16,15 +16,16 @@ in
 
   config = with lib;
     mkIf cfg.enable {
-      my = {
-        user.packages = with pkgs; [
+      my.user = {
+        packages = with pkgs; [
           graalvm17-ce
-          gradle
           maven
+          # gradle
           java-language-server
-          #vagrant
+          # vagrant
         ];
       };
+
       my.hm.file = {
         ".m2/settings.xml" = {
           target = ".m2/settings.xml";
@@ -83,22 +84,22 @@ in
             </settings>
           '';
         };
-    };
+      };
 
-    environment = {
-      systemPackages = [
-        pkgs.intellij-idea-ce
-      ];
-      shellInit = ''
-        test -e ${pkgs.graalvm17-ce}/nix-support/setup-hook && source ${pkgs.graalvm17-ce}/nix-support/setup-hook
-      '';
-      variables = {
-        LANG = "en_US.UTF-8";
-        LC_TIME = "en_GB.UTF-8";
-        JAVA_HOME = ''${pkgs.graalvm17-ce.home}'';
-        JAVA_CPPFLAGS = ''-I${pkgs.graalvm17-ce}/include/'';
-        MAVEN_OPTS = "-Djava.awt.headless=true -Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS";
+      environment = {
+        systemPackages = [
+          pkgs.intellij-idea-ce
+        ];
+        shellInit = ''
+          test -e ${pkgs.graalvm17-ce}/nix-support/setup-hook && source ${pkgs.graalvm17-ce}/nix-support/setup-hook
+        '';
+        variables = {
+          LANG = "en_US.UTF-8";
+          LC_TIME = "en_GB.UTF-8";
+          JAVA_HOME = ''${pkgs.graalvm17-ce.home}'';
+          JAVA_CPPFLAGS = ''-I${pkgs.graalvm17-ce}/include/'';
+          MAVEN_OPTS = "-Djava.awt.headless=true -Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS";
+        };
       };
     };
-  };
 }

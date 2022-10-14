@@ -41,16 +41,17 @@ in
             ${optionalString (username != "") "  name = ${username}"}
             ${optionalString (email != "") "  email = ${email}"}
               useconfigonly = true
+              signingkey = 4593BADCA8DD894D
             ${optionalString (github_username != "") ''
-              [github]
-                username = ${github_username}''}
+            [github]
+              username = ${github_username}''}
             [gpg]
               program = ${pkgs.gnupg}/bin/gpg
             [diff "exif"]
               textconv = ${pkgs.exiftool}/bin/exiftool
             ${optionalString pkgs.stdenv.isDarwin ''
-              [diff "plist"]
-                textconv = plutil -convert xml1 -o -''}
+            [diff "plist"]
+              textconv = plutil -convert xml1 -o -''}
           '';
         };
 

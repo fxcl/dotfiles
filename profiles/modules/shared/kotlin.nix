@@ -16,8 +16,8 @@ in
 
   config = with lib;
     mkIf cfg.enable {
-      my = {
-        user.packages = with pkgs; [
+      my.user = {
+        packages = with pkgs; [
           kotlin
           ktlint
           gradle

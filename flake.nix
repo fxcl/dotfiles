@@ -41,15 +41,25 @@
             experimental-features = nix-command flakes
           '';
 
+          settings.extra-trusted-substituters = [
+            "https://mirror.sjtu.edu.cn/nix-channels/store"
+            "https://nix-cache.status.im"
+          ];
+
           settings.substituters = [
-            "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-            "https://cache.nixos.org"
-            "https://nix-community.cachix.org"
-            "https://nixpkgs.cachix.org"
-            #"https://zxfstd.cachix.org"
+            # "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=30"
+            # "https://mirrors.ustc.edu.cn/nix-channels/store"
+            "https://r.zhullyb.top/https://nix-community.cachix.org"
+            "https://r.zhullyb.top/https://cache.nixos.org"
+            "https://r.zhullyb.top/https://nixpkgs.cachix.org"
+            # "https://nix-community.cachix.org"
+            # "https://cache.nixos.org"
+            # "https://nixpkgs.cachix.org"
+            # "https://zxfstd.cachix.org"
           ];
 
           settings.trusted-public-keys = [
+            "nix-cache.status.im-1:x/93lOfLU+duPplwMSBR+OlY4+mo+dCN7n0mr4oPwgY="
             "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
             "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
             "nixpkgs.cachix.org-1:q91R6hxbwFvDqTSDKwDAV4T5PxqXGxswD8vhONFMeOE="
@@ -58,7 +68,7 @@
 
           gc = {
             automatic = true;
-            options = "--delete-older-than 3d";
+            options = "--delete-older-than 10d";
           };
         };
 

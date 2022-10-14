@@ -5,7 +5,7 @@
 let
   LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc.lib ];
   env-python = pkgs.python39;
-  env-python-with-packages = env-python.withPackages (p: with p; [
+  env-python-with-packages = env-python.withPackages (ps: with ps; [
     #pip
     #wheel
     # Neovim pylsp and tools

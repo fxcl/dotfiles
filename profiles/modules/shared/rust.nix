@@ -16,20 +16,19 @@ in
 
   config = with lib;
     mkIf cfg.enable {
-      my = {
-        env = {
-          RUSTUP_DIST_SERVER = "https://rsproxy.cn";
-          RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup";
-        };
-        user.packages = with pkgs; [
+      my.env = {
+        RUSTUP_DIST_SERVER = "https://rsproxy.cn";
+        RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup";
+        RUSTUP_HOME = "$XDG_DATA_HOME/rustup";
+        CARGO_HOME = "$XDG_DATA_HOME/cargo";
+      };
+      my.user = {
+        packages = with pkgs; [
           (rust-bin.stable.latest.default.override { extensions = [ "rust-src" ]; })
           # rls
           # rust-analyzer
-          #rust-bin.nightly.latest."rust-analyzer-preview"
-
+          # rust-bin.nightly.latest."rust-analyzer-preview"
           # cargo-bloat
-          # rust-analyzer-unwrapped
-          # rustup rustc cargo
           # cargo-watch
           # evcxr
           # cargo-msrv
@@ -38,12 +37,16 @@ in
           # cargo-bloat
           # cargo-fuzz
           # gitlint
+
+          # rustup rustc cargo
+          # rust-analyzer-unwrapped
           (writeScriptBin "rust-doc" ''
             #! ${stdenv.shell} -e
             exec ${pkgs.firefox-mac}/Applications/Firefox.app/Contents/MacOS/firefox "${rustc.doc}/share/doc/rust/html/index.html"
           '')
         ];
       };
+
       my.hm.file = {
         ".cargo/config" = {
           text = ''

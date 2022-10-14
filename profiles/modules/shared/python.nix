@@ -17,20 +17,27 @@ in
   config = with lib;
     mkIf cfg.enable {
       my = {
-        env = { };
-        user.packages = with pkgs; [
-          python39
-          python39Packages.pip
-          python39Packages.ipython
-          python39Packages.black # Code formatter
-          python39Packages.setuptools
-          python39Packages.pylint # Linter
-          python39Packages.poetry # Better package manager
-          python39Packages.python-lsp-server
-          python39Packages.virtualenv
-          python39Packages.flake8
-          python39Packages.black
-        ];
+        env = { PYTHONSTARTUP = "$XDG_CONFIG_HOME/python/config.py"; };
+        user = {
+          packages = with pkgs;
+            [
+              (python39.withPackages (ps:
+                with ps; [
+                  python39Packages.pip
+                  python39Packages.ipython
+                  python39Packages.black # Code formatter
+                  python39Packages.setuptools
+                  python39Packages.pylint # Linter
+                  python39Packages.poetry # Better package manager
+                  python39Packages.python-lsp-server
+                  python39Packages.virtualenv
+                  python39Packages.flake8
+                  python39Packages.black
+                ]))
+              # nixos.python38Packages.httpx
+            ];
+
+        };
       };
     };
 }
