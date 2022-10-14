@@ -23,16 +23,16 @@ in
             [
               (python39.withPackages (ps:
                 with ps; [
-                  python39Packages.pip
-                  python39Packages.ipython
-                  python39Packages.black # Code formatter
-                  python39Packages.setuptools
-                  python39Packages.pylint # Linter
-                  python39Packages.poetry # Better package manager
-                  python39Packages.python-lsp-server
-                  python39Packages.virtualenv
-                  python39Packages.flake8
-                  python39Packages.black
+                  pip
+
+                  black # Code formatter
+                  setuptools
+                  pylint # Linter
+                  # poetry # Better package manager
+                  python-lsp-server
+                  # virtualenv
+                  flake8
+                  # ipython
                 ]))
               # nixos.python38Packages.httpx
             ];
