@@ -38,6 +38,17 @@ in
             ];
 
         };
+
+        hm.file = {
+          ".config/python" = {
+            recursive = true;
+            source = ../../../config/python;
+          };
+          ".config/pip" = {
+            recursive = true;
+            source = ../../../config/pip;
+          };
+        };
       };
     };
 }

@@ -75,7 +75,7 @@ in
               # htop
               fzf
               direnv
-              # nix-zsh-completions
+              nix-zsh-completions
               zsh
               # zoxide
               # rsync
