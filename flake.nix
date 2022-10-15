@@ -42,7 +42,6 @@
           '';
 
           settings.extra-trusted-substituters = [
-            # "https://mirror.sjtu.edu.cn/nix-channels/store"
             "https://nix-cache.status.im"
           ];
 
