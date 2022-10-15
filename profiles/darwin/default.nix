@@ -171,7 +171,6 @@ in
       # direnv = import ./programs/direnv.nix { inherit pkgs; };
       # fzf = import ./programs/fzf.nix { inherit pkgs; };
       lsd = import ./programs/lsd.nix { inherit pkgs; };
-      #neovim = import ./programs/neovim.nix { inherit pkgs; };
       octant = import ./programs/octant.nix { inherit pkgs; };
       readline = import ./programs/readline.nix { inherit pkgs; };
       ssh = import ./programs/ssh.nix { inherit pkgs; };
@@ -179,7 +178,6 @@ in
       vscode = import ./programs/vscode.nix { inherit pkgs; };
       # zsh = import ./programs/zsh.nix { inherit pkgs; };
       zathura = import ./programs/zathura.nix { inherit pkgs; };
-      lf = import ./programs/lf.nix { inherit pkgs; };
     };
   };
 }

@@ -6,14 +6,13 @@ let
   LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc.lib ];
   env-python = pkgs.python39;
   env-python-with-packages = env-python.withPackages (ps: with ps; [
-    #pip
-    #wheel
+    # pip
+    # wheel
     # Neovim pylsp and tools
     setuptools
     pydocstyle
     python-lsp-server
     pyls-flake8
-
     # Formatter
     black
     isort
@@ -28,20 +27,6 @@ pkgs.mkShell {
     pkgs.stdenv.cc.cc.lib
     env-python
     env-python-with-packages
-
-    # pkgs.python39.pkgs.pip
-    # pkgs.python39.pkgs.wheel
-
-    # # Neovim pylsp and tools
-    # #pkgs.python39.pkgs.setuptools
-    # pkgs.python39.pkgs.pydocstyle
-    # pkgs.python39.pkgs.python-lsp-server
-    # pkgs.python39.pkgs.pyls-flake8
-
-    # # Formatter
-    # pkgs.python39.pkgs.black
-    # pkgs.python39.pkgs.isort
-    # pkgs.python39.pkgs.python-olm
   ];
   shellHook =
     ''

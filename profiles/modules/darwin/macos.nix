@@ -88,14 +88,18 @@ in
         ];
 
         masApps = {
-          #"1Password 7" = 1333542190;
-          #"Xcode" = 497799835;
-          #"The Unarchiver" = 425424353;
+          # "1Password 7" = 1333542190;
+          # "Xcode" = 497799835;
+          # "The Unarchiver" = 425424353;
         };
       };
 
       system = {
         defaults = {
+          # System - Disable 'Are you sure you want to open this application?' dialog
+          LaunchServices.LSQuarantine = false;
+          SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;
+
           # System - Enable font smoothing
           # Enables subpixel font rendering on non-Apple LCDs
           NSGlobalDomain.AppleFontSmoothing = 1;
@@ -103,6 +107,8 @@ in
           # Keyboard - Enable full keyboard access for all controls.
           # (e.g., enable Tab in modal dialogs)
           NSGlobalDomain.AppleKeyboardUIMode = 3;
+          # NSGlobalDomain.AppleMeasurementUnits = "Centimeters";
+          # NSGlobalDomain.AppleMetricUnits = 1;
 
           # Keyboard - Disable press-and-hold for keys in favor of key repeat
           NSGlobalDomain.ApplePressAndHoldEnabled = false;
@@ -144,29 +150,26 @@ in
           NSGlobalDomain.NSNavPanelExpandedStateForSaveMode = true;
           NSGlobalDomain.NSNavPanelExpandedStateForSaveMode2 = true;
 
+          NSGlobalDomain.NSTableViewDefaultSizeMode = 2;
+          NSGlobalDomain.NSTextShowsControlCharacters = true;
+
           # System - Decrease window resize duration
-          # NSGlobalDomain.NSWindowResizeTime = "0.001";
+          # NSGlobalDomain.NSWindowResizeTime = "0";
 
           # Printer - Expand print panel by default.
           NSGlobalDomain.PMPrintingExpandedStateForPrint = true;
           NSGlobalDomain.PMPrintingExpandedStateForPrint2 = true;
 
-          # NSGlobalDomain.AppleMeasurementUnits = "Centimeters";
-          # NSGlobalDomain.AppleMetricUnits = 1;
-          # NSGlobalDomain.NSDisableAutomaticTermination = false;
-          # NSGlobalDomain.NSScrollAnimationEnabled = false;
-          # NSGlobalDomain.NSTableViewDefaultSizeMode = 2;
-          # NSGlobalDomain.NSTextShowsControlCharacters = true;
-          # NSGlobalDomain.NSUseAnimatedFocusRing = false;
-          # NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
-          # NSGlobalDomain."com.apple.trackpad.enableSecondaryClick" = true;
-          # NSGlobalDomain."com.apple.trackpad.trackpadCornerClickBehavior" = 1;
-
-          # Trackpad - Disable natural scrolling
-          # NSGlobalDomain."com.apple.swipescrolldirection" = false;
-
-          # System - Disable 'Are you sure you want to open this application?' dialog
-          LaunchServices.LSQuarantine = false;
+          dock.autohide = false;
+          # dock.dashboard-in-overlay = true;
+          # dock.expose-animation-duration = 0;
+          # dock.expose-group-by-app = false;
+          # dock.launchanim = false;
+          # dock.mineffect = "genie";
+          # dock.mouse-over-hilite-stack = true;
+          # dock.show-process-indicators = false;
+          # dock.static-only = true;
+          dock.tilesize = 48;
 
           # Dock - Don’t show recent applications in Dock
           dock.show-recents = false;
@@ -183,12 +186,16 @@ in
           # Dock - Minimize apps to their icon
           dock.minimize-to-application = true;
 
-          dock.tilesize = 48;
-
-          dock.wvous-tl-corner = 2;
-          dock.wvous-bl-corner = 3;
-          dock.wvous-tr-corner = 2;
-          dock.wvous-br-corner = 3;
+          # Hot corners, reset them all.
+          # Not supported in nix-darwin yet
+          # wvous-tl-corner = 0;
+          # wvous-tl-modifier = 0;
+          # wvous-tr-corner = 0;
+          # wvous-tr-modifier = 0;
+          # wvous-bl-corner = 0;
+          # wvous-bl-modifier = 0;
+          # wvous-br-corner = 0;
+          # wvous-br-modifier = 0;
 
           # Finder - Disable the warning when changing a file extension
           finder.FXEnableExtensionChangeWarning = false;
@@ -202,11 +209,8 @@ in
           # Screencapture - Save screenshots to the desktop
           screencapture.location = "/Users/${config.my.username}/Pictures/Screenshots";
 
-          SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
-
           loginwindow.DisableConsoleAccess = true;
           loginwindow.GuestEnabled = false;
-          # LoginwindowText = "";
           loginwindow.PowerOffDisabledWhileLoggedIn = true;
           loginwindow.RestartDisabledWhileLoggedIn = true;
           loginwindow.ShutDownDisabledWhileLoggedIn = true;

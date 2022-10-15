@@ -49,9 +49,9 @@
           settings.substituters = [
             # "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=30"
             # "https://mirrors.ustc.edu.cn/nix-channels/store"
-            "https://r.zhullyb.top/https://nix-community.cachix.org"
-            "https://r.zhullyb.top/https://cache.nixos.org"
-            "https://r.zhullyb.top/https://nixpkgs.cachix.org"
+            "https://r.gnux.cn/https://nix-community.cachix.org"
+            "https://r.gnux.cn/https://cache.nixos.org"
+            "https://r.gnux.cn/https://nixpkgs.cachix.org"
             # "https://nix-community.cachix.org"
             # "https://cache.nixos.org"
             # "https://nixpkgs.cachix.org"
