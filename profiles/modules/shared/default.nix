@@ -8,6 +8,7 @@
     ./shells.nix
     ./sudoers.nix
     ./lf.nix
+    ./ssh.nix
     # ./fonts.nix
     ./gui.nix
     ./git.nix
@@ -28,6 +29,7 @@
     shells.enable = lib.mkDefault true;
     sudoers.enable = lib.mkDefault true;
     lf.enable = lib.mkDefault true;
+    ssh.enable = lib.mkDefault true;
     # fonts.enable = lib.mkDefault true;
     gui.enable = lib.mkDefault true;
     git.enable = lib.mkDefault true;
