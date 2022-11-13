@@ -156,9 +156,9 @@
           specialArgs = { inherit inputs; };
           modules = [
             inputs.home-manager.nixosModules.home-manager
-            ./nix/modules/shared
+            ./profiles/modules/shared
             sharedHostsConfig
-            ./nix/hosts/nixos
+            ./machines/nixos
           ];
         };
       };
