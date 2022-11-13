@@ -13,7 +13,7 @@
   boot.extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/bf9df006-7b07-4895-973c-819d283fb7ed";
+    device = "/dev/disk/by-uuid/2eaf8f55-20a7-4f09-9d5b-508a0dfda998";
     fsType = "ext4";
   };
 
@@ -23,7 +23,7 @@
   };
 
   swapDevices =
-    [{ device = "/dev/disk/by-uuid/b24c0bc4-f574-431b-8803-9eb313dfb23a"; }];
+    [{ device = "/dev/disk/by-uuid/ac24ec65-9afa-4769-8c11-747722eaf09b"; }];
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
 }
