@@ -188,7 +188,7 @@
     npm.enable = true;
     # ssh.knownHosts = {};
     # ssh.startAgent = true; # Only this or the gnupg enableSSHSupport should be enabled in the same time
-    wireshark.enable = true;
+    # wireshark.enable = true;
   };
 
   # List services that you want to enable:
