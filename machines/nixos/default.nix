@@ -127,7 +127,9 @@
 
     # Enable the Plasma 5 Desktop Environment.
     displayManager.sddm.enable = true;
-    desktopManager.plasma5.enable = true;
+    #desktopManager.plasma5.enable = true;
+    #displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
   };
 
   services.nextdns.enable = true;
