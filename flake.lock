@@ -7,11 +7,25 @@
         ]
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1664140963,
         "narHash": "sha256-pFxDtOLduRFlol0Y4ShE+soRQX4kbhaCNBtDOvx7ykw=",
+||||||| parent of 95d1ee5 (first commit)
+        "lastModified": 1684153753,
+        "narHash": "sha256-PVbWt3qrjYAK+T5KplFcO+h7aZWfEj1UtyoKlvcDxh0=",
+=======
+        "lastModified": 1690228878,
+        "narHash": "sha256-9Xe7JV0krp4RJC9W9W9WutZVlw6BlHTFMiUP/k48LQY=",
+>>>>>>> 95d1ee5 (first commit)
         "owner": "ryantm",
         "repo": "agenix",
+<<<<<<< HEAD
         "rev": "6acb1fe5f8597d5ce63fc82bc7fcac7774b1cdf0",
+||||||| parent of 95d1ee5 (first commit)
+        "rev": "db5637d10f797bb251b94ef9040b237f4702cde3",
+=======
+        "rev": "d8c973fd228949736dedf61b7f8cc1ece3236792",
+>>>>>>> 95d1ee5 (first commit)
         "type": "github"
       },
       "original": {
@@ -41,6 +55,156 @@
         "type": "github"
       }
     },
+<<<<<<< HEAD
+||||||| parent of 95d1ee5 (first commit)
+    "darwin_2": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1686307493,
+        "narHash": "sha256-R4VEFnDn7nRmNxAu1LwNbjns5DPM8IBsvnrWmZ8ymPs=",
+        "owner": "lnl7",
+        "repo": "nix-darwin",
+        "rev": "7c16d31383a90e0e72ace0c35d2d66a18f90fb4f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lnl7",
+        "ref": "master",
+        "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
+    "emacs": {
+      "inputs": {
+        "emacs-src": "emacs-src",
+        "emacs-vterm-src": "emacs-vterm-src",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1685494553,
+        "narHash": "sha256-7kB1at//UUKIaedu8bbtfZS+F9LzgHVv9aXPppcBBGw=",
+        "owner": "cmacrae",
+        "repo": "emacs",
+        "rev": "1c48a5984bab69a79cc6ebe20e28ee32138fc683",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cmacrae",
+        "repo": "emacs",
+        "type": "github"
+      }
+    },
+    "emacs-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1685464105,
+        "narHash": "sha256-Y0uuemxviXxi4WQEn2fb3derGaDLJxDH10qGXkpmKDQ=",
+        "owner": "emacs-mirror",
+        "repo": "emacs",
+        "rev": "ecc1d990d9e9d006838ca514213ea5e46a459363",
+        "type": "github"
+      },
+      "original": {
+        "owner": "emacs-mirror",
+        "repo": "emacs",
+        "type": "github"
+      }
+    },
+    "emacs-vterm-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1681705456,
+        "narHash": "sha256-1+AbPtyl1dS73WTMrIUduyWeM4cOiD3CI7d0Ic3jpVw=",
+        "owner": "akermu",
+        "repo": "emacs-libvterm",
+        "rev": "94e2b0b2b4a750e7907dacd5b4c0584900846dd1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "akermu",
+        "repo": "emacs-libvterm",
+        "type": "github"
+      }
+    },
+=======
+    "darwin_2": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1691640097,
+        "narHash": "sha256-6vPsJYjtt2hs4mkiR46yt8c/Spdm/UiUKoSCIlc7iJw=",
+        "owner": "lnl7",
+        "repo": "nix-darwin",
+        "rev": "426d38710b656b0a31f8eaae6e0002206a3b96d7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lnl7",
+        "ref": "master",
+        "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
+    "emacs": {
+      "inputs": {
+        "emacs-src": "emacs-src",
+        "emacs-vterm-src": "emacs-vterm-src",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1685494553,
+        "narHash": "sha256-7kB1at//UUKIaedu8bbtfZS+F9LzgHVv9aXPppcBBGw=",
+        "owner": "cmacrae",
+        "repo": "emacs",
+        "rev": "1c48a5984bab69a79cc6ebe20e28ee32138fc683",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cmacrae",
+        "repo": "emacs",
+        "type": "github"
+      }
+    },
+    "emacs-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1685464105,
+        "narHash": "sha256-Y0uuemxviXxi4WQEn2fb3derGaDLJxDH10qGXkpmKDQ=",
+        "owner": "emacs-mirror",
+        "repo": "emacs",
+        "rev": "ecc1d990d9e9d006838ca514213ea5e46a459363",
+        "type": "github"
+      },
+      "original": {
+        "owner": "emacs-mirror",
+        "repo": "emacs",
+        "type": "github"
+      }
+    },
+    "emacs-vterm-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1681705456,
+        "narHash": "sha256-1+AbPtyl1dS73WTMrIUduyWeM4cOiD3CI7d0Ic3jpVw=",
+        "owner": "akermu",
+        "repo": "emacs-libvterm",
+        "rev": "94e2b0b2b4a750e7907dacd5b4c0584900846dd1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "akermu",
+        "repo": "emacs-libvterm",
+        "type": "github"
+      }
+    },
+>>>>>>> 95d1ee5 (first commit)
     "flake-utils": {
       "locked": {
         "lastModified": 1659877975,
@@ -63,11 +227,25 @@
         ]
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1665475263,
         "narHash": "sha256-T4at7d+KsQNWh5rfjvOtQCaIMWjSDlSgQZKvxb+LcEY=",
+||||||| parent of 95d1ee5 (first commit)
+        "lastModified": 1686693375,
+        "narHash": "sha256-1Smjo0E8WI9PeVGmmCjpQWRX04aQvz5gAGXfdanIjgw=",
+=======
+        "lastModified": 1687871164,
+        "narHash": "sha256-bBFlPthuYX322xOlpJvkjUBz0C+MOBjZdDOOJJ+G2jU=",
+>>>>>>> 95d1ee5 (first commit)
         "owner": "nix-community",
         "repo": "home-manager",
+<<<<<<< HEAD
         "rev": "17208be516fc36e2ab0ceb064d931e90eb88b2a3",
+||||||| parent of 95d1ee5 (first commit)
+        "rev": "61e5d1c38ef04ba30a9119825b159bce9c6010be",
+=======
+        "rev": "07c347bb50994691d7b0095f45ebd8838cf6bc38",
+>>>>>>> 95d1ee5 (first commit)
         "type": "github"
       },
       "original": {
@@ -95,11 +273,25 @@
     },
     "nixpkgs-unstable": {
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1665723124,
         "narHash": "sha256-J1JY2cN0L+CNDSrGkNdbiTl2EFV8hpqqsDJFICsYSBw=",
+||||||| parent of 95d1ee5 (first commit)
+        "lastModified": 1686828063,
+        "narHash": "sha256-Cv0Sx1N5+3xBDF5OnmFU3Qoh9OqZmXDBKg1fgXlXTWs=",
+=======
+        "lastModified": 1691625043,
+        "narHash": "sha256-IiiOwgRTQm9W1QHe8qme7qYxDbAT2MYxbIJMfPEltN0=",
+>>>>>>> 95d1ee5 (first commit)
         "owner": "nixos",
         "repo": "nixpkgs",
+<<<<<<< HEAD
         "rev": "31d567846255e122846548255101980162bbf641",
+||||||| parent of 95d1ee5 (first commit)
+        "rev": "683f2f5ba2ea54abb633d0b17bc9f7f6dede5799",
+=======
+        "rev": "3d6ebeb283be256f008541ce2b089eb5fb0e4e01",
+>>>>>>> 95d1ee5 (first commit)
         "type": "github"
       },
       "original": {
@@ -111,11 +303,25 @@
     },
     "nur": {
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1665816557,
         "narHash": "sha256-l+PbGkSE8IEQW5PFg95bf1ne8QxNdtxIOzXb/3j3Yw4=",
         "owner": "nix-community",
         "repo": "NUR",
         "rev": "2ff0d1346d6c6dadbb6435ac1d5e55c8ec9dec43",
+||||||| parent of 95d1ee5 (first commit)
+        "lastModified": 1686731662,
+        "narHash": "sha256-obapE7ZHvurJVaQ6TVFYByxi9UoxeMJ4uuS0l6Ut2cM=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "c56d659ebcfc4a0e7a9938adcf379a06930dc8b4",
+=======
+        "lastModified": 1691592289,
+        "narHash": "sha256-Lqpw7lrXlLkYra33tp57ms8tZ0StWhbcl80vk4D90F8=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9034b46dc4c7596a87ab837bb8a07ef2d887e8c7",
+>>>>>>> 95d1ee5 (first commit)
         "type": "github"
       },
       "original": {
@@ -143,11 +349,25 @@
         ]
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1665802870,
         "narHash": "sha256-02x6xx56WY6eDqamQUK7gIVSiKW14I25EMKozwtGf00=",
+||||||| parent of 95d1ee5 (first commit)
+        "lastModified": 1686882360,
+        "narHash": "sha256-6iWVGIdIzmx/CgXPVLPyyxxBhPGYMl8sG09S8hpQ6pc=",
+=======
+        "lastModified": 1691634013,
+        "narHash": "sha256-EYrZnyYO84mewPetfjxloLKq4WIwmsXUNWnaHhdeO/Y=",
+>>>>>>> 95d1ee5 (first commit)
         "owner": "oxalica",
         "repo": "rust-overlay",
+<<<<<<< HEAD
         "rev": "f55e3d741c6fe357d1e1bea50f5916863c831fdc",
+||||||| parent of 95d1ee5 (first commit)
+        "rev": "b519b1d7a31f1bd35423990398adecc6f7dd4dd2",
+=======
+        "rev": "48f3d76f512c7267d82d84c5d3d156ad2b9a8d12",
+>>>>>>> 95d1ee5 (first commit)
         "type": "github"
       },
       "original": {
