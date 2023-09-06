@@ -11,8 +11,8 @@
 
   my = {
     modules = {
-      macos.enable = true;
-      gpg.enable = true;
+      # macos.enable = true;
+      # gpg.enable = true;
     };
   };
 
