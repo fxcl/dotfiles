@@ -33,13 +33,9 @@ in
           "appcleaner"
           "raycast"
           "rectangle"
-<<<<<<< HEAD:profiles/modules/shared/gui.nix
-||||||| parent of 95d1ee5 (first commit):nix/modules/shared/gui.nix
           # "aria2"
-=======
           #  "tcl-tk"
           # "aria2"
->>>>>>> 95d1ee5 (first commit):nix/modules/shared/gui.nix
           # "bitwarden"
           # "hammerspoon"
           # "adobe-acrobat-reader"

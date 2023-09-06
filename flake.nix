@@ -113,6 +113,19 @@
             ./profiles/darwin
           ];
         };
+        addsa = inputs.darwin.lib.darwinSystem {
+          system = "x86_64-darwin";
+          inherit inputs;
+
+          modules = [
+            inputs.homemanager.darwinModules.home-manager
+            inputs.agenix.nixosModules.age
+            sharedHostsConfig
+            ./profiles/modules/darwin
+            ./machines/addsa.nix
+            ./profiles/darwin
+          ];
+        };
         vvh = inputs.darwin.lib.darwinSystem {
           system = "x86_64-darwin";
           inherit inputs;
@@ -149,6 +162,7 @@
 
       tony = self.darwinConfigurations.tony.system;
       vvh = self.darwinConfigurations.vvh.system;
+      addsa = self.darwinConfigurations.addsa.system;
 
       nixosConfigurations = {
         "nixos" = inputs.nixpkgs.lib.nixosSystem {

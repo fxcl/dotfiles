@@ -40,17 +40,9 @@ in
             [user]
             ${optionalString (username != "") "  name = ${username}"}
             ${optionalString (email != "") "  email = ${email}"}
-<<<<<<< HEAD:profiles/modules/shared/git.nix
               useconfigonly = true
               signingkey = 4593BADCA8DD894D
-||||||| parent of 95d1ee5 (first commit):nix/modules/shared/git.nix
-            useconfigonly = true
-
-=======
-            signingkey = "3880B4932355767F"
-            useconfigonly = true
-
->>>>>>> 95d1ee5 (first commit):nix/modules/shared/git.nix
+              useconfigonly = true
             ${optionalString (github_username != "") ''
             [github]
               username = ${github_username}''}

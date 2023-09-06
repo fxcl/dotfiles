@@ -121,7 +121,7 @@ in
       octant = import ./programs/octant.nix { inherit pkgs; };
       readline = import ./programs/readline.nix { inherit pkgs; };
       starship = import ./programs/starship.nix { inherit pkgs; };
-      vscode = import ./programs/vscode.nix { inherit pkgs; };
+      #vscode = import ./programs/vscode.nix { inherit pkgs; };
       # zsh = import ./programs/zsh.nix { inherit pkgs; };
       zathura = import ./programs/zathura.nix { inherit pkgs; };
     };
